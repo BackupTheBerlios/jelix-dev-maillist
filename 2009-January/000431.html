@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] commit SVN-1283 (laurentj)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-January/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1283%20%28laurentj%29&In-Reply-To=%3C20090115114840.4F0ED356F4A%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000430.html">
+   <LINK REL="Next"  HREF="000432.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] commit SVN-1283 (laurentj)</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1283%20%28laurentj%29&In-Reply-To=%3C20090115114840.4F0ED356F4A%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] commit SVN-1283 (laurentj)">dev at jelix.org
+       </A><BR>
+    <I>Thu Jan 15 12:48:40 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000430.html">[Jelix-dev] [cron] Manual building
+</A></li>
+        <LI>Next message: <A HREF="000432.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#431">[ date ]</a>
+              <a href="thread.html#431">[ thread ]</a>
+              <a href="subject.html#431">[ subject ]</a>
+              <a href="author.html#431">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>laurentj
+2009-01-15 12:48:39 +0100 (Thu, 15 Jan 2009)
+199
+ticket #787: new ldap plugin for jAuth. p=Tahina Ramaroson. I made some modifications on ldap tests to do no tests when ldap is not configured, and I made some minor changes in the code of the plugin
+
+U   trunk/build/manifests/jelix-lib.mn
+U   trunk/build/manifests/testapp.mn
+U   trunk/lib/jelix/CREDITS
+A   trunk/lib/jelix/auth/jAuthUserLDAP.class.php
+U   trunk/lib/jelix/core-modules/jelix/locales/en_EN/auth.UTF-8.properties
+U   trunk/lib/jelix/core-modules/jelix/locales/en_US/auth.UTF-8.properties
+U   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/auth.UTF-8.properties
+A   trunk/lib/jelix/plugins/auth/ldap/
+A   trunk/lib/jelix/plugins/auth/ldap/ldap.auth.php
+U   trunk/lib/jelix/plugins/coord/auth/auth.coord.ini.php.dist
+U   trunk/lib/jelix-modules/jauth/install/var/config/auth.coord.ini.php
+U   trunk/lib/jelix-modules/jauth/install/var/config/authsw.coord.ini.php
+U   trunk/lib/jelix-scripts/templates/var/config/auth.coord.ini.php.tpl
+A   trunk/testapp/modules/jelix_tests/tests/jauth.ldap_api.html.php
+A   trunk/testapp/var/config/auth_ldap.coord.ini.php.dist
+U   trunk/testapp/var/config/defaultconfig.ini.php
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000430.html">[Jelix-dev] [cron] Manual building
+</A></li>
+	<LI>Next message: <A HREF="000432.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#431">[ date ]</a>
+              <a href="thread.html#431">[ thread ]</a>
+              <a href="subject.html#431">[ subject ]</a>
+              <a href="author.html#431">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

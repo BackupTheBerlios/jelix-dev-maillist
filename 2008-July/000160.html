@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] checkin SVN-1030 (laurentj)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20checkin%20SVN-1030%20%28laurentj%29&In-Reply-To=%3C20080719221117.6AED6354001%40mail.lenwe-linux.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000159.html">
+   <LINK REL="Next"  HREF="000161.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] checkin SVN-1030 (laurentj)</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20checkin%20SVN-1030%20%28laurentj%29&In-Reply-To=%3C20080719221117.6AED6354001%40mail.lenwe-linux.org%3E"
+       TITLE="[Jelix-dev] checkin SVN-1030 (laurentj)">dev at jelix.org
+       </A><BR>
+    <I>Sun Jul 20 00:11:17 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000159.html">[Jelix-dev] checkin SVN-1029 (laurentj)
+</A></li>
+        <LI>Next message: <A HREF="000161.html">[Jelix-dev] checkin SVN-1031 (laurentj)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#160">[ date ]</a>
+              <a href="thread.html#160">[ thread ]</a>
+              <a href="subject.html#160">[ subject ]</a>
+              <a href="author.html#160">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>laurentj
+2008-07-20 00:11:17 +0200 (Sun, 20 Jul 2008)
+955
+Merge modifications from jelix-group branch to the trunk. It includes:
+
+- Ticket #549: jforms, support of group
+- Ticket #564: jforms, support of choice
+- Separate tests on jforms 1.1 and on jforms 1.0 xml format
+- new javascript API for jforms
+- changed the behavior of jFormsBase::setReadOnly()
+- new methods on jFormsBase: setModifiedFlag(), isReadOnly(), getRootControls(),
+   addControl(), removeControl()
+- new methods on jFormsDataContainer: setReadOnly(), isReadOnly()
+- removed $readonly property on jFormsControl
+- removed methods on jFormsControl: getValueFromRequest()
+- added properties on jFormsControl: $initialReadOnly, $initialActivation
+- new methods on jFormsControl: setForm(), setData(), setReadOnly(), setValueFromRequest()
+  setDataFromDao(), deactivate(), isActivated(), isReadOnly()
+- method jFormsControl::check() doesn't accept anymore parameters
+- new method jTplCompiler::isInsideBlock(), for block and cfunction tpl plugins
+
+U   trunk/build/manifests/testapp.mn
+U   trunk/lib/jelix/docs/ns/jforms_1.1.rng
+U   trunk/lib/jelix/forms/jFormsBase.class.php
+U   trunk/lib/jelix/forms/jFormsCompiler.class.php
+U   trunk/lib/jelix/forms/jFormsCompiler_jf_1_0.class.php
+U   trunk/lib/jelix/forms/jFormsCompiler_jf_1_1.class.php
+U   trunk/lib/jelix/forms/jFormsControl.class.php
+U   trunk/lib/jelix/forms/jFormsDataContainer.class.php
+U   trunk/lib/jelix/forms/jFormsDatasource.class.php
+U   trunk/lib/jelix/plugins/jforms/html/html.jformsbuilder.php
+U   trunk/lib/jelix/plugins/jforms/html/html.jformscompiler.php
+U   trunk/lib/jelix/plugins/tpl/html/block.form.php
+U   trunk/lib/jelix/plugins/tpl/html/block.formcontrols.php
+U   trunk/lib/jelix/tpl/jTplCompiler.class.php
+U   trunk/lib/jelix-www/design/jform.css
+U   trunk/lib/jelix-www/js/jforms.js
+U   trunk/testapp/modules/jelix_tests/daos/products.dao.xml
+U   trunk/testapp/modules/jelix_tests/tests/jforms.check_datas.html_cli.php
+U   trunk/testapp/modules/jelix_tests/tests/jforms.compiler.html_cli.php
+A   trunk/testapp/modules/jelix_tests/tests/jforms.compiler_1_1.html_cli.php
+U   trunk/testapp/modules/jelix_tests/tests/jforms.html_cli.php
+U   trunk/testapp/modules/jelix_tests/tests/jforms.htmlbuilder.html_cli.php
+A   trunk/testapp/modules/jelix_tests/tests/jforms.htmlbuilder2.html_cli.php
+U   trunk/testapp/modules/testapp/controllers/sampleform.classic.php
+U   trunk/testapp/modules/testapp/forms/sample.form.xml
+U   trunk/testapp/modules/testapp/templates/sampleform.tpl
+A   trunk/testapp/modules/testapp/templates/sampleformfull.tpl
+U   trunk/testapp/modules/testapp/templates/sommaire.tpl
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000159.html">[Jelix-dev] checkin SVN-1029 (laurentj)
+</A></li>
+	<LI>Next message: <A HREF="000161.html">[Jelix-dev] checkin SVN-1031 (laurentj)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#160">[ date ]</a>
+              <a href="thread.html#160">[ thread ]</a>
+              <a href="subject.html#160">[ subject ]</a>
+              <a href="author.html#160">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

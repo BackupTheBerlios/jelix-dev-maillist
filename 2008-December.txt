@@ -1,0 +1,27 @@
+From ljouanneau at gmail.com  Tue Dec  9 00:37:26 2008
+From: ljouanneau at gmail.com (Laurent)
+Date: Mon, 08 Dec 2008 23:37:26 -0000
+Subject: [Jelix-dev] Release of Jelix 1.1RC1
+Message-ID: <493DAE37.3070404@jelix.org>
+
+Hello !
+
+This is done ! The first release candidate is here !
+
+http://jelix.org/en/news/post/jelix-1.1RC1-is-available
+http://jelix.org/fr/news/post/jelix-1.1RC1-est-disponible
+
+We have still many work on the documentation. Please help me to finish 
+the french and the english manuals.
+
+After the release of Jelix 1.1, the english documentation will become 
+the main documentation, so the priority will be the english 
+documentation. We really need to target non-french developers, in order 
+to have more and more contributors.
+
+
+Thanks by advance,
+
+Laurent
+
+

@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [cron] nightly builds and unit tests
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20080618020243.7CC62354001%40mail.lenwe-linux.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000054.html">
+   <LINK REL="Next"  HREF="000056.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [cron] nightly builds and unit tests</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20080618020243.7CC62354001%40mail.lenwe-linux.org%3E"
+       TITLE="[Jelix-dev] [cron] nightly builds and unit tests">dev at jelix.org
+       </A><BR>
+    <I>Wed Jun 18 04:02:43 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000054.html">[Jelix-dev] checkin SVN-995 (laurentj)
+</A></li>
+        <LI>Next message: <A HREF="000056.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#55">[ date ]</a>
+              <a href="thread.html#55">[ thread ]</a>
+              <a href="subject.html#55">[ subject ]</a>
+              <a href="author.html#55">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>building trunk...
+===========================================
+U    build/buildjelix.php
+U    build/manifests/jelix-lib.mn
+U    build/CREDITS
+U    build/lib/jManifest.class.php
+D    lib/jelix-modules/jWSDL/locales/en_EN/errors.ISO-8859-1.properties
+D    lib/jelix-modules/jWSDL/locales/en_US/errors.ISO-8859-1.properties
+D    lib/jelix-modules/jWSDL/locales/fr_FR/errors.ISO-8859-1.properties
+D    lib/jelix-modules/jauth/locales/en_EN/auth.ISO-8859-15.properties
+D    lib/jelix-modules/jauth/locales/en_EN/autherror.ISO-8859-1.properties
+D    lib/jelix-modules/jauth/locales/en_EN/autherror.ISO-8859-15.properties
+D    lib/jelix-modules/jauth/locales/en_EN/auth.ISO-8859-1.properties
+D    lib/jelix-modules/jauth/locales/en_US/auth.ISO-8859-15.properties
+D    lib/jelix-modules/jauth/locales/en_US/autherror.ISO-8859-1.properties
+D    lib/jelix-modules/jauth/locales/en_US/autherror.ISO-8859-15.properties
+D    lib/jelix-modules/jauth/locales/en_US/auth.ISO-8859-1.properties
+D    lib/jelix-modules/jauth/locales/fr_FR/auth.ISO-8859-15.properties
+D    lib/jelix-modules/jauth/locales/fr_FR/autherror.ISO-8859-1.properties
+D    lib/jelix-modules/jauth/locales/fr_FR/autherror.ISO-8859-15.properties
+D    lib/jelix-modules/jauth/locales/fr_FR/auth.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/formserr.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/auth.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/format.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/dao.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/common.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/acldb.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/crud.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/jelix.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/errors.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/captcha.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/daoxml.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/errors.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/ui.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/crud.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/daoxml.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/db.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/acl2db.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/captcha.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/formserr.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/auth.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/ui.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/dao.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/acldb.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/db.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/jelix.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/acl2db.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/format.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_EN/common.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/formserr.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/auth.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/format.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/dao.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/common.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/acldb.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/crud.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/jelix.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/errors.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/captcha.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/daoxml.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/errors.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/ui.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/crud.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/daoxml.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/db.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/acl2db.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/captcha.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/formserr.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/auth.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/ui.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/dao.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/acldb.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/db.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/jelix.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/acl2db.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/format.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/en_US/common.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/formserr.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/auth.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/format.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/dao.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/common.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/acldb.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/crud.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/jelix.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/errors.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/captcha.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/daoxml.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/errors.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/ui.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/crud.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/daoxml.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/db.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/acl2db.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/captcha.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/formserr.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/auth.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/ui.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/dao.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/acldb.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/db.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/jelix.ISO-8859-1.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/acl2db.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/format.ISO-8859-15.properties
+D    lib/jelix/core-modules/jelix/locales/fr_FR/common.ISO-8859-15.properties
+Updated to revision 995.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildmodules.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/modules-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/trunk/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/trunk/&quot; build/config/testapp-test.ini
+cd /home/lenwe.org/ljouanneau/tests/trunk/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.ini.php testapp/var/config/dbprofils.ini.php
+cd /home/lenwe.org/ljouanneau/tests/trunk//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.1a1pre.995
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+jfilter tests: use of jelix filter
+OK
+Test cases run: 38/38, Passes: 3670, Failures: 0, Exceptions: 0
+
+
+building 1.0.x branch...
+===========================================
+At revision 995.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildmodules.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/modules-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/1.0.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/1.0.x/&quot; build/config/testapp-test.ini
+cd /home/lenwe.org/ljouanneau/tests/1.0.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.10x.ini.php testapp/var/config/dbprofils.ini.php
+cd /home/lenwe.org/ljouanneau/tests/1.0.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.0.5pre.995
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+jfilter tests: use of jelix filter
+OK
+Test cases run: 32/32, Passes: 3428, Failures: 0, Exceptions: 0
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000054.html">[Jelix-dev] checkin SVN-995 (laurentj)
+</A></li>
+	<LI>Next message: <A HREF="000056.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#55">[ date ]</a>
+              <a href="thread.html#55">[ thread ]</a>
+              <a href="subject.html#55">[ subject ]</a>
+              <a href="author.html#55">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

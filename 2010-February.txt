@@ -1,0 +1,1894 @@
+From laurent at jelix.org  Fri Feb 19 14:51:50 2010
+From: laurent at jelix.org (Laurent)
+Date: Fri, 19 Feb 2010 14:51:50 +0100
+Subject: [Jelix-dev] Changement de cap pour Jelix
+Message-ID: <4B7E9776.10202@jelix.org>
+
+Bonjour,
+
+(if you are an english reader, please let me know, and I will translate 
+this mail. It talks about the future of the project)
+
+Comme vous l'avez sous doute remarqu?, l'activit? du projet jelix semble 
+au ralenti. Il n'y a pas eu de release majeure depuis un an, alors m?me 
+que l'on avait annonc? une acc?l?ration des releases. (m?me si on 
+commite r?guli?rement http://hg.jelix.org/jelix/jelix-trunk)
+
+La faute ? beaucoup de choses, principalement au manque de temps. Depuis 
+un an, suite ? un changement professionnel, j'ai beaucoup moins de temps 
+? consacrer ? Jelix qu'auparavant. Avant je pouvais bosser au moins une 
+journ?e compl?te par semaine (des fois c'?tait 2, voire 3), sans compter 
+mon temps libre personnel. Depuis un an, je n'ai plus que mon temps libre.
+
+Le probl?me, est que le nombre de contributeurs n'a quasiment pas 
+augment? (voir r?gress? ?), et que nous n'avons plus le temps de 
+maintenir cette organisation de "gros" projet, que l'on avait pu mettre 
+en place ces derni?res ann?es (une forge, un serveur d?di?, une roadmap 
+ambitieuse etc...).
+
+Je ne vous cache pas que je ne vais pas pouvoir continuer longtemps ? 
+supporter toute cette charge, physiquement et psychologiquement 
+(l'avanc?e de la concurrence n'aide pas ? garder le moral). Et j'ai bien 
+l'impression que si j'arr?te, le projet s'arr?tera.
+
+Hier nous en avons discut? sur IRC, et nous en sommes arriv?s ? la 
+conclusion, qu'il fallait que l'on se bouge un peu les fesses, mais 
+surtout qu'on se r?organise, qu'on ait une charge de travail de petite 
+?quipe (ce que nous sommes), et qu'on revoit ? la baisse nos ambitions, 
+en ce qui concerne en tout cas l'infrastructure du projet.
+
+Voici ce que nous avons ?voqu? comme ?volutions.
+
+* les sites jelix.org, le serveur
+
+Nous avions d? d?m?nager de serveur il y a quelques semaines. ?a a ?t? 
+particuli?rement energivore, ?a nous a bouff? un temps monstre. La forge 
+en est responsable pour une grosse partie. On a bascul? sur une debian 
+plus r?cente, donc version de trac diff?rente, donc migration ? faire 
+des environnements trac etc...
+
+Dans l'?tat actuel des ressources humaines : plus jamais ?a. D'ailleurs, 
+on n'a pas encore eu le temps d'adapter les templates pour que ?a ait le 
+look "jelix" (le nouveau langage de template de trac ?tant 
+particuli?rement d?courageant). Ajoutons le fait aussi que la forge, 
+m?me si peu utilis?e, nous bouffes des ressources syst?mes, et est 
+probablement responsable des plantages qui sont survenus r?guli?rement 
+depuis le d?m?nagement. La forge, par rapport au service qu'elle rend et 
+du nombre d'utilisateurs, n'est absolument pas "rentable".
+
+premi?re d?cision : on va fermer la forge. Il existe maintenant bien 
+plus de forges sur le web qu'? l'?poque (github, bitbucket etc..), mieux 
+fait que sourceforge ou autre. Ceux qui sont dans la forge jelix ne 
+perdrons donc rien au change, en d?m?nageant vers ces forges nouvelles 
+g?n?rations. Je donnerai des d?tails dans un autre mail sur cette 
+suppression de forge, et j'avertirai par mail les propri?taires des 
+projets. Ne vous inqui?tez pas, on ne va pas fermer brutalement.
+
+deuxi?me d?cision : faire une sorte de addons.mozilla.org. La forge 
+disparait mais il nous est tout de m?me indispensable d'avoir un endroit 
+o? on recense les modules, plugins et autres applications r?alis?es avec 
+jelix. C'est le but de ce nouveau site. Il est en grande partie 
+d?velopp?. Olivier (foxmask), a d?j? fait des d?veloppements en ce sens, 
+qui ont ?t? int?gr?s dans l'ex futur site de la forge (pas mis en 
+ligne). ? priori, il y aura peu de d?veloppement ? faire pour r?utiliser 
+ce qu'a fait Olivier pour ce nouveau site.
+
+Parall?lement ? ?a, essayer de simplifier les dependances, les 
+"requirements" techniques des sites et du processus de releases, avec le 
+serveur. Dans l'id?al, faudrait tenir sur du mutualis?, mais des choses 
+nous empechera certainement (trac + depots hg, cron pour les nightlies, 
+scripts divers pour le backup, les releases etc..). Objectif donc : 
+diminuer au maximum la charge de travail pour administrer la machine.
+
+
+* la roadmap
+
+Trop de tickets dans les roadmaps, temps de d?veloppements qui n'en 
+finissent plus. Du coup, impression de projet mort, au ralenti. De plus, 
+review souvent trop longue, trop de ticket. Tout ?a d?courage les gens ? 
+utiliser jelix et ? contribuer.
+
+Troisi?me d?cision : changement du cycle de release. ?a sera dor?navant 
+des releases ultra courtes (3 mois ?), se focalisant sur 1 ou 2 point 
+importants, donc comportant peu de tickets. (je dis n'importe quoi, mais 
+?a peut ?tre : 1.3=am?liorations dans jForms  1.4=am?liorations dans jDB 
+etc.). Bien s?r, si il y a des contributeurs qui proposent des patchs 
+sur d'autres trucs, et qui sont pr?t ? ?tre int?gr?, on int?gre. Apr?s 
+chaque release, il y aura une r?union IRC/mail pour d?finir les 
+objectifs de la suivante.
+
+Cons?quence :
+
+- release d'une beta 1.2 d?s que possible. Il reste un point assez 
+essentiel ? faire je pense : le script de migration 1.1 vers 1.2, qui 
+consiste principalement ? remanier les fichiers de conf et ? installer 
+"virtuellement" les modules pr?sents de l'application. (sp?ciale 
+dedicace ? foxmask pour son probl?me de passage ? jelix 1.2 avec 
+havefnubb :-)
+
+- release de la 1.2 peu apr?s : pas de nouvelle features, juste les bugs 
+corrig?s trouv?s dans la beta. Tout le reste des tickets pr?vus 
+initialement pour la 1.2 seront re tri?s et on d?finira la roadmap pour 
+les prochaines versions.
+
+- LTS : on d?finira des releases LTS, des versions qu'on supporte sur le 
+long terme. Car ? la fin de l'ann?e, avec le rythme de release accrue, 
+?a va nous faire un paquet de branche ? maintenir. Donc on ne 
+maintiendra les versions classiques qu'un an (ou plus ? ou moins ?), et 
+les autres 2-3 ans. C'est ? rediscuter.
+
+Quatri?me d?cision : Arr?t prochain de la maintenance de la branche 
+1.0.x. Toujours dans l'optique d'all?ger notre charge de travail, ou en 
+tout cas, d'utiliser ce temps ? des choses plus importantes.
+
+
+* process de release
+
+Un truc que l'on a d?tect? comme ?tant une charge de travail importante, 
+c'est la sortie d'une nouvelle version. Il y a un paquet de truc que 
+l'on fait plus ou moins ? la main ( 
+http://developer.jelix.org/wiki/en/howto_release ), ?a prend des fois 
+des heures pour le faire, alors que l'on pourrait automatiser bien plus. 
+Si on veut sortir des release plus souvent, il faut absolument 
+automatiser un maximum.
+
+J'ai commenc? ? y r?fl?chir, ?a aboutit ? ?a 
+http://developer.jelix.org/wiki/en/futur_release_process
+
+J'ai commenc? un peu un module "release" pour ?a, mais un peu d'aide ne 
+ferait pas de mal, en tout cas pour la partie visible sur le site. Je me 
+concentrerai ainsi sur le script principale de release.
+
+
+* l'organisation des ?quipes
+
+Il faut se reorganiser, et distribuer les t?ches. Je ne peux plus faire 
+tout tout seul. 0n avait essay? de monter des ?quipes, mais cela n'a pas 
+fonctionn? ( http://developer.jelix.org/wiki/fr/equipes )
+
+Peut ?tre qu'il faudrait juste des responsables, des r?ferents pour 
+chaque domaine, et que ces personnes aient *vraiment* du temps ? passer 
+pour contribuer. Charge aussi ? ce responsable de se monter une ?quipe, 
+de motiver les troupes.
+
+
+* marketing
+
+Il faut nous faire connaitre un peu plus, pour attirer les utilisateurs, 
+donc les contributeurs, qui permettront de faire avancer le projet un 
+peu mieux, ce qui attirera alors d'autres utilisateurs etc.
+
+Plusieurs moyens :
+
+- mettre plus en avant la liste des sites et projets reposant sur jelix, 
+en indiquant par ex en page d'accueil nos "killer" app. Pour l'instant 
+on peut mettre en avant HavefnuBB, Overblog... On en a une qui est aussi 
+en cours de dev, Rarangi (http://forge.jelix.org/projects/rarangi/) qui 
+pourrait int?resser pas mal les d?veloppeurs (un phpdoc ++ avec moteur 
+de recherche)
+
+- des news plus souvent
+
+- autres...
+
+
+
+Conclusion :
+
+Dans l'ordre des priorit?s :
+1) d?finir des responsables pour chaque domaine : dev, doc, site web, 
+marketing
+2) d?veloppement du nouveau processus de release
+3) sur la home, mise en avant des applis actuelles bas?es sur jelix.
+4) sortie de la 1.2 beta
+5) fermeture de la forge
+6) d?veloppement du site addict.jelix.org (ou autre nom :-))
+
+
+J'attends vos questions, vos propositions, vos id?es, vos remarques, vos 
+envies et surtout, j'aimerais savoir si il y a encore des volontaires 
+dans la salle pour nous aider :-)
+
+
+Laurent
+
+
+
+
+
+
+From olivier at foxmask.info  Fri Feb 19 21:54:28 2010
+From: olivier at foxmask.info (olivier)
+Date: Fri, 19 Feb 2010 21:54:28 +0100
+Subject: [Jelix-dev] re : changement de cap
+Message-ID: <4B7EFA84.5010709@foxmask.info>
+
+Bonsoir,
+
+premiere d?cision  : la forge et "process de release" :
+
+Ajoutons le fait aussi que la forge,
+m?me si peu utilis?e, nous bouffes des ressources syst?mes, et est
+probablement responsable des plantages qui sont survenus r?guli?rement
+depuis le d?m?nagement.
+
+
+de ce que j'ai observ? sur le serveur jelix, c'est mercurial lui m?me le 
+responsable ;
+lorsque je faisais un hg clone du depot jelix ; le cpu paniquait.
+
+Donc j'aurai bien vu aussi le d?p?t du projet jelix aller se faire dorer 
+la pilulle sur bitbucket
+et conserver les (maigres) ressources systemes pour apache/mysql/php et 
+mercurial pour le d?pot des sources du site seulement.
+
+Le fait que le dep?t ne soit pas local au module "release" ne changerait 
+pas le process de release il me semble, non ?
+
+deuxieme d?cision : pour l' "ex" new forge oui il ne devrait pas il y 
+avoir trop trop de modifs
+Quant ? son nouveau nom ; je passe mon tour ; j'ai pas de truc "sexy" en 
+tete :-)
+sauf peut-?tre "jungler.jelix.org" (avec l'id?e imag?e d'un jongleur de 
+modules jelix ; et l'aliteration J et L :-)
+Bref un d?lire quoi
+
+troisieme et quatrieme  d?cision : +1
+
+Comme responsabilit? je veux bien continuer ? m'occuper du site comme 
+j'avais d?but? la "new forge" et que bient?t devrait poindre le nouveau 
+forum,
+et donner un coup de main pour le "addons.mozilla.org like" (genre jungler).
+Comme Laurent l'a dit ; je suis bon pour ( 
+http://developer.jelix.org/ticket/988)
+
+- release d'une beta 1.2 d?s que possible. Il reste un point assez
+essentiel ? faire je pense : le script de migration 1.1 vers 1.2, qui
+consiste principalement ? remanier les fichiers de conf et ? installer
+"virtuellement" les modules pr?sents de l'application. (sp?ciale
+dedicace ? foxmask pour son probl?me de passage ? jelix 1.2 avec
+havefnubb :-)
+
+Je comptais bien botter en touche, un moment, en continuant ? faire 
+vivoter havefnubb avec son propre syst?me d'installation :)
+mais quand faut y aller faut y aller. Donc si d'autres veulent se 
+joindre ? la t?che, suffit d'installer le forum et remplacer le rep lib
+par celui (build?) du trunk et tester que ca marche pareil.
+
+Donc voici ma todolist temporaire 
+http://www.foxmask.info/pages/Jelix-et-HaveFnuBB-ToDo-List
+
+bonne soir?e.
+
+
+
+
+
+From loic at mathaud.net  Sat Feb 20 10:20:43 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Sat, 20 Feb 2010 10:20:43 +0100
+Subject: [Jelix-dev] Changement de cap pour Jelix
+In-Reply-To: <4B7E9776.10202@jelix.org>
+References: <4B7E9776.10202@jelix.org>
+Message-ID: <4B7FA96B.1090102@mathaud.net>
+
+Bonjour ? tous,
+
+Tr?s bon r?sum? de la discussion que nous avons eu. Voir mes remarques
+ci-dessous.
+
+Laurent a ?crit :
+> Bonjour,
+> 
+> 
+> Conclusion :
+> 
+> Dans l'ordre des priorit?s :
+> 1) d?finir des responsables pour chaque domaine : dev, doc, site web, 
+> marketing
+
+Je n'ai plus les logs mais tu avais list? les "nouveaux" r?les ?
+attribuer ? des personnes. Tu pourrais les citer ici ?
+
+> 2) d?veloppement du nouveau processus de release
+
+On se base sur la page sur djo que tu as commenc? ? r?diger pour
+r?fl?chir ? tout ?a ?
+
+> 3) sur la home, mise en avant des applis actuelles bas?es sur jelix.
+> 4) sortie de la 1.2 beta
+> 5) fermeture de la forge
+> 6) d?veloppement du site addict.jelix.org (ou autre nom :-))
+> 
+> 
+> J'attends vos questions, vos propositions, vos id?es, vos remarques, vos 
+> envies et surtout, j'aimerais savoir si il y a encore des volontaires 
+> dans la salle pour nous aider :-)
+
+Concernant le nouveau cycle des releases. Il va falloir d?terminer la
+dur?e du cycle et la fa?on dont on souhaite organiser la num?rotation.
+
+Si nous voulons partir sur des cycles courts, je propose alors 3
+releases par an, 1 tous les 4 mois. On pourrait tenter 4/an, tous les 3
+mois, mais ne soyons peut-?tre pas trop gourmand ?
+
+Pour la num?rotation, nous allons de toute fa?on commencer sur la base
+de Jelix 1.2.
+Soit nous continuons : 1.3, 1.4, ... 1.26, ... sur la branche 1.x (je
+mets de c?t? 1.0.x dont on stop le support), avec ce que ferait plut?t
+Gnome.
+Soit on part sur une num?rotation "ubuntu-like". Cela peut donner au
+choix pour cette ann?e : 10.1, 10.2 et 10.3 (ann?e + num?ro de release
+dans l'ann?e), soit vraiment comme ubuntu : ann?e.mois.
+
+Je n'ai pas de v?ritable pr?f?rence, mais il faudra par contre prendre
+la d?cision.
+
+@+
+Loic
+
+
+From ym69ceuajgm at gmail.com  Sat Feb 20 12:13:11 2010
+From: ym69ceuajgm at gmail.com (Yannick)
+Date: Sat, 20 Feb 2010 12:13:11 +0100
+Subject: [Jelix-dev] Changement de cap pour Jelix
+In-Reply-To: <4B7FA96B.1090102@mathaud.net>
+References: <4B7E9776.10202@jelix.org> <4B7FA96B.1090102@mathaud.net>
+Message-ID: <8a2b36ed1002200313h383b947cj43d42ca75fd64e9a@mail.gmail.com>
+
+Bonjour ? tous,
+
+Pour ma part, et comme je l'ai d?j? mentionn?, je pourrais travailler sur un
+site de communication. Par contre, je n'aurai pas de r?elles disponibilit?s
+avant septembre. Je pourrai cependant y r?fl?chir et faire des propositions
+dans un d?lai plus court. Il faut juste me dire si l'envie est toujours
+pr?sente.
+
+D'autre part, j'avoue avoir focalis? sur le propos de Laurent quant au
+financement possible du projet. Et je trouve tentant de travailler sur une
+demande de m?c?nat. Le but n'?tant bien ?videmment pas de confier le projet
+? un priv?, mais de recevoir un soutien financier, comme cela se pratique
+parfois avec les logiciels libres.
+
+M?me si les chances d'int?resser une structure sont ? mon avis tr?s faibles,
+il ne co?te rien d'essayer et d'en d?marcher certaines, d'autant que
+l'apport financier vis? n'est pas forc?ment tr?s cons?quent, et pourrait
+d?j? permettre un bond en avant dans l'avanc?e de Jelix.
+
+Si l'id?e est retenue, il faudra travailler sur une liste d'entreprises ?
+d?marcher (ce peut ?tre aussi des collectivit?s par le biais de fondations.
+Certaines r?gions proposent de soutenir des projets.) Travailler ?galement
+sur un dossier de pr?sentation, et sur l'argumentaire ? mettre en place
+quant au retour en terme d'image qu'un tel soutien apporterait au m?c?ne.
+
+Peut-?tre serait-il pr?f?rable de demander un soutien financier non pas pour
+le framework lui-m?me, mais pour un produit r?alis? avec celui-ci (forum,
+CMS, ...). Peut-?tre cela recevrait-il un ?cho plus favorable, du fait que
+cela correspond ? un produit plus "palpable", je sais pas... Et cela
+permettrait de soutenir indirectement le d?veloppement du framework
+lui-m?me, et d'attirer de nouveaux utilisateurs.
+
+Laurent, je crois que tu connais bien Tristan Nitot ? J'imagine qu'il doit
+?tre cal? et pleins de bonnes id?es ? ce sujet, non ?
+
+Yannick
+
+
+
+
+
+Le 20 f?vrier 2010 10:20, Loic Mathaud <loic at mathaud.net> a ?crit :
+
+> Bonjour ? tous,
+>
+> Tr?s bon r?sum? de la discussion que nous avons eu. Voir mes remarques
+> ci-dessous.
+>
+> Laurent a ?crit :
+> > Bonjour,
+> >
+> >
+> > Conclusion :
+> >
+> > Dans l'ordre des priorit?s :
+> > 1) d?finir des responsables pour chaque domaine : dev, doc, site web,
+> > marketing
+>
+> Je n'ai plus les logs mais tu avais list? les "nouveaux" r?les ?
+> attribuer ? des personnes. Tu pourrais les citer ici ?
+>
+> > 2) d?veloppement du nouveau processus de release
+>
+> On se base sur la page sur djo que tu as commenc? ? r?diger pour
+> r?fl?chir ? tout ?a ?
+>
+> > 3) sur la home, mise en avant des applis actuelles bas?es sur jelix.
+> > 4) sortie de la 1.2 beta
+> > 5) fermeture de la forge
+> > 6) d?veloppement du site addict.jelix.org (ou autre nom :-))
+> >
+> >
+> > J'attends vos questions, vos propositions, vos id?es, vos remarques, vos
+> > envies et surtout, j'aimerais savoir si il y a encore des volontaires
+> > dans la salle pour nous aider :-)
+>
+> Concernant le nouveau cycle des releases. Il va falloir d?terminer la
+> dur?e du cycle et la fa?on dont on souhaite organiser la num?rotation.
+>
+> Si nous voulons partir sur des cycles courts, je propose alors 3
+> releases par an, 1 tous les 4 mois. On pourrait tenter 4/an, tous les 3
+> mois, mais ne soyons peut-?tre pas trop gourmand ?
+>
+> Pour la num?rotation, nous allons de toute fa?on commencer sur la base
+> de Jelix 1.2.
+> Soit nous continuons : 1.3, 1.4, ... 1.26, ... sur la branche 1.x (je
+> mets de c?t? 1.0.x dont on stop le support), avec ce que ferait plut?t
+> Gnome.
+> Soit on part sur une num?rotation "ubuntu-like". Cela peut donner au
+> choix pour cette ann?e : 10.1, 10.2 et 10.3 (ann?e + num?ro de release
+> dans l'ann?e), soit vraiment comme ubuntu : ann?e.mois.
+>
+> Je n'ai pas de v?ritable pr?f?rence, mais il faudra par contre prendre
+> la d?cision.
+>
+> @+
+> Loic
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20100220/2b7544e5/attachment.html>
+
+From mr.thiriot at gmail.com  Sat Feb 20 22:54:43 2010
+From: mr.thiriot at gmail.com (Christophe Thiriot)
+Date: Sat, 20 Feb 2010 22:54:43 +0100
+Subject: [Jelix-dev] Changement de cap pour Jelix
+In-Reply-To: <4B7E9776.10202@jelix.org>
+References: <4B7E9776.10202@jelix.org>
+Message-ID: <829794f91002201354m2d7706dbpb1454c931f789a5@mail.gmail.com>
+
+Bonjour,
+
+En ce qui me concerne, je ne peux pas faire autant de contributions que ce
+que je voudrais. Donc, honn?tement, ma contribution va en rester quelques
+patchs de temps en temps et la livraison peut-?tre un jour de mon module
+pour PHPUnit (que j'utilise au boulot mais qui est encore sp?cifique et pas
+totalement g?n?rique).
+
+Je suis toujours ce qui se passe sur le Wiki, la timeline de trac, et le
+forum.
+
+premi?re d?cision : on va fermer la forge. Il existe maintenant bien
+> plus de forges sur le web qu'? l'?poque (github, bitbucket etc..)
+>
+
+Tout ? fait d'accord, il me semble m?me qu'il serait pas mal d'en faire
+autant en ce qui concerne les repositories de jelix lui-m?me. Et leur
+syst?me de tickets me semble bien valoir celui de trac (ainsi que le wiki de
+trac). Par contre, en ce qui concerne une ?ventuelle migration (des tickets
+et du wiki), ?a risque de pas ?tre de la tarte!
+
+
+
+>
+> deuxi?me d?cision : faire une sorte de addons.mozilla.org. La forge
+> disparait mais il nous est tout de m?me indispensable d'avoir un endroit
+> o? on recense les modules, plugins et autres applications r?alis?es avec
+> jelix. C'est le but de ce nouveau site. Il est en grande partie
+> d?velopp?. Olivier (foxmask), a d?j? fait des d?veloppements en ce sens,
+> qui ont ?t? int?gr?s dans l'ex futur site de la forge (pas mis en
+> ligne). ? priori, il y aura peu de d?veloppement ? faire pour r?utiliser
+> ce qu'a fait Olivier pour ce nouveau site.
+>
+
+
+Super id?e : moins de boulot et peu donner de la visiblit? (en mettant un
+flux RSS associ? dans le planet PHP par exemple)
+
+
+>
+>
+> Troisi?me d?cision : changement du cycle de release. ?a sera dor?navant
+> des releases ultra courtes (3 mois ?), se focalisant sur 1 ou 2 point
+> importants, donc comportant peu de tickets. (je dis n'importe quoi, mais
+> ?a peut ?tre : 1.3=am?liorations dans jForms  1.4=am?liorations dans jDB
+> etc.). Bien s?r, si il y a des contributeurs qui proposent des patchs
+> sur d'autres trucs, et qui sont pr?t ? ?tre int?gr?, on int?gre. Apr?s
+> chaque release, il y aura une r?union IRC/mail pour d?finir les
+> objectifs de la suivante.
+>
+
+Je vais faire mon chieur, mais je n'ai pas acc?s ? IRC depuis le boulot et
+je peux pas ?tre beaucoup devant le PC ? la maison. Je serais plus pour un
+moyen de communication plus accessible depuis le web "corporate"... Je suis
+le seul dans ce cas? Par contre, je vois pas d'?quivalent web ? IRC (et
+twitter et identica sont peut-?tre un peu limit?s...)
+
+
+
+> Conclusion :
+>
+> Dans l'ordre des priorit?s :
+> 1) d?finir des responsables pour chaque domaine : dev, doc, site web,
+> marketing
+>
+
+Je ne peux participer qu'au dev et surement un peu plus ? la doc
+
+6) d?veloppement du site addict.jelix.org (ou autre nom :-))
+>
+>
+http://gallery.jelix.org   ?
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20100220/5eeedd21/attachment.html>
+
+From ehesry at yahoo.com  Sun Feb 21 16:34:04 2010
+From: ehesry at yahoo.com (Emmanuel HESRY)
+Date: Sun, 21 Feb 2010 07:34:04 -0800 (PST)
+Subject: [Jelix-dev] Re : Jelix-dev Digest, Vol 18, Issue 2
+Message-ID: <980407.6714.qm@web30302.mail.mud.yahoo.com>
+
+Bonjour ? tous,
+
+Je trouve les orientations, dont tu r?sumes bien la discussion matinale de la semaine derni?re, tr?s int?ressantes.
+Personnellement, je veux bien m'investir un peu dans les contributions dev mais effectivement si la ligne directrice est plus franche.
+En effet je me trouve souvent bien perdu et d?sarmer dans la for?t vierge de tickets qu'il y ? d?broussailler.
+Cela fait projet qui s'?parpille. Ce n'est pas un reproche ! juste un constat de comment je ressens les choses.
+
+Donc oui, je suis plut?t pour un vrai "coaching" des dev. Avec un responsable, qui essaie de trouver la ressource qui va avoir le temps n?cessaire pour r?aliser une t?che pr?cise en rapport directe avec l'objectif ? atteindre pour la prochaine release. Pas pour tirer au hasard dans la pioche des tickets.
+A mon sens, ze "coach" ne peut-?tre qu'un contributeur qui a d?j? mis son nez dans le core et ? une bonne vision d'ensemble du projet.
+
+Personnellement, je suis pas mal charg?, un gros projet de refonte de ?? http://www.cg17.fr/ avec une livraison en prod du premier lot d?but mars. Cela ne va pas aller mieux niveau charge sur ce projet puisque le CP a d?missionn? ;-)))
+Sans compter, ma petite activit? d'AE qui d?marre bien en 2010, puisque j'ai vendu jelix sur le d?veloppement d'une application de gestion (2 mois de Dev dans un premier temps). Je suis intervenu surtout pour organiser techniquement le projet et j'interviens en assistance technique sur Jelix. Je continue les petits sites vitrine (j'en ai un autre ? faire avec Jelix biens?r) et j'ai une boutique en ligne en cours d'int?gration. Mais je ne suis pas contre donner un coup de main, si je sais sur quoi je dois travailler pr?cis?ment.
+
+Oui ! et un gros OUI ! ?galement pour un site qui r?pertorie les modules.
+Les qualit?s intrins?ques de jelix sont ind?niables, notamment sa modularit?. Cela peut donc ?tre un tr?s bon moyen de l'enrichir sans toucher au coeur. Cela peut ?tre ?galement un tr?s bon moyen de rentrer des contributeurs afin de permettre d'enrichir les applications produites avec Jelix.
+A mon sens, il manque des modules et ceux qui existent sont mal r?f?renc?s (puisque uniquement au travers de la forge ou quelques messages sur le forum).
+Personnellement, j'ai illico presto mis mes sources jGmap sur bitbucket. 
+J'utilise le module download manager d'Olivier (foxmask).
+Un module qui fait vraiment d?faut par exemple c'est un gestionnaire de m?dia, comme on peut trouver dans dotclear.
+Pour son nom pourquoi ne pas rest? un brin "franchouillard" et faire dans la simplicit? : modules.jelix.org ou ? la rigueur jmodules....
+
+Concernant l'aspect marketing, je vais juste faire une petite constation sur ma paroisse ?galement. Tout mes sites font une r?f?rence en pied de page ? Jelix. Cela peut para?tre r?tro mais je l'ai fait ?galement sur mon activit? d'AE : j'ai multipli? par 4 ou 5 le nombre de visites. En 1 mois (3 premi?res semaines de f?vrier) j'ai quasiement atteint le nombre de visites des 9 mois de 2009 dont 50% principalement sur 2 sites.
+
+A+
+Manu
+
+ http://manooweb.fr
+4 rue des tulipes
+85600 Treize-Septiers
+02 51 24 84 54
+06 19 21 21 72
+- Cr?ation de site internet
+- Assistance/Conseil/Optimisation
+- Formation
+
+
+
+----- Message d'origine ----
+De : "jelix-dev-request at lists.berlios.de" <jelix-dev-request at lists.berlios.de>
+? : jelix-dev at lists.berlios.de
+Envoy? le : Dim 21 F?vrier 2010, 12 h 01 min 47 s
+Objet : Jelix-dev Digest, Vol 18, Issue 2
+
+Send Jelix-dev mailing list submissions to
+    jelix-dev at lists.berlios.de
+
+To subscribe or unsubscribe via the World Wide Web, visit
+    https://lists.berlios.de/mailman/listinfo/jelix-dev
+or, via email, send a message with subject or body 'help' to
+    jelix-dev-request at lists.berlios.de
+
+You can reach the person managing the list at
+    jelix-dev-owner at lists.berlios.de
+
+When replying, please edit your Subject line so it is more specific
+than "Re: Contents of Jelix-dev digest..."
+
+
+Today's Topics:
+
+   1. Re: Changement de cap pour Jelix (Yannick)
+   2. Re: Changement de cap pour Jelix (Christophe Thiriot)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Sat, 20 Feb 2010 12:13:11 +0100
+From: Yannick <ym69ceuajgm at gmail.com>
+Subject: Re: [Jelix-dev] Changement de cap pour Jelix
+To: jelix-dev at lists.berlios.de
+Message-ID:
+    <8a2b36ed1002200313h383b947cj43d42ca75fd64e9a at mail.gmail.com>
+Content-Type: text/plain; charset="iso-8859-1"
+
+Bonjour ? tous,
+
+Pour ma part, et comme je l'ai d?j? mentionn?, je pourrais travailler sur un
+site de communication. Par contre, je n'aurai pas de r?elles disponibilit?s
+avant septembre. Je pourrai cependant y r?fl?chir et faire des propositions
+dans un d?lai plus court. Il faut juste me dire si l'envie est toujours
+pr?sente.
+
+D'autre part, j'avoue avoir focalis? sur le propos de Laurent quant au
+financement possible du projet. Et je trouve tentant de travailler sur une
+demande de m?c?nat. Le but n'?tant bien ?videmment pas de confier le projet
+? un priv?, mais de recevoir un soutien financier, comme cela se pratique
+parfois avec les logiciels libres.
+
+M?me si les chances d'int?resser une structure sont ? mon avis tr?s faibles,
+il ne co?te rien d'essayer et d'en d?marcher certaines, d'autant que
+l'apport financier vis? n'est pas forc?ment tr?s cons?quent, et pourrait
+d?j? permettre un bond en avant dans l'avanc?e de Jelix.
+
+Si l'id?e est retenue, il faudra travailler sur une liste d'entreprises ?
+d?marcher (ce peut ?tre aussi des collectivit?s par le biais de fondations.
+Certaines r?gions proposent de soutenir des projets.) Travailler ?galement
+sur un dossier de pr?sentation, et sur l'argumentaire ? mettre en place
+quant au retour en terme d'image qu'un tel soutien apporterait au m?c?ne.
+
+Peut-?tre serait-il pr?f?rable de demander un soutien financier non pas pour
+le framework lui-m?me, mais pour un produit r?alis? avec celui-ci (forum,
+CMS, ...). Peut-?tre cela recevrait-il un ?cho plus favorable, du fait que
+cela correspond ? un produit plus "palpable", je sais pas... Et cela
+permettrait de soutenir indirectement le d?veloppement du framework
+lui-m?me, et d'attirer de nouveaux utilisateurs.
+
+Laurent, je crois que tu connais bien Tristan Nitot ? J'imagine qu'il doit
+?tre cal? et pleins de bonnes id?es ? ce sujet, non ?
+
+Yannick
+
+
+
+
+
+Le 20 f?vrier 2010 10:20, Loic Mathaud <loic at mathaud.net> a ?crit :
+
+> Bonjour ? tous,
+>
+> Tr?s bon r?sum? de la discussion que nous avons eu. Voir mes remarques
+> ci-dessous.
+>
+> Laurent a ?crit :
+> > Bonjour,
+> >
+> >
+> > Conclusion :
+> >
+> > Dans l'ordre des priorit?s :
+> > 1) d?finir des responsables pour chaque domaine : dev, doc, site web,
+> > marketing
+>
+> Je n'ai plus les logs mais tu avais list? les "nouveaux" r?les ?
+> attribuer ? des personnes. Tu pourrais les citer ici ?
+>
+> > 2) d?veloppement du nouveau processus de release
+>
+> On se base sur la page sur djo que tu as commenc? ? r?diger pour
+> r?fl?chir ? tout ?a ?
+>
+> > 3) sur la home, mise en avant des applis actuelles bas?es sur jelix.
+> > 4) sortie de la 1.2 beta
+> > 5) fermeture de la forge
+> > 6) d?veloppement du site addict.jelix.org (ou autre nom :-))
+> >
+> >
+> > J'attends vos questions, vos propositions, vos id?es, vos remarques, vos
+> > envies et surtout, j'aimerais savoir si il y a encore des volontaires
+> > dans la salle pour nous aider :-)
+>
+> Concernant le nouveau cycle des releases. Il va falloir d?terminer la
+> dur?e du cycle et la fa?on dont on souhaite organiser la num?rotation.
+>
+> Si nous voulons partir sur des cycles courts, je propose alors 3
+> releases par an, 1 tous les 4 mois. On pourrait tenter 4/an, tous les 3
+> mois, mais ne soyons peut-?tre pas trop gourmand ?
+>
+> Pour la num?rotation, nous allons de toute fa?on commencer sur la base
+> de Jelix 1.2.
+> Soit nous continuons : 1.3, 1.4, ... 1.26, ... sur la branche 1.x (je
+> mets de c?t? 1.0.x dont on stop le support), avec ce que ferait plut?t
+> Gnome.
+> Soit on part sur une num?rotation "ubuntu-like". Cela peut donner au
+> choix pour cette ann?e : 10.1, 10.2 et 10.3 (ann?e + num?ro de release
+> dans l'ann?e), soit vraiment comme ubuntu : ann?e.mois.
+>
+> Je n'ai pas de v?ritable pr?f?rence, mais il faudra par contre prendre
+> la d?cision.
+>
+> @+
+> Loic
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: https://lists.berlios.de/pipermail/jelix-dev/attachments/20100220/2b7544e5/attachment-0001.html 
+
+------------------------------
+
+Message: 2
+Date: Sat, 20 Feb 2010 22:54:43 +0100
+From: Christophe Thiriot <mr.thiriot at gmail.com>
+Subject: Re: [Jelix-dev] Changement de cap pour Jelix
+To: Development progress on Jelix <jelix-dev at lists.berlios.de>
+Cc: jelix-public at lists.berlios.de
+Message-ID:
+    <829794f91002201354m2d7706dbpb1454c931f789a5 at mail.gmail.com>
+Content-Type: text/plain; charset="iso-8859-1"
+
+Bonjour,
+
+En ce qui me concerne, je ne peux pas faire autant de contributions que ce
+que je voudrais. Donc, honn?tement, ma contribution va en rester quelques
+patchs de temps en temps et la livraison peut-?tre un jour de mon module
+pour PHPUnit (que j'utilise au boulot mais qui est encore sp?cifique et pas
+totalement g?n?rique).
+
+Je suis toujours ce qui se passe sur le Wiki, la timeline de trac, et le
+forum.
+
+premi?re d?cision : on va fermer la forge. Il existe maintenant bien
+> plus de forges sur le web qu'? l'?poque (github, bitbucket etc..)
+>
+
+Tout ? fait d'accord, il me semble m?me qu'il serait pas mal d'en faire
+autant en ce qui concerne les repositories de jelix lui-m?me. Et leur
+syst?me de tickets me semble bien valoir celui de trac (ainsi que le wiki de
+trac). Par contre, en ce qui concerne une ?ventuelle migration (des tickets
+et du wiki), ?a risque de pas ?tre de la tarte!
+
+
+
+>
+> deuxi?me d?cision : faire une sorte de addons.mozilla.org. La forge
+> disparait mais il nous est tout de m?me indispensable d'avoir un endroit
+> o? on recense les modules, plugins et autres applications r?alis?es avec
+> jelix. C'est le but de ce nouveau site. Il est en grande partie
+> d?velopp?. Olivier (foxmask), a d?j? fait des d?veloppements en ce sens,
+> qui ont ?t? int?gr?s dans l'ex futur site de la forge (pas mis en
+> ligne). ? priori, il y aura peu de d?veloppement ? faire pour r?utiliser
+> ce qu'a fait Olivier pour ce nouveau site.
+>
+
+
+Super id?e : moins de boulot et peu donner de la visiblit? (en mettant un
+flux RSS associ? dans le planet PHP par exemple)
+
+
+>
+>
+> Troisi?me d?cision : changement du cycle de release. ?a sera dor?navant
+> des releases ultra courtes (3 mois ?), se focalisant sur 1 ou 2 point
+> importants, donc comportant peu de tickets. (je dis n'importe quoi, mais
+> ?a peut ?tre : 1.3=am?liorations dans jForms  1.4=am?liorations dans jDB
+> etc.). Bien s?r, si il y a des contributeurs qui proposent des patchs
+> sur d'autres trucs, et qui sont pr?t ? ?tre int?gr?, on int?gre. Apr?s
+> chaque release, il y aura une r?union IRC/mail pour d?finir les
+> objectifs de la suivante.
+>
+
+Je vais faire mon chieur, mais je n'ai pas acc?s ? IRC depuis le boulot et
+je peux pas ?tre beaucoup devant le PC ? la maison. Je serais plus pour un
+moyen de communication plus accessible depuis le web "corporate"... Je suis
+le seul dans ce cas? Par contre, je vois pas d'?quivalent web ? IRC (et
+twitter et identica sont peut-?tre un peu limit?s...)
+
+
+
+> Conclusion :
+>
+> Dans l'ordre des priorit?s :
+> 1) d?finir des responsables pour chaque domaine : dev, doc, site web,
+> marketing
+>
+
+Je ne peux participer qu'au dev et surement un peu plus ? la doc
+
+6) d?veloppement du site addict.jelix.org (ou autre nom :-))
+>
+>
+http://gallery.jelix.org   ?
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: https://lists.berlios.de/pipermail/jelix-dev/attachments/20100220/5eeedd21/attachment-0001.html 
+
+------------------------------
+
+_______________________________________________
+Jelix-dev mailing list
+Jelix-dev at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+End of Jelix-dev Digest, Vol 18, Issue 2
+****************************************
+
+
+
+      
+
+
+From kevin at lepeltier.info  Tue Feb 23 15:01:08 2010
+From: kevin at lepeltier.info (=?windows-1252?Q?Lepeltier_k=E9vin?=)
+Date: Tue, 23 Feb 2010 15:01:08 +0100
+Subject: [Jelix-dev] Changement de cap pour Jelix
+In-Reply-To: <4B7E9776.10202@jelix.org>
+References: <4B7E9776.10202@jelix.org>
+Message-ID: <4B83DFA4.9050408@lepeltier.info>
+
+Bonjour,
+Juste pour dire que je suis l?, pas loin, et que jelix me tiens toujours 
+a c?ur.
+
+lipki
+
+
+From olivier at foxmask.info  Wed Feb 24 20:40:45 2010
+From: olivier at foxmask.info (olivier at foxmask.info)
+Date: Wed, 24 Feb 2010 20:40:45 +0100
+Subject: [Jelix-dev] =?utf-8?q?id=C3=A9e_pour_la_page_d=27accueil?=
+Message-ID: <50093.1267040445@foxmask.info>
+
+Bonsoir,
+ j'imaginais une pr?sentation claire ? la
+http://components.symfony-project.org/ [1]
+ - Suppression de l'encart de la news pour avoir toute la largeur de
+la page ;
+ - Image d'un journal avec la derni?re news affich?e dessous
+ - Image d'une paire de lunettes au dessus du mot Articles
+ - cette image
+http://fr.wikipedia.org/wiki/Discussion:Liste_de_couvre-chefs_par_ordre_alphab%C3%A9tique
+[2] au dessus du mot Tutoriels
+ - Image d'une bible/livre au dessus du mot documentation
+ - Image d'une grosse fleche verticale pointant une cible / un
+cercle, au dessus du mot T?l?charger
+ Chaque image m?nerait ? la rubrique associ?e etc..
+ voila une id?e en l'air :-)
+  
+
+Links:
+------
+[1] http://components.symfony-project.org/
+[2]
+http://fr.wikipedia.org/wiki/Discussion:Liste_de_couvre-chefs_par_ordre_alphab%C3%A9tique
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20100224/39c3cfc8/attachment.html>
+
+From loic at mathaud.net  Fri Feb 26 17:45:34 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Fri, 26 Feb 2010 17:45:34 +0100
+Subject: [Jelix-dev] =?iso-8859-1?q?=5Brelease=5D_Num=E9rotation_des_versi?=
+	=?iso-8859-1?q?ons?=
+Message-ID: <4B87FAAE.50602@mathaud.net>
+
+Hello,
+
+Actuellement la num?rotation de Jelix est assez classique : x.y.z
+
+Avec le nouveau cycle de releases qui va ?tre mis en place, nous devons
+nous poser la question de la num?rotation : est-ce qu'on garde ce
+principe ou est-ce qu'on en change pour quelque chose se rapprochant de
+ce que fait ubuntu ?
+
+Pour ne pas perturber nos utilisateurs je pense qu'il serait bien de
+conserver notre num?rotation (m?me si j'aime bien la num?rotation ubuntu).
+
+On va donc sortir bient?t une 1.2 (id?alement en avril)
+On incr?menterait alors le 2?me chiffre ? chaque release : 1.3, 1.4,
+..., 1.10, 1.11, ...
+
+La version 2 arriverait certainement lors de la refonte plus compl?te et
+du passage ? php5.3. On continuerait alors sur le  m?me principe : 2.1,
+2.2, ...
+
+On reste donc sur ce principe ou vous voulez autre chose ?
+
+
+@+
+Loic
+
+
+From loic at mathaud.net  Fri Feb 26 17:48:10 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Fri, 26 Feb 2010 17:48:10 +0100
+Subject: [Jelix-dev] [release] Cycle des releases
+Message-ID: <4B87FB4A.9080409@mathaud.net>
+
+Hello,
+
+Concernant le cycle des releases de Jelix, je serais partant pour 3
+releases par an, 1 tous les 4 mois.
+
+Cela me parait un bon compromis pour avoir ? la fois le temps de
+d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+de sortir 3 releases chaque ann?e.
+
+Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+rythme de 3 mois soit un peu plus difficile ? tenir.
+
+Vous en pensez quoi ?
+
+
+@+
+Loic
+
+
+From loic at mathaud.net  Fri Feb 26 17:51:56 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Fri, 26 Feb 2010 17:51:56 +0100
+Subject: [Jelix-dev] Discussions sur le futur de Jelix
+Message-ID: <4B87FC2C.2010409@mathaud.net>
+
+Hello ? tous,
+
+Comme annonc? par Laurent, il va y avoir du changement. Mais maintenant
+que le cap est donn? il va falloir l'orienter plus pr?cis?ment et
+discuter des d?tails.
+
+Je vais reprendre ici les points principaux avec ce que nous devons donc
+discuter :
+
+- Fermer la forge : en fait pas grand chose ? dire, c'est en cours et
+les projets r?cup?rent leurs sources et migrent ailleurs
+
+- Lancer booster.jelix.org : c'est notre addons.mozilla.org-like. Le
+lancement se fera sur une version assez simple mais sera am?lior?e au
+fil du temps (notation, commentaires, ...)
+
+- La roadmap/les releases :
+    - d?finir le cycle exact
+    - quelle num?rotation ?
+    - organisation de planification des roadmap pour R et R+1
+    - gestion de la dur?e de support des versions. LTS ?
+    - arr?t de 1.0.x
+
+- Les responsabilit?s :
+    - un release manager :
+        - gestion de la bonne marche de la milestone en cours
+        - gestion de la release
+    - un documentation manager :
+        - gestion de la mise ? jour de la documentation, sa bonne tenue
+        - gestion de la synchro FR // EN
+        - r?daction de tutoriaux, bonnes pratiques
+    - un community manager :
+        - gestion du site jelix.org
+        - gestion des actions marketing
+
+Je pense ? court terme cr?er des pages sur djo pour noter ce qui sera
+retenu des d?bats ayant lieu ici.
+
+Dans l'imm?diat, je vous propose d'organiser les threads ainsi
+
+- [booster] Sujet du mail : pour tout ce qui touche ? booster
+- [release] Sujet du mail : pour tout ce qui touche aux roadmaps/releases
+- [roles] Sujet du mail : pour tout ce qui touche aux responsabilit?
+
+Il s'agit donc maintenant d'entrer dans le vif du sujet pour remettre
+Jelix en route et avancer doucement (quoi que) mais r?guli?rement.
+
+Loic
+
+
+
+
+From laurent at xulfr.org  Fri Feb 26 17:51:17 2010
+From: laurent at xulfr.org (laurent)
+Date: Fri, 26 Feb 2010 17:51:17 +0100
+Subject: [Jelix-dev]
+ =?iso-8859-1?q?=5Brelease=5D_Num=E9rotation_des_versi?=
+ =?iso-8859-1?q?ons?=
+In-Reply-To: <4B87FAAE.50602@mathaud.net>
+References: <4B87FAAE.50602@mathaud.net>
+Message-ID: <4B87FC05.6010803@xulfr.org>
+
+Le 26/02/10 17:45, Loic Mathaud a ?crit :
+> Hello,
+>
+> Actuellement la num?rotation de Jelix est assez classique : x.y.z
+>
+> Avec le nouveau cycle de releases qui va ?tre mis en place, nous devons
+> nous poser la question de la num?rotation : est-ce qu'on garde ce
+> principe ou est-ce qu'on en change pour quelque chose se rapprochant de
+> ce que fait ubuntu ?
+>
+> Pour ne pas perturber nos utilisateurs je pense qu'il serait bien de
+> conserver notre num?rotation (m?me si j'aime bien la num?rotation ubuntu).
+>
+> On va donc sortir bient?t une 1.2 (id?alement en avril)
+> On incr?menterait alors le 2?me chiffre ? chaque release : 1.3, 1.4,
+> ..., 1.10, 1.11, ...
+>
+> La version 2 arriverait certainement lors de la refonte plus compl?te et
+> du passage ? php5.3. On continuerait alors sur le  m?me principe : 2.1,
+> 2.2, ...
+>
+> On reste donc sur ce principe ou vous voulez autre chose ?
+
+
+Je suis d'avis de rester sur la m?me num?rotation.
+
+Laurent
+
+
+From laurent at xulfr.org  Fri Feb 26 18:06:09 2010
+From: laurent at xulfr.org (laurent)
+Date: Fri, 26 Feb 2010 18:06:09 +0100
+Subject: [Jelix-dev] [release] Cycle des releases
+In-Reply-To: <4B87FB4A.9080409@mathaud.net>
+References: <4B87FB4A.9080409@mathaud.net>
+Message-ID: <4B87FF81.4060900@xulfr.org>
+
+Le 26/02/10 17:48, Loic Mathaud a ?crit :
+> Hello,
+>
+> Concernant le cycle des releases de Jelix, je serais partant pour 3
+> releases par an, 1 tous les 4 mois.
+>
+> Cela me parait un bon compromis pour avoir ? la fois le temps de
+> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+> de sortir 3 releases chaque ann?e.
+>
+> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+> rythme de 3 mois soit un peu plus difficile ? tenir.
+>
+> Vous en pensez quoi ?
+
+
+4 mois oui, pourquoi pas.
+
+Et il y a aussi au niveau de la gestion des dep?ts qu'il faut 
+s'organiser, et que je ne refasse pas la m?me erreur que pour la 1.2.
+
+En effet, j'ai eu le grand tord de d?velopper le syst?me d'installation 
+directement sur le trunk. Resultat : trunk instable pendant plusieurs 
+semaines, et ?a m'a pris plusieurs mois pour le finaliser. Cons?quence : 
+release pas possible, m?me sans le syst?me d'installation.
+
+donc voil?, je vais dor?navant d?velopper les nouvelles features sur mon 
+propre d?p?t. J'invite tout les contributeurs ? le faire d'ailleurs. 
+Utilisons au maximum les possibilit?s que nous offre Mercurial. clone, 
+rebase, merge, collapse etc...
+
+On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire 
+une release ? tout moment.
+
+D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun 
+pourra ainsi cloner "publiquement" le trunk et faire ses modifs. Et moi 
+je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait 
+de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf 
+qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+
+Qu'en pensez-vous ?
+
+Laurent
+
+
+
+
+
+
+From loic at mathaud.net  Fri Feb 26 17:32:58 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Fri, 26 Feb 2010 17:32:58 +0100
+Subject: [Jelix-dev] Discussions sur le futur de Jelix
+Message-ID: <4B87F7BA.70008@mathaud.net>
+
+Hello ? tous,
+
+Comme annonc? par Laurent, il va y avoir du changement. Mais maintenant
+que le cap est donn? il va falloir l'orienter plus pr?cis?ment et
+discuter des d?tails.
+
+Je vais reprendre ici les points principaux avec ce que nous devons donc
+discuter :
+
+- Fermer la forge : en fait pas grand chose ? dire, c'est en cours et
+les projets r?cup?rent leurs sources et migrent ailleurs
+
+- Lancer booster.jelix.org : c'est notre addons.mozilla.org-like. Le
+lancement se fera sur une version assez simple mais sera am?lior?e au
+fil du temps (notation, commentaires, ...)
+
+- La roadmap/les releases :
+    - d?finir le cycle exact
+    - quelle num?rotation ?
+    - organisation de planification des roadmap pour R et R+1
+    - gestion de la dur?e de support des versions. LTS ?
+    - arr?t de 1.0.x
+
+- Les responsabilit?s :
+    - un release manager :
+        - gestion de la bonne marche de la milestone en cours
+        - gestion de la release
+    - un documentation manager :
+        - gestion de la mise ? jour de la documentation, sa bonne tenue
+        - gestion de la synchro FR // EN
+        - r?daction de tutoriaux, bonnes pratiques
+    - un community manager :
+        - gestion du site jelix.org
+        - gestion des actions marketing
+
+Je pense ? court terme cr?er des pages sur djo pour noter ce qui sera
+retenu des d?bats ayant lieu ici.
+
+Dans l'imm?diat, je vous propose d'organiser les threads ainsi
+
+- [booster] Sujet du mail : pour tout ce qui touche ? booster
+- [release] Sujet du mail : pour tout ce qui touche aux roadmaps/releases
+- [roles] Sujet du mail : pour tout ce qui touche aux responsabilit?
+
+Il s'agit donc maintenant d'entrer dans le vif du sujet pour remettre
+Jelix en route et avancer doucement (quoi que) mais r?guli?rement.
+
+Loic
+
+
+
+From loic at mathaud.net  Fri Feb 26 18:14:40 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Fri, 26 Feb 2010 18:14:40 +0100
+Subject: [Jelix-dev] [release] Cycle des releases
+In-Reply-To: <4B87FF81.4060900@xulfr.org>
+References: <4B87FB4A.9080409@mathaud.net> <4B87FF81.4060900@xulfr.org>
+Message-ID: <4B880180.6080309@mathaud.net>
+
+
+laurent a ?crit :
+> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+>> Hello,
+>>
+>> Concernant le cycle des releases de Jelix, je serais partant pour 3
+>> releases par an, 1 tous les 4 mois.
+>>
+>> Cela me parait un bon compromis pour avoir ? la fois le temps de
+>> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+>> de sortir 3 releases chaque ann?e.
+>>
+>> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+>> rythme de 3 mois soit un peu plus difficile ? tenir.
+>>
+>> Vous en pensez quoi ?
+> 
+> 
+> 4 mois oui, pourquoi pas.
+
++2 pour les 4 mois alors.
+
+Peu importe la p?riode qui sera retenue, ce qu'il faut avant tout ? mon
+avis c'est que cette p?riode soit fixe afin de nous imposer de la
+r?gularit?.
+Si un ticket n'est pas pr?t ? temps (cas qu'il faudrait garder
+exceptionnel), ce n'est pas grave, on release et on le reporte ? dans 4
+mois. Ce n'est pas m?chant.
+
+> 
+> Et il y a aussi au niveau de la gestion des dep?ts qu'il faut
+> s'organiser, et que je ne refasse pas la m?me erreur que pour la 1.2.
+> 
+> En effet, j'ai eu le grand tord de d?velopper le syst?me d'installation
+> directement sur le trunk. Resultat : trunk instable pendant plusieurs
+> semaines, et ?a m'a pris plusieurs mois pour le finaliser. Cons?quence :
+> release pas possible, m?me sans le syst?me d'installation.
+> 
+> donc voil?, je vais dor?navant d?velopper les nouvelles features sur mon
+> propre d?p?t. J'invite tout les contributeurs ? le faire d'ailleurs.
+> Utilisons au maximum les possibilit?s que nous offre Mercurial. clone,
+> rebase, merge, collapse etc...
+> 
+> On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire
+> une release ? tout moment.
+
+Bonne id?e.
+
+> 
+> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+> pourra ainsi cloner "publiquement" le trunk et faire ses modifs. Et moi
+> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+
+100% pour bitbucket.
+Cela nous ?vitera de devoir g?rer les d?pots, c'est exactement dans
+l'optique simplification de la maintenance du serveur.
+En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+hg.jelix.org et propose plus de fonctionnalit?s : fork en cliquant,
+possibilit? ensuite de s'?changer facilement les patchs, un wiki +
+bugtracker pour chaque projet, ...
+
+
+@+
+Loic
+
+
+From mr.thiriot at gmail.com  Fri Feb 26 22:15:46 2010
+From: mr.thiriot at gmail.com (Christophe Thiriot)
+Date: Fri, 26 Feb 2010 22:15:46 +0100
+Subject: [Jelix-dev] [release] Cycle des releases
+In-Reply-To: <4B880180.6080309@mathaud.net>
+References: <4B87FB4A.9080409@mathaud.net> <4B87FF81.4060900@xulfr.org>
+	<4B880180.6080309@mathaud.net>
+Message-ID: <829794f91002261315y3adbaba3v1455fe95598fd8f7@mail.gmail.com>
+
+2010/2/26 Loic Mathaud <loic at mathaud.net>
+
+>
+> laurent a ?crit :
+> > Le 26/02/10 17:48, Loic Mathaud a ?crit :
+> >> Hello,
+> >>
+> >> Concernant le cycle des releases de Jelix, je serais partant pour 3
+> >> releases par an, 1 tous les 4 mois.
+> >>
+> >> Cela me parait un bon compromis pour avoir ? la fois le temps de
+> >> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+> >> de sortir 3 releases chaque ann?e.
+> >>
+> >> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+> >> rythme de 3 mois soit un peu plus difficile ? tenir.
+> >>
+> >> Vous en pensez quoi ?
+> >
+> >
+> > 4 mois oui, pourquoi pas.
+>
+> +2 pour les 4 mois alors.
+>
+> Peu importe la p?riode qui sera retenue, ce qu'il faut avant tout ? mon
+> avis c'est que cette p?riode soit fixe afin de nous imposer de la
+> r?gularit?.
+> Si un ticket n'est pas pr?t ? temps (cas qu'il faudrait garder
+> exceptionnel), ce n'est pas grave, on release et on le reporte ? dans 4
+> mois. Ce n'est pas m?chant.
+>
+
+Tout ? fait d'accord
+
+
+>
+> >
+> > D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+> > pourra ainsi cloner "publiquement" le trunk et faire ses modifs. Et moi
+> > je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+> > de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+> > qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+>
+> 100% pour bitbucket.
+> Cela nous ?vitera de devoir g?rer les d?pots, c'est exactement dans
+> l'optique simplification de la maintenance du serveur.
+> En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+> hg.jelix.org et propose plus de fonctionnalit?s : fork en cliquant,
+> possibilit? ensuite de s'?changer facilement les patchs, un wiki +
+> bugtracker pour chaque projet, ...
+>
+>
+>
+Comme je l'ai d?j? dit, je suis ? fond pour cette solution, qui nous
+permettra
+de nous concentrer plus sur le code et pas l'administration. Par contre, je
+ne
+vois pas de moyen de transfert de nos tickets vers le syst?me de bitbucket.
+Pour le wiki de dev, c'est aussi un depot hg ?a devrait ?tre jouable.
+
+A+
+
+Christophe
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20100226/04379ead/attachment.html>
+
+From olivier at foxmask.info  Sat Feb 27 01:40:08 2010
+From: olivier at foxmask.info (olivier)
+Date: Sat, 27 Feb 2010 01:40:08 +0100
+Subject: [Jelix-dev] Jelix-dev Digest, Vol 18, Issue 6
+In-Reply-To: <mailman.52.1267218951.27689.jelix-dev@lists.berlios.de>
+References: <mailman.52.1267218951.27689.jelix-dev@lists.berlios.de>
+Message-ID: <4B8869E8.4050706@foxmask.info>
+
+Bonsoir,
+
+100% pour shooter le d?p?t mercurial de jelix et passer sur bb ;
+comme je l'avais expliqu? je trouvais que c'?tait lors de hg clone du 
+d?pot que le serveur partait en vrille.
+donc ? fond pour cette solution.
+
+Pour Booster.Jelix.org :
+J'ai regard? et ya tellement de code ? virer (notamment la  gestion de 
+donn?es ajout?es ? trac )
+qu'on ferait mieux de le reprendre from scratch ce "projet"
+
+100% ok pour le temps des releases.
+
+Pour les tickets ? migrer (? la main :/ ) :
+1) on migre en premier les BUGs pour la 1.2 et les tickets dont on 
+s'occupe d?j? ;
+2) on prend le temps de migrer le reste au fur et ? mesure de notre temps
+
+Derniere chose :
+on conserve un d?pot HG pour les sources du site sur le serveur non (je 
+serai pour tout tout mettre sur bitbucket) ?
+ou on fait un depot "priv?" sur BB pour cela (mais je ne sais pas si 
+"priv?" = invisible ? tout ? chacun sauf ? ceux dont on donne "l'adresse" )?
+
+bonne nuit.
+
+Le 26/02/2010 22:15, jelix-dev-request at lists.berlios.de a ?crit :
+> Send Jelix-dev mailing list submissions to
+> 	jelix-dev at lists.berlios.de
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	https://lists.berlios.de/mailman/listinfo/jelix-dev
+> or, via email, send a message with subject or body 'help' to
+> 	jelix-dev-request at lists.berlios.de
+>
+> You can reach the person managing the list at
+> 	jelix-dev-owner at lists.berlios.de
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Jelix-dev digest..."
+>
+>
+> Today's Topics:
+>
+>     1. [release] Num?rotation des versions (Loic Mathaud)
+>     2. [release] Cycle des releases (Loic Mathaud)
+>     3. Discussions sur le futur de Jelix (Loic Mathaud)
+>     4. Re: [release] Num?rotation des versions (laurent)
+>     5. Re: [release] Cycle des releases (laurent)
+>     6. Discussions sur le futur de Jelix (Loic Mathaud)
+>     7. Re: [release] Cycle des releases (Loic Mathaud)
+>     8. Re: [release] Cycle des releases (Christophe Thiriot)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Fri, 26 Feb 2010 17:45:34 +0100
+> From: Loic Mathaud<loic at mathaud.net>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: [Jelix-dev] [release] Num?rotation des versions
+> Message-ID:<4B87FAAE.50602 at mathaud.net>
+> Content-Type: text/plain; charset=ISO-8859-1
+>
+> Hello,
+>
+> Actuellement la num?rotation de Jelix est assez classique : x.y.z
+>
+> Avec le nouveau cycle de releases qui va ?tre mis en place, nous devons
+> nous poser la question de la num?rotation : est-ce qu'on garde ce
+> principe ou est-ce qu'on en change pour quelque chose se rapprochant de
+> ce que fait ubuntu ?
+>
+> Pour ne pas perturber nos utilisateurs je pense qu'il serait bien de
+> conserver notre num?rotation (m?me si j'aime bien la num?rotation ubuntu).
+>
+> On va donc sortir bient?t une 1.2 (id?alement en avril)
+> On incr?menterait alors le 2?me chiffre ? chaque release : 1.3, 1.4,
+> ..., 1.10, 1.11, ...
+>
+> La version 2 arriverait certainement lors de la refonte plus compl?te et
+> du passage ? php5.3. On continuerait alors sur le  m?me principe : 2.1,
+> 2.2, ...
+>
+> On reste donc sur ce principe ou vous voulez autre chose ?
+>
+>
+> @+
+> Loic
+>
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Fri, 26 Feb 2010 17:48:10 +0100
+> From: Loic Mathaud<loic at mathaud.net>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: [Jelix-dev] [release] Cycle des releases
+> Message-ID:<4B87FB4A.9080409 at mathaud.net>
+> Content-Type: text/plain; charset=ISO-8859-1
+>
+> Hello,
+>
+> Concernant le cycle des releases de Jelix, je serais partant pour 3
+> releases par an, 1 tous les 4 mois.
+>
+> Cela me parait un bon compromis pour avoir ? la fois le temps de
+> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+> de sortir 3 releases chaque ann?e.
+>
+> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+> rythme de 3 mois soit un peu plus difficile ? tenir.
+>
+> Vous en pensez quoi ?
+>
+>
+> @+
+> Loic
+>
+>
+> ------------------------------
+>
+> Message: 3
+> Date: Fri, 26 Feb 2010 17:51:56 +0100
+> From: Loic Mathaud<loic at mathaud.net>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: [Jelix-dev] Discussions sur le futur de Jelix
+> Message-ID:<4B87FC2C.2010409 at mathaud.net>
+> Content-Type: text/plain; charset=ISO-8859-1
+>
+> Hello ? tous,
+>
+> Comme annonc? par Laurent, il va y avoir du changement. Mais maintenant
+> que le cap est donn? il va falloir l'orienter plus pr?cis?ment et
+> discuter des d?tails.
+>
+> Je vais reprendre ici les points principaux avec ce que nous devons donc
+> discuter :
+>
+> - Fermer la forge : en fait pas grand chose ? dire, c'est en cours et
+> les projets r?cup?rent leurs sources et migrent ailleurs
+>
+> - Lancer booster.jelix.org : c'est notre addons.mozilla.org-like. Le
+> lancement se fera sur une version assez simple mais sera am?lior?e au
+> fil du temps (notation, commentaires, ...)
+>
+> - La roadmap/les releases :
+>      - d?finir le cycle exact
+>      - quelle num?rotation ?
+>      - organisation de planification des roadmap pour R et R+1
+>      - gestion de la dur?e de support des versions. LTS ?
+>      - arr?t de 1.0.x
+>
+> - Les responsabilit?s :
+>      - un release manager :
+>          - gestion de la bonne marche de la milestone en cours
+>          - gestion de la release
+>      - un documentation manager :
+>          - gestion de la mise ? jour de la documentation, sa bonne tenue
+>          - gestion de la synchro FR // EN
+>          - r?daction de tutoriaux, bonnes pratiques
+>      - un community manager :
+>          - gestion du site jelix.org
+>          - gestion des actions marketing
+>
+> Je pense ? court terme cr?er des pages sur djo pour noter ce qui sera
+> retenu des d?bats ayant lieu ici.
+>
+> Dans l'imm?diat, je vous propose d'organiser les threads ainsi
+>
+> - [booster] Sujet du mail : pour tout ce qui touche ? booster
+> - [release] Sujet du mail : pour tout ce qui touche aux roadmaps/releases
+> - [roles] Sujet du mail : pour tout ce qui touche aux responsabilit?
+>
+> Il s'agit donc maintenant d'entrer dans le vif du sujet pour remettre
+> Jelix en route et avancer doucement (quoi que) mais r?guli?rement.
+>
+> Loic
+>
+>
+>
+>
+> ------------------------------
+>
+> Message: 4
+> Date: Fri, 26 Feb 2010 17:51:17 +0100
+> From: laurent<laurent at xulfr.org>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: Re: [Jelix-dev] [release] Num?rotation des versions
+> Message-ID:<4B87FC05.6010803 at xulfr.org>
+> Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+>
+> Le 26/02/10 17:45, Loic Mathaud a ?crit :
+>    
+>> Hello,
+>>
+>> Actuellement la num?rotation de Jelix est assez classique : x.y.z
+>>
+>> Avec le nouveau cycle de releases qui va ?tre mis en place, nous devons
+>> nous poser la question de la num?rotation : est-ce qu'on garde ce
+>> principe ou est-ce qu'on en change pour quelque chose se rapprochant de
+>> ce que fait ubuntu ?
+>>
+>> Pour ne pas perturber nos utilisateurs je pense qu'il serait bien de
+>> conserver notre num?rotation (m?me si j'aime bien la num?rotation ubuntu).
+>>
+>> On va donc sortir bient?t une 1.2 (id?alement en avril)
+>> On incr?menterait alors le 2?me chiffre ? chaque release : 1.3, 1.4,
+>> ..., 1.10, 1.11, ...
+>>
+>> La version 2 arriverait certainement lors de la refonte plus compl?te et
+>> du passage ? php5.3. On continuerait alors sur le  m?me principe : 2.1,
+>> 2.2, ...
+>>
+>> On reste donc sur ce principe ou vous voulez autre chose ?
+>>      
+>
+> Je suis d'avis de rester sur la m?me num?rotation.
+>
+> Laurent
+>
+>
+> ------------------------------
+>
+> Message: 5
+> Date: Fri, 26 Feb 2010 18:06:09 +0100
+> From: laurent<laurent at xulfr.org>
+> To: jelix-dev at lists.berlios.de
+> Subject: Re: [Jelix-dev] [release] Cycle des releases
+> Message-ID:<4B87FF81.4060900 at xulfr.org>
+> Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+>
+> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+>    
+>> Hello,
+>>
+>> Concernant le cycle des releases de Jelix, je serais partant pour 3
+>> releases par an, 1 tous les 4 mois.
+>>
+>> Cela me parait un bon compromis pour avoir ? la fois le temps de
+>> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+>> de sortir 3 releases chaque ann?e.
+>>
+>> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+>> rythme de 3 mois soit un peu plus difficile ? tenir.
+>>
+>> Vous en pensez quoi ?
+>>      
+>
+> 4 mois oui, pourquoi pas.
+>
+> Et il y a aussi au niveau de la gestion des dep?ts qu'il faut
+> s'organiser, et que je ne refasse pas la m?me erreur que pour la 1.2.
+>
+> En effet, j'ai eu le grand tord de d?velopper le syst?me d'installation
+> directement sur le trunk. Resultat : trunk instable pendant plusieurs
+> semaines, et ?a m'a pris plusieurs mois pour le finaliser. Cons?quence :
+> release pas possible, m?me sans le syst?me d'installation.
+>
+> donc voil?, je vais dor?navant d?velopper les nouvelles features sur mon
+> propre d?p?t. J'invite tout les contributeurs ? le faire d'ailleurs.
+> Utilisons au maximum les possibilit?s que nous offre Mercurial. clone,
+> rebase, merge, collapse etc...
+>
+> On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire
+> une release ? tout moment.
+>
+> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+> pourra ainsi cloner "publiquement" le trunk et faire ses modifs. Et moi
+> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+>
+> Qu'en pensez-vous ?
+>
+> Laurent
+>
+>
+>
+>
+>
+>
+> ------------------------------
+>
+> Message: 6
+> Date: Fri, 26 Feb 2010 17:32:58 +0100
+> From: Loic Mathaud<loic at mathaud.net>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: [Jelix-dev] Discussions sur le futur de Jelix
+> Message-ID:<4B87F7BA.70008 at mathaud.net>
+> Content-Type: text/plain; charset=ISO-8859-1
+>
+> Hello ? tous,
+>
+> Comme annonc? par Laurent, il va y avoir du changement. Mais maintenant
+> que le cap est donn? il va falloir l'orienter plus pr?cis?ment et
+> discuter des d?tails.
+>
+> Je vais reprendre ici les points principaux avec ce que nous devons donc
+> discuter :
+>
+> - Fermer la forge : en fait pas grand chose ? dire, c'est en cours et
+> les projets r?cup?rent leurs sources et migrent ailleurs
+>
+> - Lancer booster.jelix.org : c'est notre addons.mozilla.org-like. Le
+> lancement se fera sur une version assez simple mais sera am?lior?e au
+> fil du temps (notation, commentaires, ...)
+>
+> - La roadmap/les releases :
+>      - d?finir le cycle exact
+>      - quelle num?rotation ?
+>      - organisation de planification des roadmap pour R et R+1
+>      - gestion de la dur?e de support des versions. LTS ?
+>      - arr?t de 1.0.x
+>
+> - Les responsabilit?s :
+>      - un release manager :
+>          - gestion de la bonne marche de la milestone en cours
+>          - gestion de la release
+>      - un documentation manager :
+>          - gestion de la mise ? jour de la documentation, sa bonne tenue
+>          - gestion de la synchro FR // EN
+>          - r?daction de tutoriaux, bonnes pratiques
+>      - un community manager :
+>          - gestion du site jelix.org
+>          - gestion des actions marketing
+>
+> Je pense ? court terme cr?er des pages sur djo pour noter ce qui sera
+> retenu des d?bats ayant lieu ici.
+>
+> Dans l'imm?diat, je vous propose d'organiser les threads ainsi
+>
+> - [booster] Sujet du mail : pour tout ce qui touche ? booster
+> - [release] Sujet du mail : pour tout ce qui touche aux roadmaps/releases
+> - [roles] Sujet du mail : pour tout ce qui touche aux responsabilit?
+>
+> Il s'agit donc maintenant d'entrer dans le vif du sujet pour remettre
+> Jelix en route et avancer doucement (quoi que) mais r?guli?rement.
+>
+> Loic
+>
+>
+>
+> ------------------------------
+>
+> Message: 7
+> Date: Fri, 26 Feb 2010 18:14:40 +0100
+> From: Loic Mathaud<loic at mathaud.net>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: Re: [Jelix-dev] [release] Cycle des releases
+> Message-ID:<4B880180.6080309 at mathaud.net>
+> Content-Type: text/plain; charset=ISO-8859-1
+>
+>
+> laurent a ?crit :
+>    
+>> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+>>      
+>>> Hello,
+>>>
+>>> Concernant le cycle des releases de Jelix, je serais partant pour 3
+>>> releases par an, 1 tous les 4 mois.
+>>>
+>>> Cela me parait un bon compromis pour avoir ? la fois le temps de
+>>> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+>>> de sortir 3 releases chaque ann?e.
+>>>
+>>> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+>>> rythme de 3 mois soit un peu plus difficile ? tenir.
+>>>
+>>> Vous en pensez quoi ?
+>>>        
+>>
+>> 4 mois oui, pourquoi pas.
+>>      
+> +2 pour les 4 mois alors.
+>
+> Peu importe la p?riode qui sera retenue, ce qu'il faut avant tout ? mon
+> avis c'est que cette p?riode soit fixe afin de nous imposer de la
+> r?gularit?.
+> Si un ticket n'est pas pr?t ? temps (cas qu'il faudrait garder
+> exceptionnel), ce n'est pas grave, on release et on le reporte ? dans 4
+> mois. Ce n'est pas m?chant.
+>
+>    
+>> Et il y a aussi au niveau de la gestion des dep?ts qu'il faut
+>> s'organiser, et que je ne refasse pas la m?me erreur que pour la 1.2.
+>>
+>> En effet, j'ai eu le grand tord de d?velopper le syst?me d'installation
+>> directement sur le trunk. Resultat : trunk instable pendant plusieurs
+>> semaines, et ?a m'a pris plusieurs mois pour le finaliser. Cons?quence :
+>> release pas possible, m?me sans le syst?me d'installation.
+>>
+>> donc voil?, je vais dor?navant d?velopper les nouvelles features sur mon
+>> propre d?p?t. J'invite tout les contributeurs ? le faire d'ailleurs.
+>> Utilisons au maximum les possibilit?s que nous offre Mercurial. clone,
+>> rebase, merge, collapse etc...
+>>
+>> On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire
+>> une release ? tout moment.
+>>      
+> Bonne id?e.
+>
+>    
+>> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+>> pourra ainsi cloner "publiquement" le trunk et faire ses modifs. Et moi
+>> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+>> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+>> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+>>      
+> 100% pour bitbucket.
+> Cela nous ?vitera de devoir g?rer les d?pots, c'est exactement dans
+> l'optique simplification de la maintenance du serveur.
+> En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+> hg.jelix.org et propose plus de fonctionnalit?s : fork en cliquant,
+> possibilit? ensuite de s'?changer facilement les patchs, un wiki +
+> bugtracker pour chaque projet, ...
+>
+>
+> @+
+> Loic
+>
+>
+> ------------------------------
+>
+> Message: 8
+> Date: Fri, 26 Feb 2010 22:15:46 +0100
+> From: Christophe Thiriot<mr.thiriot at gmail.com>
+> To: Development progress on Jelix<jelix-dev at lists.berlios.de>
+> Subject: Re: [Jelix-dev] [release] Cycle des releases
+> Message-ID:
+> 	<829794f91002261315y3adbaba3v1455fe95598fd8f7 at mail.gmail.com>
+> Content-Type: text/plain; charset="iso-8859-1"
+>
+> 2010/2/26 Loic Mathaud<loic at mathaud.net>
+>
+>    
+>> laurent a ?crit :
+>>      
+>>> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+>>>        
+>>>> Hello,
+>>>>
+>>>> Concernant le cycle des releases de Jelix, je serais partant pour 3
+>>>> releases par an, 1 tous les 4 mois.
+>>>>
+>>>> Cela me parait un bon compromis pour avoir ? la fois le temps de
+>>>> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+>>>> de sortir 3 releases chaque ann?e.
+>>>>
+>>>> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+>>>> rythme de 3 mois soit un peu plus difficile ? tenir.
+>>>>
+>>>> Vous en pensez quoi ?
+>>>>          
+>>>
+>>> 4 mois oui, pourquoi pas.
+>>>        
+>> +2 pour les 4 mois alors.
+>>
+>> Peu importe la p?riode qui sera retenue, ce qu'il faut avant tout ? mon
+>> avis c'est que cette p?riode soit fixe afin de nous imposer de la
+>> r?gularit?.
+>> Si un ticket n'est pas pr?t ? temps (cas qu'il faudrait garder
+>> exceptionnel), ce n'est pas grave, on release et on le reporte ? dans 4
+>> mois. Ce n'est pas m?chant.
+>>
+>>      
+> Tout ? fait d'accord
+>
+>
+>    
+>>      
+>>> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+>>> pourra ainsi cloner "publiquement" le trunk et faire ses modifs. Et moi
+>>> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+>>> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+>>> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+>>>        
+>> 100% pour bitbucket.
+>> Cela nous ?vitera de devoir g?rer les d?pots, c'est exactement dans
+>> l'optique simplification de la maintenance du serveur.
+>> En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+>> hg.jelix.org et propose plus de fonctionnalit?s : fork en cliquant,
+>> possibilit? ensuite de s'?changer facilement les patchs, un wiki +
+>> bugtracker pour chaque projet, ...
+>>
+>>
+>>
+>>      
+> Comme je l'ai d?j? dit, je suis ? fond pour cette solution, qui nous
+> permettra
+> de nous concentrer plus sur le code et pas l'administration. Par contre, je
+> ne
+> vois pas de moyen de transfert de nos tickets vers le syst?me de bitbucket.
+> Pour le wiki de dev, c'est aussi un depot hg ?a devrait ?tre jouable.
+>
+> A+
+>
+> Christophe
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL:<https://lists.berlios.de/pipermail/jelix-dev/attachments/20100226/04379ead/attachment.html>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>
+>
+> End of Jelix-dev Digest, Vol 18, Issue 6
+> ****************************************
+>    
+
+
+From olivier at foxmask.info  Sat Feb 27 15:21:03 2010
+From: olivier at foxmask.info (olivier)
+Date: Sat, 27 Feb 2010 15:21:03 +0100
+Subject: [Jelix-dev] [booster] un point sous peu
+Message-ID: <4B892A4F.4070802@foxmask.info>
+
+bonjour
+je refais le tour de l'ex new forge pour v?rifier si on peut le 
+conserver as is
+retour dans la journ?e :)
+@Tchao
+
+
+From olivier at foxmask.info  Sat Feb 27 17:58:14 2010
+From: olivier at foxmask.info (olivier)
+Date: Sat, 27 Feb 2010 17:58:14 +0100
+Subject: [Jelix-dev] [booster] un point sous peu
+In-Reply-To: <4B892A4F.4070802@foxmask.info>
+References: <4B892A4F.4070802@foxmask.info>
+Message-ID: <4B894F26.6040308@foxmask.info>
+
+Bonsoir,
+finallement c'est pas trop trop mal :)
+suffit de shooter un event de ci de la et du code en trop sinon ca le fait.
+je fais un push dans la soir?e si d'autres veulent s'y mettre
+cdt.
+Le 27/02/2010 15:21, olivier a ?crit :
+> bonjour
+> je refais le tour de l'ex new forge pour v?rifier si on peut le 
+> conserver as is
+> retour dans la journ?e :)
+> @Tchao
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+From olivier at foxmask.info  Sat Feb 27 19:16:35 2010
+From: olivier at foxmask.info (olivier)
+Date: Sat, 27 Feb 2010 19:16:35 +0100
+Subject: [Jelix-dev] [booster] un point sous peu
+In-Reply-To: <4B894F26.6040308@foxmask.info>
+References: <4B892A4F.4070802@foxmask.info> <4B894F26.6040308@foxmask.info>
+Message-ID: <4B896183.5010705@foxmask.info>
+
+mis?re ...
+
+je creais une nouvelle branche et ...
+
+pushing to ssh://hg at hg.jelix.org/private/websites
+searching for changes
+remote: adding changesets
+remote: adding manifests
+remote: adding file changes
+remote: added 2 changesets with 26 changes to 26 files (+1 heads)
+remote: error: pretxnchangegroup.access hook failed: 
+mercurialserver.access: access denied for changeset a9ec85f7c5da
+remote: transaction abort!
+remote: rollback completed
+remote: abort: mercurialserver.access: access denied for changeset 
+a9ec85f7c5da
+abort: unexpected response: empty string
+
+
+Le 27/02/2010 17:58, olivier a ?crit :
+> Bonsoir,
+> finallement c'est pas trop trop mal :)
+> suffit de shooter un event de ci de la et du code en trop sinon ca le 
+> fait.
+> je fais un push dans la soir?e si d'autres veulent s'y mettre
+> cdt.
+> Le 27/02/2010 15:21, olivier a ?crit :
+>> bonjour
+>> je refais le tour de l'ex new forge pour v?rifier si on peut le 
+>> conserver as is
+>> retour dans la journ?e :)
+>> @Tchao
+>> _______________________________________________
+>> Jelix-dev mailing list
+>> Jelix-dev at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+

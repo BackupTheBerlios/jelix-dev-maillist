@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [cron] nightly builds and unit tests
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-September/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20090923020221.1E0BD44C077%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001396.html">
+   <LINK REL="Next"  HREF="001385.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [cron] nightly builds and unit tests</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20090923020221.1E0BD44C077%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] [cron] nightly builds and unit tests">dev at jelix.org
+       </A><BR>
+    <I>Wed Sep 23 04:02:21 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001396.html">[Jelix-dev] RE : Re: Jelix Dev Summit
+</A></li>
+        <LI>Next message: <A HREF="001385.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1384">[ date ]</a>
+              <a href="thread.html#1384">[ thread ]</a>
+              <a href="subject.html#1384">[ subject ]</a>
+              <a href="author.html#1384">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>building trunk...
+===========================================
+pulling from /var/hg/jelix.org/repos/jelix/jelix-trunk
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_DEV
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_OPT
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_GOLD
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/var/www/jelix.org/temp/build_dir/hgrepo/jelix-trunk
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/trunk/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/trunk/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/trunk/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/trunk//testapp/install &amp;&amp; /usr/bin/php installer.php
+Installation start..
+Installation starts for the entry point index
+Check dependencies of the module jelix
+Check dependencies of the module junittests
+Check dependencies of the module jacldb
+Check dependencies of the module jacl2db
+Check dependencies of the module jauth
+Check dependencies of the module jWSDL
+Check dependencies of the module jauthdb
+Check dependencies of the module testapp
+Check dependencies of the module jelix_tests
+Check dependencies of the module testurls
+All modules dependencies are ok
+All modules are installed or upgraded for the entry point index
+Installation starts for the entry point soap
+Check dependencies of the module jelix
+Check dependencies of the module junittests
+Check dependencies of the module jacldb
+Check dependencies of the module jacl2db
+Check dependencies of the module jauth
+Check dependencies of the module jWSDL
+Check dependencies of the module jauthdb
+Check dependencies of the module testapp
+Check dependencies of the module jelix_tests
+Check dependencies of the module testurls
+All modules dependencies are ok
+All modules are installed or upgraded for the entry point soap
+Installation starts for the entry point jsonrpc
+Check dependencies of the module jelix
+Check dependencies of the module junittests
+Check dependencies of the module jacldb
+Check dependencies of the module jacl2db
+Check dependencies of the module jauth
+Check dependencies of the module jWSDL
+Check dependencies of the module jauthdb
+Check dependencies of the module testapp
+Check dependencies of the module jelix_tests
+Check dependencies of the module testurls
+All modules dependencies are ok
+All modules are installed or upgraded for the entry point jsonrpc
+Installation ended.
+cd /var/www/jelix.org/temp/build_dir/tests/trunk//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+
+building 1.0.x branch...
+===========================================
+pulling from /var/hg/jelix.org/repos/jelix/releases/jelix-1.0.x
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_DEV
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_OPT
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_GOLD
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/var/www/jelix.org/temp/build_dir/hgrepo/jelix-1.0.x
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.0.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.0.x/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/1.0.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.10x.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/1.0.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.0.11pre.915
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+UTjDbPgsql cannot be run: Le profil de connexion &quot;testapp_pgsql&quot; pour jDb est inconnu
+jfilter tests: use of jelix filter
+OK
+Test cases run: 33/33, Passes: 3505, Failures: 0, Exceptions: 0
+
+building 1.1.x branch...
+===========================================
+pulling from /var/hg/jelix.org/repos/jelix/releases/jelix-1.1.x
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_DEV
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_OPT
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_GOLD
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/var/www/jelix.org/temp/build_dir/hgrepo/jelix-1.1.x
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.1.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.1.x/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/1.1.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.11x.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/1.1.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.1.4pre.1276
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+UTjDbPgsql cannot be run: jDb:unknow connection profile &quot;testapp_pgsql&quot;
+jfilter tests: use of jelix filter
+OK
+Test cases run: 46/46, Passes: 4372, Failures: 0, Exceptions: 0
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001396.html">[Jelix-dev] RE : Re: Jelix Dev Summit
+</A></li>
+	<LI>Next message: <A HREF="001385.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1384">[ date ]</a>
+              <a href="thread.html#1384">[ thread ]</a>
+              <a href="subject.html#1384">[ subject ]</a>
+              <a href="author.html#1384">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

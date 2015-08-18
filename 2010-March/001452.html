@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [booster] un point sous peu
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2010-March/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bbooster%5D%20un%20point%20sous%20peu&In-Reply-To=%3C4B8AF85D.7000206%40foxmask.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="001453.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [booster] un point sous peu</H1>
+    <B>olivier</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bbooster%5D%20un%20point%20sous%20peu&In-Reply-To=%3C4B8AF85D.7000206%40foxmask.info%3E"
+       TITLE="[Jelix-dev] [booster] un point sous peu">olivier at foxmask.info
+       </A><BR>
+    <I>Mon Mar  1 00:12:29 CET 2010</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="001453.html">[Jelix-dev] [release] Cycle des releases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1452">[ date ]</a>
+              <a href="thread.html#1452">[ thread ]</a>
+              <a href="subject.html#1452">[ subject ]</a>
+              <a href="author.html#1452">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Bonsoir,
+En parcourant <A HREF="http://hginit.com/02.html">http://hginit.com/02.html</A> j'ai pige pourquoi j'avais une 
+nouvelle branche qui se cr&#233;ait :)
+Donc hg pull + hg commit + hg push et rebelote
+
+C:\WEB\DOCUMENT_ROOT\www_jelix&gt;hg push
+pushing to <A HREF="ssh://hg@hg.jelix.org/private/websites">ssh://hg@hg.jelix.org/private/websites</A>
+searching for changes
+remote: adding changesets
+remote: adding manifests
+remote: adding file changes
+remote: added 3 changesets with 28 changes to 27 files
+remote: error: pretxnchangegroup.access hook failed: 
+mercurialserver.access: access denied for changeset a9ec85f7c5da
+remote: transaction abort!
+remote: rollback completed
+remote: abort: mercurialserver.access: access denied for changeset 
+a9ec85f7c5da
+abort: unexpected response: empty string
+
+Mais je suis persuad&#233; qu'avant le 31/12/2009 je pouvais push .
+cdt.
+
+Le 27/02/2010 19:16, olivier a &#233;crit :
+&gt;<i> mis&#232;re ...
+</I>&gt;<i>
+</I>&gt;<i> je creais une nouvelle branche et ...
+</I>&gt;<i>
+</I>&gt;<i> pushing to <A HREF="ssh://hg@hg.jelix.org/private/websites">ssh://hg@hg.jelix.org/private/websites</A>
+</I>&gt;<i> searching for changes
+</I>&gt;<i> remote: adding changesets
+</I>&gt;<i> remote: adding manifests
+</I>&gt;<i> remote: adding file changes
+</I>&gt;<i> remote: added 2 changesets with 26 changes to 26 files (+1 heads)
+</I>&gt;<i> remote: error: pretxnchangegroup.access hook failed: 
+</I>&gt;<i> mercurialserver.access: access denied for changeset a9ec85f7c5da
+</I>&gt;<i> remote: transaction abort!
+</I>&gt;<i> remote: rollback completed
+</I>&gt;<i> remote: abort: mercurialserver.access: access denied for changeset 
+</I>&gt;<i> a9ec85f7c5da
+</I>&gt;<i> abort: unexpected response: empty string
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Le 27/02/2010 17:58, olivier a &#233;crit :
+</I>&gt;&gt;<i> Bonsoir,
+</I>&gt;&gt;<i> finallement c'est pas trop trop mal :)
+</I>&gt;&gt;<i> suffit de shooter un event de ci de la et du code en trop sinon ca le 
+</I>&gt;&gt;<i> fait.
+</I>&gt;&gt;<i> je fais un push dans la soir&#233;e si d'autres veulent s'y mettre
+</I>&gt;&gt;<i> cdt.
+</I>&gt;&gt;<i> Le 27/02/2010 15:21, olivier a &#233;crit :
+</I>&gt;&gt;&gt;<i> bonjour
+</I>&gt;&gt;&gt;<i> je refais le tour de l'ex new forge pour v&#233;rifier si on peut le 
+</I>&gt;&gt;&gt;<i> conserver as is
+</I>&gt;&gt;&gt;<i> retour dans la journ&#233;e :)
+</I>&gt;&gt;&gt;<i> @Tchao
+</I>&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;<i> Jelix-dev mailing list
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">Jelix-dev at lists.berlios.de</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">https://lists.berlios.de/mailman/listinfo/jelix-dev</A>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> Jelix-dev mailing list
+</I>&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">Jelix-dev at lists.berlios.de</A>
+</I>&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">https://lists.berlios.de/mailman/listinfo/jelix-dev</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jelix-dev mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">Jelix-dev at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">https://lists.berlios.de/mailman/listinfo/jelix-dev</A>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="001453.html">[Jelix-dev] [release] Cycle des releases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1452">[ date ]</a>
+              <a href="thread.html#1452">[ thread ]</a>
+              <a href="subject.html#1452">[ subject ]</a>
+              <a href="author.html#1452">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [cron] nightly builds and unit tests
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20080719020112.66EF1354001%40mail.lenwe-linux.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000155.html">
+   <LINK REL="Next"  HREF="000157.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [cron] nightly builds and unit tests</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20080719020112.66EF1354001%40mail.lenwe-linux.org%3E"
+       TITLE="[Jelix-dev] [cron] nightly builds and unit tests">dev at jelix.org
+       </A><BR>
+    <I>Sat Jul 19 04:01:12 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000155.html">[Jelix-dev] checkin SVN-1027 (laurentj)
+</A></li>
+        <LI>Next message: <A HREF="000157.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#156">[ date ]</a>
+              <a href="thread.html#156">[ thread ]</a>
+              <a href="subject.html#156">[ subject ]</a>
+              <a href="author.html#156">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>building trunk...
+===========================================
+U    build/buildjelix.php
+U    build/config/jelix-test2.ini
+U    build/config/jelix-dist-opt.ini
+U    build/config/jelix-test.ini
+U    build/config/jelix-dist-dev.ini
+U    build/config/jelix-dist-gold.ini
+U    lib/jelix-scripts/templates/myHtmlResponse.class.php.tpl
+U    lib/jelix-scripts/templates/controller.tpl
+U    lib/jelix-scripts/templates/www/rdf.php.tpl
+U    lib/jelix-scripts/templates/www/jsonrpc.php.tpl
+U    lib/jelix-scripts/templates/www/xmlrpc.php.tpl
+U    lib/jelix-scripts/templates/www/index.php.tpl
+U    lib/jelix-scripts/templates/controller.daocrud.tpl
+U    lib/jelix-scripts/templates/zone.tpl
+U    lib/jelix-scripts/templates/controller.newapp.tpl
+U    lib/jelix-modules/jauth/controllers/login.classic.php
+U    lib/jelix-modules/jauth/templates/login.form.tpl
+U    lib/jelix/plugins/acl/db/db.acl.php
+U    lib/jelix/plugins/tpl/xml/function.jlocale.php
+U    lib/jelix/plugins/tpl/xml/function.jurl.php
+U    lib/jelix/plugins/tpl/xml/meta.xml.php
+U    lib/jelix/plugins/tpl/ltx2pdf/modifier.latex.php
+U    lib/jelix/plugins/tpl/ltx2pdf/block.lenv.php
+U    lib/jelix/plugins/tpl/ltx2pdf/function.jlocale.php
+U    lib/jelix/plugins/tpl/ltx2pdf/function.jurl.php
+U    lib/jelix/plugins/tpl/ltx2pdf/block.lcmd.php
+U    lib/jelix/plugins/tpl/html/meta.html.php
+U    lib/jelix/plugins/tpl/html/function.breadcrumb.php
+U    lib/jelix/plugins/tpl/html/function.formurlparam.php
+U    lib/jelix/plugins/tpl/html/function.diff.php
+U    lib/jelix/plugins/tpl/html/function.jlocale.php
+U    lib/jelix/plugins/tpl/html/function.jurl.php
+U    lib/jelix/plugins/tpl/html/function.pagelinks.php
+U    lib/jelix/plugins/tpl/html/function.image.php
+U    lib/jelix/plugins/tpl/html/cfunction.swfbiscuit.php
+U    lib/jelix/plugins/tpl/html/function.formurl.php
+U    lib/jelix/plugins/tpl/html/function.urljsstring.php
+U    lib/jelix/plugins/tpl/html/block.ifctrl.php
+U    lib/jelix/plugins/tpl/html/modifier.nl2br.php
+U    lib/jelix/plugins/tpl/html/block.swfjs.php
+U    lib/jelix/plugins/tpl/html/block.swf.php
+U    lib/jelix/plugins/tpl/text/function.jlocale.php
+U    lib/jelix/plugins/tpl/text/function.jurl.php
+U    lib/jelix/plugins/tpl/common/block.ifusernotconnected.php
+U    lib/jelix/plugins/tpl/common/modifier.spacify.php
+U    lib/jelix/plugins/tpl/common/modifier.count_sentences.php
+U    lib/jelix/plugins/tpl/common/modifier.count_paragraphs.php
+U    lib/jelix/plugins/tpl/common/function.counter_reset_all.php
+U    lib/jelix/plugins/tpl/common/modifier.strip.php
+U    lib/jelix/plugins/tpl/common/modifier.wiki.php
+U    lib/jelix/plugins/tpl/common/modifier.jdatetime.php
+U    lib/jelix/plugins/tpl/common/modifier.count_words.php
+U    lib/jelix/plugins/tpl/common/modifier.cat.php
+U    lib/jelix/plugins/tpl/common/function.counter_reset.php
+U    lib/jelix/plugins/tpl/common/modifier.replace.php
+U    lib/jelix/plugins/tpl/common/block.ifuserconnected.php
+U    lib/jelix/plugins/tpl/common/block.ifnotacl2.php
+U    lib/jelix/plugins/tpl/common/modifier.sprintf.php
+U    lib/jelix/plugins/tpl/common/modifier.date_format.php
+U    lib/jelix/plugins/tpl/common/function.cycle.php
+U    lib/jelix/plugins/tpl/common/modifier.count_characters.php
+U    lib/jelix/plugins/tpl/common/block.ifacl2.php
+U    lib/jelix/plugins/tpl/common/modifier.regex_replace.php
+U    lib/jelix/plugins/tpl/common/cfunction.zone.php
+U    lib/jelix/plugins/tpl/common/modifier.wordwrap.php
+U    lib/jelix/plugins/tpl/common/function.counter.php
+U    lib/jelix/plugins/tpl/common/block.stripws.php
+U    lib/jelix/plugins/tpl/common/modifier.count_records.php
+U    lib/jelix/plugins/tpl/common/function.cycle_init.php
+U    lib/jelix/plugins/tpl/common/block.ifacl.php
+U    lib/jelix/plugins/tpl/common/cfunction.include.php
+U    lib/jelix/plugins/tpl/common/modifier.indent.php
+U    lib/jelix/plugins/tpl/common/modifier.truncate.php
+U    lib/jelix/plugins/tpl/common/modifier.count_array.php
+U    lib/jelix/plugins/tpl/common/function.cycle_reset.php
+U    lib/jelix/plugins/tpl/common/function.counter_init.php
+U    lib/jelix/plugins/tpl/common/block.ifnotacl.php
+U    lib/jelix/plugins/tpl/xul/function.urljsstring.php
+U    lib/jelix/plugins/tpl/xul/function.jlocale.php
+U    lib/jelix/plugins/tpl/xul/meta.xul.php
+U    lib/jelix/plugins/tpl/xul/function.jurl.php
+U    lib/jelix/plugins/auth/lds/lds.auth.php
+U    lib/jelix/plugins/auth/class/class.auth.php
+U    lib/jelix/plugins/auth/db/db.auth.php
+U    lib/jelix/plugins/db/sqlite/sqlite.dbresultset.php
+U    lib/jelix/plugins/db/sqlite/sqlite.dbconnection.php
+U    lib/jelix/plugins/db/sqlite/sqlite.dbtools.php
+U    lib/jelix/plugins/db/intuition/intuition.daobuilder.php
+U    lib/jelix/plugins/db/intuition/intuition.dbresultset.php
+U    lib/jelix/plugins/db/intuition/intuition.dbconnection.php
+U    lib/jelix/plugins/db/intuition/intuition.dbtools.php
+U    lib/jelix/plugins/db/mysql/mysql.dbconnection.php
+U    lib/jelix/plugins/db/mysql/mysql.dbtools.php
+U    lib/jelix/plugins/db/mysql/mysql.daobuilder.php
+U    lib/jelix/plugins/db/mysql/mysql.dbresultset.php
+U    lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php
+U    lib/jelix/plugins/db/pgsql/pgsql.dbtools.php
+U    lib/jelix/plugins/db/pgsql/pgsql.daobuilder.php
+U    lib/jelix/plugins/db/pgsql/pgsql.dbresultset.php
+U    lib/jelix/plugins/db/oci/oci.dbtools.php
+U    lib/jelix/plugins/db/oci/oci.daobuilder.php
+U    lib/jelix/plugins/urls/simple/simple.urls.php
+U    lib/jelix/plugins/urls/significant/jSignificantUrlsCompiler.class.php
+U    lib/jelix/plugins/urls/significant/significant.urls.php
+U    lib/jelix/plugins/coord/auth/auth.coord.php
+U    lib/jelix/plugins/coord/history/history.coord.php
+U    lib/jelix/plugins/coord/magicquotes/magicquotes.coord.php
+U    lib/jelix/plugins/coord/autolocale/autolocale.coord.php
+U    lib/jelix/plugins/coord/jacl/jacl.coord.php
+U    lib/jelix/db/jDbResultSet.class.php
+U    lib/jelix/db/jDb.class.php
+U    lib/jelix/db/jDbConnection.class.php
+U    lib/jelix/db/jDbTools.class.php
+U    lib/jelix/db/jDbPDOConnection.class.php
+U    lib/jelix/db/jDbWidget.class.php
+U    lib/jelix/forms/jFormsCompiler_jf_1_0.class.php
+U    lib/jelix/forms/jFormsControl.class.php
+U    lib/jelix/core/request/jJsonRpcRequest.class.php
+U    lib/jelix/core/response/jResponseTcpdf.class.php
+U    lib/jelix/core/response/jResponseXml.class.php
+U    lib/jelix/core/response/jResponseText.class.php
+U    lib/jelix/core/jLocale.class.php
+U    lib/jelix/init.php
+U    lib/jelix/CREDITS
+U    lib/jelix/installer/jInstallerPlugin.class.php
+U    lib/jelix/installer/jInstallerApp.class.php
+U    lib/jelix/installer/jInstallerModule.class.php
+U    lib/jelix/installer/jIInstallReporter.iface.php
+U    lib/jelix/installer/jInstallerBase.class.php
+U    lib/jelix/core-modules/jelix/controllers/error.classic.php
+U    lib/jelix/core-modules/jelix/controllers/error.xmlrpc.php
+U    lib/jelix/core-modules/jelix/controllers/error.xul.php
+U    lib/jelix/core-modules/jelix/controllers/help.cmdline.php
+U    lib/jelix/core-modules/jelix/controllers/error.rdf.php
+U    lib/jelix/core-modules/jelix/controllers/error.jsonrpc.php
+U    lib/jelix/acl/jAcl.class.php
+U    lib/jelix/acl/jAclDbManager.class.php
+U    lib/jelix/acl/jAclDbUserGroup.class.php
+U    lib/jelix/acl/jAclDb.class.php
+U    lib/jelix/tpl/locales/fr.php
+U    lib/jelix/tpl/jtpl_standalone_prepend.php
+U    lib/jelix/tpl/tests_std/exemple.php
+U    lib/jelix/utils/jAppManager.class.php
+U    lib/jelix/utils/jZone.class.php
+U    lib/jelix/utils/jJsonRpc.class.php
+U    lib/jelix/utils/jIniFile.class.php
+U    lib/jelix/utils/jFile.class.php
+U    lib/jelix/utils/jLog.class.php
+U    lib/jelix/utils/jZipCreator.class.php
+U    lib/jelix/utils/jSmtp.class.php
+U    lib/jelix/utils/jCmdUtils.class.php
+U    lib/jelix/utils/jClasses.class.php
+U    lib/jelix/utils/jIniFileModifier.class.php
+U    lib/jelix/utils/jTcpdf.class.php
+U    lib/jelix/utils/jCrypt.class.php
+U    lib/jelix/utils/jWiki.class.php
+U    lib/jelix/utils/jXmlRpc.class.php
+U    lib/jelix/utils/jJson.class.php
+U    lib/jelix/utils/jMailer.class.php
+U    lib/jelix/utils/jBinding.class.php
+U    lib/jelix/auth/jAuthDummyUser.class.php
+U    lib/jelix/auth/jAuthUser.class.php
+U    lib/jelix/auth/jAuth.class.php
+U    lib/jelix/dao/jDaoConditions.class.php
+U    lib/jelix/dao/jDaoRecordBase.class.php
+U    lib/jelix/dao/jDaoCompiler.class.php
+U    lib/jelix/dao/jDaoParser.class.php
+U    lib/jelix/dao/jDao.class.php
+U    lib/jelix/dao/jDaoMethod.class.php
+U    lib/jelix/dao/jDaoFactoryBase.class.php
+U    lib/jelix/dao/jDaoProperty.class.php
+U    lib/jelix/dao/jDaoGenerator.class.php
+U    lib/jelix/events/jEventCompiler.class.php
+U    lib/jelix/events/jEvent.class.php
+U    lib/jelix/events/jEventListener.class.php
+U    lib/jelix/controllers/jControllerCmdLine.class.php
+U    lib/jelix/controllers/jControllerDaoCrud.class.php
+Updated to revision 1027.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildmodules.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/modules-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/trunk/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/trunk/&quot; build/config/testapp-test.ini
+cd /home/lenwe.org/ljouanneau/tests/trunk/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.ini.php testapp/var/config/dbprofils.ini.php
+cd /home/lenwe.org/ljouanneau/tests/trunk//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.1a1pre.1027
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+jfilter tests: use of jelix filter
+OK
+Test cases run: 39/39, Passes: 3713, Failures: 0, Exceptions: 0
+
+
+building 1.0.x branch...
+===========================================
+U    lib/jelix-modules/jauth/controllers/login.classic.php
+U    lib/jelix-modules/jauth/templates/login.form.tpl
+U    lib/jelix/plugins/tpl/html/function.image.php
+U    lib/jelix/forms/jFormsCompiler.class.php
+U    lib/jelix/forms/jFormsControl.class.php
+U    lib/jelix/CREDITS
+U    lib/jelix/dao/jDaoFactoryBase.class.php
+Updated to revision 1027.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildmodules.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/modules-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/1.0.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/home/lenwe.org/ljouanneau/tests/1.0.x/&quot; build/config/testapp-test.ini
+cd /home/lenwe.org/ljouanneau/tests/1.0.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.10x.ini.php testapp/var/config/dbprofils.ini.php
+cd /home/lenwe.org/ljouanneau/tests/1.0.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.0.5pre.1027
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+jfilter tests: use of jelix filter
+OK
+Test cases run: 33/33, Passes: 3461, Failures: 0, Exceptions: 0
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000155.html">[Jelix-dev] checkin SVN-1027 (laurentj)
+</A></li>
+	<LI>Next message: <A HREF="000157.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#156">[ date ]</a>
+              <a href="thread.html#156">[ thread ]</a>
+              <a href="subject.html#156">[ subject ]</a>
+              <a href="author.html#156">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [cron] nightly builds and unit tests
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-March/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20090304030215.C79F235402B%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000646.html">
+   <LINK REL="Next"  HREF="000648.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [cron] nightly builds and unit tests</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20090304030215.C79F235402B%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] [cron] nightly builds and unit tests">dev at jelix.org
+       </A><BR>
+    <I>Wed Mar  4 04:02:15 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000646.html">[Jelix-dev] commit SVN-1336 (laurentj)
+</A></li>
+        <LI>Next message: <A HREF="000648.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#647">[ date ]</a>
+              <a href="thread.html#647">[ thread ]</a>
+              <a href="subject.html#647">[ subject ]</a>
+              <a href="author.html#647">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>building trunk...
+===========================================
+U    build/buildjelix.php
+U    build/manifests/testapp.mn
+D    testapp/modules/jelix_tests/tests/core.old_urls_generation.html.php
+D    testapp/modules/jelix_tests/tests/core.old_urls_parsing.html.php
+D    testapp/modules/jelix_tests/tests/core.old_selectors_action.html.php
+U    lib/jelix-scripts/templates/var/config/defaultconfig.ini.php.tpl
+U    lib/jelix/plugins/urls/significant/significant.urls.php
+U    lib/jelix/core/selector/jSelectorActFast.class.php
+U    lib/jelix/core/selector/jSelectorAct.class.php
+U    lib/jelix/utils/jZone.class.php
+U    lib/jelix/events/jEvent.class.php
+Updated to revision 1336.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/trunk/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/trunk/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/trunk/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/trunk//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.2b1pre.1336
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+Error !!
+	in testStart
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/trunk/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [invalid query (ERREUR:  droit refus&#195;&#169; pour la relation product_test(DELETE FROM product_test))] in [/var/www/jelix.org/temp/build_dir/tests/trunk/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+Error !!
+	in testInsert
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/trunk/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)invalid query (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(INSERT INTO &quot;product_test&quot; (
+&quot;name&quot;,&quot;price&quot;,&quot;create_date&quot;,&quot;promo&quot;
+) VALUES (
+'assiette', 3.87, NOW(), FALSE
+)))] in [/var/www/jelix.org/temp/build_dir/tests/trunk/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+Error !!
+	in testGet
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/trunk/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [invalid query (ERREUR:  La colonne p.promo n'existe pas(SELECT &quot;p&quot;.&quot;id&quot;, &quot;p&quot;.&quot;name&quot;, &quot;p&quot;.&quot;price&quot;, &quot;p&quot;.&quot;create_date&quot;, &quot;p&quot;.&quot;promo&quot; FROM &quot;product_test&quot; AS &quot;p&quot; WHERE  &quot;p&quot;.&quot;id&quot;=0))] in [/var/www/jelix.org/temp/build_dir/tests/trunk/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+Error !!
+	in testUpdate
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/trunk/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)invalid query (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(UPDATE &quot;product_test&quot; SET 
+ &quot;name&quot;= 'assiette nouvelle', &quot;price&quot;= 5.9, &quot;create_date&quot;= NULL, &quot;promo&quot;= TRUE
+ where  &quot;id&quot;=0
+))] in [/var/www/jelix.org/temp/build_dir/tests/trunk/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+jfilter tests: use of jelix filter
+FAILURES!!!
+Test cases run: 45/45, Passes: 4382, Failures: 0, Exceptions: 4
+
+
+building 1.0.x branch...
+===========================================
+At revision 1336.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.0.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.0.x/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/1.0.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.10x.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/1.0.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.0.8pre.1336
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+Error !!
+	in testStart
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [Erreur dans la requ&#195;&#170;te (ERREUR:  droit refus&#195;&#169; pour la relation product_test(DELETE FROM product_test))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [127]
+Error !!
+	in testInsert
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)Erreur dans la requ&#195;&#170;te (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(INSERT INTO &quot;product_test&quot; (
+&quot;name&quot;,&quot;price&quot;,&quot;create_date&quot;,&quot;promo&quot;
+) VALUES (
+'assiette', 3.87, NOW(), FALSE
+)))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [127]
+Error !!
+	in testGet
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [Erreur dans la requ&#195;&#170;te (ERREUR:  La colonne p.promo n'existe pas(SELECT &quot;p&quot;.&quot;id&quot;, &quot;p&quot;.&quot;name&quot;, &quot;p&quot;.&quot;price&quot;, &quot;p&quot;.&quot;create_date&quot;, &quot;p&quot;.&quot;promo&quot; FROM &quot;product_test&quot; AS &quot;p&quot; WHERE  &quot;p&quot;.&quot;id&quot;=0))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [127]
+Error !!
+	in testUpdate
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)Erreur dans la requ&#195;&#170;te (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(UPDATE &quot;product_test&quot; SET 
+ &quot;name&quot;= 'assiette nouvelle', &quot;price&quot;= 5.9, &quot;create_date&quot;= NULL, &quot;promo&quot;= TRUE
+ where  &quot;id&quot;=0
+))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [127]
+jfilter tests: use of jelix filter
+FAILURES!!!
+Test cases run: 33/33, Passes: 3571, Failures: 0, Exceptions: 4
+
+building 1.1.x branch...
+===========================================
+At revision 1336.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.1.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.1.x/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/1.1.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.11x.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/1.1.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.1.2pre.1336
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+Error !!
+	in testStart
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [invalid query (ERREUR:  droit refus&#195;&#169; pour la relation product_test(DELETE FROM product_test))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+Error !!
+	in testInsert
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)invalid query (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(INSERT INTO &quot;product_test&quot; (
+&quot;name&quot;,&quot;price&quot;,&quot;create_date&quot;,&quot;promo&quot;
+) VALUES (
+'assiette', 3.87, NOW(), FALSE
+)))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+Error !!
+	in testGet
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [invalid query (ERREUR:  La colonne p.promo n'existe pas(SELECT &quot;p&quot;.&quot;id&quot;, &quot;p&quot;.&quot;name&quot;, &quot;p&quot;.&quot;price&quot;, &quot;p&quot;.&quot;create_date&quot;, &quot;p&quot;.&quot;promo&quot; FROM &quot;product_test&quot; AS &quot;p&quot; WHERE  &quot;p&quot;.&quot;id&quot;=0))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+Error !!
+	in testUpdate
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)invalid query (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(UPDATE &quot;product_test&quot; SET 
+ &quot;name&quot;= 'assiette nouvelle', &quot;price&quot;= 5.9, &quot;create_date&quot;= NULL, &quot;promo&quot;= TRUE
+ where  &quot;id&quot;=0
+))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [139]
+jfilter tests: use of jelix filter
+FAILURES!!!
+Test cases run: 45/45, Passes: 4382, Failures: 0, Exceptions: 4
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000646.html">[Jelix-dev] commit SVN-1336 (laurentj)
+</A></li>
+	<LI>Next message: <A HREF="000648.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#647">[ date ]</a>
+              <a href="thread.html#647">[ thread ]</a>
+              <a href="subject.html#647">[ subject ]</a>
+              <a href="author.html#647">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

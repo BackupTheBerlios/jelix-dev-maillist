@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%0A%09%3D%3Fiso-8859-1%3Fq%3Fexpos%3DE9_du_%3D22actAs%3D22_par_Bastnic_%3F%3D%0A%09%3D%3Fiso-8859-1%3Fq%3F%3D3B%3D29%3F%3D&In-Reply-To=%3C16ce71b30910141137t19cc6b57oc5b67de17e794222%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001423.html">
+   <LINK REL="Next"  HREF="001427.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)</H1>
+    <B>Bastien Jaillot</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%0A%09%3D%3Fiso-8859-1%3Fq%3Fexpos%3DE9_du_%3D22actAs%3D22_par_Bastnic_%3F%3D%0A%09%3D%3Fiso-8859-1%3Fq%3F%3D3B%3D29%3F%3D&In-Reply-To=%3C16ce71b30910141137t19cc6b57oc5b67de17e794222%40mail.gmail.com%3E"
+       TITLE="[Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)">bastnicj at gmail.com
+       </A><BR>
+    <I>Wed Oct 14 20:37:29 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001423.html">[Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)
+</A></li>
+        <LI>Next message: <A HREF="001427.html">[Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1426">[ date ]</a>
+              <a href="thread.html#1426">[ thread ]</a>
+              <a href="subject.html#1426">[ subject ]</a>
+              <a href="author.html#1426">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Salut,
+
+Je passe en vitesse, prenons un exemple cette table :
+
+MaTable:
+  actAs:
+    I18n: { fields : [name] }
+    Timestampable: ~
+    Taggable: ~
+  column:
+    name: string(255)
+    madate: date
+    nbmachin : integer
+
+C'est un sch&#233;ma doctrine bidon &#233;crit en yaml. Avec une commande en CLI
+je reg&#232;nre la bd, les formulaires, les mod&#232;les, les filtres (notions
+non abord&#233;es ici).
+Il faut savoir qu'avec les ORM de sf (propel et doctrine donc), des
+classes BaseMaTableForm, BaseMaClass et BaseMaClassTable sont
+g&#233;n&#233;r&#233;es. elles ne sont pas &#224; modifi&#233;es par le dev, ce sont les
+repr&#233;snetations du sch&#233;ma yml. En principe on svn:ignore ces dossiers.
+Ailleurs, sont &#233;galement g&#233;n&#233;r&#233;s les m&#234;mes classes sans le &quot;Base&quot; qui
+h&#233;ritent des Base*. Ainsi l'orm g&#233;n&#232;re tout qu'il faut dans son coin
+et propose des classes filles qui nous permettent de tout changer.
+
+Les ActAs interviennent &#224; la g&#233;n&#233;ration de ces classes Base* : il
+ajoute des champs au formulaire, ajoute les champs &#224; la bd, le
+comportement en modification de MaTable sont automatiquement g&#233;r&#233;s.
+
+
+on peut ainsi faire :
+$toto = new MaTable();
+$toto-&gt;setTags(array('titi', 'toto', 'coucou', 'miaou');
+$toto-&gt;Translations['fr']-&gt;setName('coucou');
+$toto-&gt;Translations['en']-&gt;setName('hello');
+
+Vous voulez savoir quoi d'autre ?
+
+
+2009/10/12  &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">foxmask at foxmask.info</A>&gt;:
+&gt;<i> Bonjour,
+</I>&gt;<i>
+</I>&gt;<i> Ce weekend j'ai un peu cherch&#233; le actAs comme je l'avais croise sur CakePHP pour
+</I>&gt;<i> comprendre comme c'&#233;tait g&#233;r&#233;.
+</I>&gt;<i>
+</I>&gt;<i> Chez Cake, le actAs influe sur le mod&#232;le uniquement.
+</I>&gt;<i> Ainsi, gerer comme dans jTags (par exemple), avec CakePHP cela revient &#224; d&#233;finir
+</I>&gt;<i> un comportement et via des callbacks, g&#233;rer les donn&#233;es dans al base.
+</I>&gt;<i>
+</I>&gt;<i> Par contre cot&#233; vue, et contr&#244;leur, il faut le faire &#224; la main.
+</I>&gt;<i>
+</I>&gt;<i> En gros donc, m&#234;me si on n'a pas actAs, on en revient &#224; la meme chose,
+</I>&gt;<i>
+</I>&gt;<i> Ajouter la colonne dans sa dao puis forms puis une zone pour gerer tout &#231;a.
+</I>&gt;<i>
+</I>&gt;<i> Bastnic : concr&#234;tement si t'as 2min je veux bien que tu me dises comment SF g&#232;re
+</I>&gt;<i> cela exactement (&#224; part Doctrine qui gere sa sauce quoi d'autre doit etre fait
+</I>&gt;<i> par le developpeur &#160;?) ;-)
+</I>&gt;<i>
+</I>&gt;<i> Je veux bien qu'il y ait de la magie &quot;la dedans&quot; mais on pourrait aussi bien
+</I>&gt;<i> d&#233;finir nous aussi un Behavior-like qui g&#232;re tous ces aspects (dao/form/tpl)
+</I>&gt;<i> via des jEvent() non ?
+</I>&gt;<i>
+</I>&gt;<i> cdt ;)
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jelix-dev mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">Jelix-dev at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">https://lists.berlios.de/mailman/listinfo/jelix-dev</A>
+</I>&gt;<i>
+</I>
+
+
+-- 
+Bastien Jaillot
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001423.html">[Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)
+</A></li>
+	<LI>Next message: <A HREF="001427.html">[Jelix-dev] expos&#233; du &quot;actAs&quot; par Bastnic ;)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1426">[ date ]</a>
+              <a href="thread.html#1426">[ thread ]</a>
+              <a href="subject.html#1426">[ subject ]</a>
+              <a href="author.html#1426">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

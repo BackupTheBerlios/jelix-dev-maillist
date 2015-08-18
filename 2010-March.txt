@@ -1,0 +1,769 @@
+From olivier at foxmask.info  Mon Mar  1 00:12:29 2010
+From: olivier at foxmask.info (olivier)
+Date: Mon, 01 Mar 2010 00:12:29 +0100
+Subject: [Jelix-dev] [booster] un point sous peu
+In-Reply-To: <4B896183.5010705@foxmask.info>
+References: <4B892A4F.4070802@foxmask.info> <4B894F26.6040308@foxmask.info>
+	<4B896183.5010705@foxmask.info>
+Message-ID: <4B8AF85D.7000206@foxmask.info>
+
+Bonsoir,
+En parcourant http://hginit.com/02.html j'ai pige pourquoi j'avais une 
+nouvelle branche qui se cr?ait :)
+Donc hg pull + hg commit + hg push et rebelote
+
+C:\WEB\DOCUMENT_ROOT\www_jelix>hg push
+pushing to ssh://hg at hg.jelix.org/private/websites
+searching for changes
+remote: adding changesets
+remote: adding manifests
+remote: adding file changes
+remote: added 3 changesets with 28 changes to 27 files
+remote: error: pretxnchangegroup.access hook failed: 
+mercurialserver.access: access denied for changeset a9ec85f7c5da
+remote: transaction abort!
+remote: rollback completed
+remote: abort: mercurialserver.access: access denied for changeset 
+a9ec85f7c5da
+abort: unexpected response: empty string
+
+Mais je suis persuad? qu'avant le 31/12/2009 je pouvais push .
+cdt.
+
+Le 27/02/2010 19:16, olivier a ?crit :
+> mis?re ...
+>
+> je creais une nouvelle branche et ...
+>
+> pushing to ssh://hg at hg.jelix.org/private/websites
+> searching for changes
+> remote: adding changesets
+> remote: adding manifests
+> remote: adding file changes
+> remote: added 2 changesets with 26 changes to 26 files (+1 heads)
+> remote: error: pretxnchangegroup.access hook failed: 
+> mercurialserver.access: access denied for changeset a9ec85f7c5da
+> remote: transaction abort!
+> remote: rollback completed
+> remote: abort: mercurialserver.access: access denied for changeset 
+> a9ec85f7c5da
+> abort: unexpected response: empty string
+>
+>
+> Le 27/02/2010 17:58, olivier a ?crit :
+>> Bonsoir,
+>> finallement c'est pas trop trop mal :)
+>> suffit de shooter un event de ci de la et du code en trop sinon ca le 
+>> fait.
+>> je fais un push dans la soir?e si d'autres veulent s'y mettre
+>> cdt.
+>> Le 27/02/2010 15:21, olivier a ?crit :
+>>> bonjour
+>>> je refais le tour de l'ex new forge pour v?rifier si on peut le 
+>>> conserver as is
+>>> retour dans la journ?e :)
+>>> @Tchao
+>>> _______________________________________________
+>>> Jelix-dev mailing list
+>>> Jelix-dev at lists.berlios.de
+>>> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>> _______________________________________________
+>> Jelix-dev mailing list
+>> Jelix-dev at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+From kevin at lepeltier.info  Mon Mar  1 13:07:47 2010
+From: kevin at lepeltier.info (=?ISO-8859-1?Q?Lepeltier_k=E9vin?=)
+Date: Mon, 01 Mar 2010 13:07:47 +0100
+Subject: [Jelix-dev] [release] Cycle des releases
+In-Reply-To: <829794f91002261315y3adbaba3v1455fe95598fd8f7@mail.gmail.com>
+References: <4B87FB4A.9080409@mathaud.net>
+	<4B87FF81.4060900@xulfr.org>	<4B880180.6080309@mathaud.net>
+	<829794f91002261315y3adbaba3v1455fe95598fd8f7@mail.gmail.com>
+Message-ID: <4B8BAE13.6000409@lepeltier.info>
+
+Je profite d'un petit projet pour tester bitbucket.
+Facile d'acc?s, m?me pour un petit fran?ais qui speak pas english, c'est 
+simple, et il y a des fonctionnalit?s vraiment sympa.
+
+Je vote pour aussi.
+
+lipki
+
+
+From laurent at xulfr.org  Mon Mar  1 13:36:31 2010
+From: laurent at xulfr.org (laurent)
+Date: Mon, 01 Mar 2010 13:36:31 +0100
+Subject: [Jelix-dev] [release] Cycle des releases
+In-Reply-To: <829794f91002261315y3adbaba3v1455fe95598fd8f7@mail.gmail.com>
+References: <4B87FB4A.9080409@mathaud.net>
+	<4B87FF81.4060900@xulfr.org>	<4B880180.6080309@mathaud.net>
+	<829794f91002261315y3adbaba3v1455fe95598fd8f7@mail.gmail.com>
+Message-ID: <4B8BB4CF.3000905@xulfr.org>
+
+
+> Comme je l'ai d?j? dit, je suis ? fond pour cette solution, qui nous
+> permettra
+> de nous concentrer plus sur le code et pas l'administration. Par contre,
+> je ne
+> vois pas de moyen de transfert de nos tickets vers le syst?me de bitbucket.
+> Pour le wiki de dev, c'est aussi un depot hg ?a devrait ?tre jouable.
+>
+
+Il manque de toute fa?on quelques trucs dans le syst?me de tickets de 
+bitbucket, comme l'interd?pendance des tickets, les champs personnalis?s...
+
+Donc pour l'instant, on reste sur developer.jelix.org pour les tickets.
+
+Laurent
+(en vacance)
+
+
+From laurent at xulfr.org  Tue Mar  2 20:39:12 2010
+From: laurent at xulfr.org (laurent)
+Date: Tue, 02 Mar 2010 20:39:12 +0100
+Subject: [Jelix-dev] Jelix-dev Digest, Vol 18, Issue 6
+In-Reply-To: <4B8869E8.4050706@foxmask.info>
+References: <mailman.52.1267218951.27689.jelix-dev@lists.berlios.de>
+	<4B8869E8.4050706@foxmask.info>
+Message-ID: <4B8D6960.3050303@xulfr.org>
+
+Le 27/02/10 01:40, olivier a ?crit :
+> Bonsoir,
+>
+> 100% pour shooter le d?p?t mercurial de jelix et passer sur bb ;
+> comme je l'avais expliqu? je trouvais que c'?tait lors de hg clone du
+> d?pot que le serveur partait en vrille.
+> donc ? fond pour cette solution.
+>
+> Pour Booster.Jelix.org :
+> J'ai regard? et ya tellement de code ? virer (notamment la gestion de
+> donn?es ajout?es ? trac )
+> qu'on ferait mieux de le reprendre from scratch ce "projet"
+>
+> 100% ok pour le temps des releases.
+>
+> Pour les tickets ? migrer (? la main :/ ) :
+> 1) on migre en premier les BUGs pour la 1.2 et les tickets dont on
+> s'occupe d?j? ;
+> 2) on prend le temps de migrer le reste au fur et ? mesure de notre temps
+
+non on ne migre pas. on va pas perdre notre temps ? ?a.
+
+>
+> Derniere chose :
+> on conserve un d?pot HG pour les sources du site sur le serveur non (je
+> serai pour tout tout mettre sur bitbucket) ?
+> ou on fait un depot "priv?" sur BB pour cela (mais je ne sais pas si
+> "priv?" = invisible ? tout ? chacun sauf ? ceux dont on donne
+> "l'adresse" )?
+
+on laisse le d?p?t hg du site sur notre serveur. aucun interet ? mon 
+avis ? mettre ?a sur bitbucket.
+
+
+
+
+
+From laurent at jelix.org  Wed Mar  3 00:41:15 2010
+From: laurent at jelix.org (Laurent)
+Date: Wed, 03 Mar 2010 00:41:15 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+Message-ID: <4B8DA21B.5020903@jelix.org>
+
+Bonjour,
+
+Le depot officiel du trunk est maintenant sur bitbucket :-)
+
+J'ai cr?? un compte jelix, et import? nos trois branches
+
+http://bitbucket.org/jelix/jelix-trunk/
+http://bitbucket.org/jelix/jelix-1.1.x/
+http://bitbucket.org/jelix/jelix-1.0.x/
+
+Pour la proposition des patchs, on pourrait proposer un nouveau mode de 
+fonctionnement. Le contributeur qui veut proposer un patch sera 
+encourager ? faire comme ceci :
+
+- il ouvre un compte sur bitbucket
+- il clone le depot qu'il veut
+- il y commit ses modifs. les messages devront suivre un format pr?cis 
+(? d?terminer), et il sera encourag? ? ne pas faire 50 commits pour 3 
+lignes de code, histoire de garder un historique propre, de toujours 
+faire un rebase etc.. r?gles ? pr?ciser.
+- il fait une demande de pull dans bitbucket
+- le reviewer check les commits et fait le pull dans le depot si c'est ok.
+
+je n'ai pas encore vu vraiment comment se passe un "pull request" sur 
+bitbucket, donc on adaptera ce mode de fonctionnement en fonction de 
+notre exp?rience.
+
+On laissera aussi, et bien s?r, la possibilit? de proposer des patchs 
+via trac, pour ceux qui ne veulent pas s'inscrire sur bitbucket, qui ne 
+connaissent pas mercurial etc.
+
+? noter que dor?navant, je ferais comme tout le monde : je clonerai le 
+trunk (d?j? fait en fait https://bitbucket.org/laurentj/jelix-trunk/) 
+j'y ferai mes propres modifs, et ne pusherai dans le depot officiel que 
+quand le d?veloppement d'une nouvelle feature est termin?.
+
+
+Qu'en pensez-vous ? Des id?es ? Voyez vous d'autres modes de 
+fonctionnement ?
+
+
+Laurent
+
+
+From ym69ceuajgm at gmail.com  Wed Mar  3 10:08:30 2010
+From: ym69ceuajgm at gmail.com (Yannick)
+Date: Wed, 3 Mar 2010 10:08:30 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+In-Reply-To: <4B8DA21B.5020903@jelix.org>
+References: <4B8DA21B.5020903@jelix.org>
+Message-ID: <8a2b36ed1003030108w1abb6cf5i919597296a28a91@mail.gmail.com>
+
+Salut,
+
+Tout cela a l'air tr?s bien. J'ai h?te de pouvoir contribuer ? Jelix d?s que
+j'aurais achev? les projets en en cours.
+A+
+
+
+
+Le 3 mars 2010 00:41, Laurent <laurent at jelix.org> a ?crit :
+
+> Bonjour,
+>
+> Le depot officiel du trunk est maintenant sur bitbucket :-)
+>
+> J'ai cr?? un compte jelix, et import? nos trois branches
+>
+> http://bitbucket.org/jelix/jelix-trunk/
+> http://bitbucket.org/jelix/jelix-1.1.x/
+> http://bitbucket.org/jelix/jelix-1.0.x/
+>
+> Pour la proposition des patchs, on pourrait proposer un nouveau mode de
+> fonctionnement. Le contributeur qui veut proposer un patch sera encourager ?
+> faire comme ceci :
+>
+> - il ouvre un compte sur bitbucket
+> - il clone le depot qu'il veut
+> - il y commit ses modifs. les messages devront suivre un format pr?cis (?
+> d?terminer), et il sera encourag? ? ne pas faire 50 commits pour 3 lignes de
+> code, histoire de garder un historique propre, de toujours faire un rebase
+> etc.. r?gles ? pr?ciser.
+> - il fait une demande de pull dans bitbucket
+> - le reviewer check les commits et fait le pull dans le depot si c'est ok.
+>
+> je n'ai pas encore vu vraiment comment se passe un "pull request" sur
+> bitbucket, donc on adaptera ce mode de fonctionnement en fonction de notre
+> exp?rience.
+>
+> On laissera aussi, et bien s?r, la possibilit? de proposer des patchs via
+> trac, pour ceux qui ne veulent pas s'inscrire sur bitbucket, qui ne
+> connaissent pas mercurial etc.
+>
+> ? noter que dor?navant, je ferais comme tout le monde : je clonerai le
+> trunk (d?j? fait en fait https://bitbucket.org/laurentj/jelix-trunk/) j'y
+> ferai mes propres modifs, et ne pusherai dans le depot officiel que quand le
+> d?veloppement d'une nouvelle feature est termin?.
+>
+>
+> Qu'en pensez-vous ? Des id?es ? Voyez vous d'autres modes de fonctionnement
+> ?
+>
+>
+> Laurent
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20100303/d1812435/attachment.html>
+
+From kevin at lepeltier.info  Wed Mar  3 10:09:58 2010
+From: kevin at lepeltier.info (=?ISO-8859-1?Q?Lepeltier_k=E9vin?=)
+Date: Wed, 03 Mar 2010 10:09:58 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+In-Reply-To: <4B8DA21B.5020903@jelix.org>
+References: <4B8DA21B.5020903@jelix.org>
+Message-ID: <4B8E2766.9020701@lepeltier.info>
+
+Bonjour,
+
+je me suis mis en followers.
+Pour ?tre Writers, on fait la demande ici, ou directement sur bitbucket ?
+
+Pour les patchs, on peut aussi utiliser les "patch queue", ?a permet de 
+garder un historique propre.
+
+Sinon je Plussois ton intention de faire comme tout le monde :)
+
+k?vin.
+
+
+From olivier at foxmask.info  Thu Mar  4 13:51:05 2010
+From: olivier at foxmask.info (olivier at foxmask.info)
+Date: Thu, 04 Mar 2010 13:51:05 +0100
+Subject: [Jelix-dev] Jelix Enlistment @Ohloh.net
+Message-ID: <20100304135105.2047822guytfvx6h@ssl0.ovh.net>
+
+bonjour,
+en passant sur ohloh.net pour havefnubb, j'en ai profit? pour ajouter  
+le d?p?t bitbucket de jelix ? ohloh.net :)
+
+++
+
+
+
+From olivier at foxmask.info  Wed Mar  3 21:05:13 2010
+From: olivier at foxmask.info (olivier)
+Date: Wed, 03 Mar 2010 21:05:13 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+In-Reply-To: <4B8DA21B.5020903@jelix.org>
+References: <4B8DA21B.5020903@jelix.org>
+Message-ID: <4B8EC0F9.2080209@foxmask.info>
+
+Bonsoir,
+
+Le 03/03/2010 00:41, Laurent a ?crit :
+> Bonjour,
+>
+> Le depot officiel du trunk est maintenant sur bitbucket :-)
+>
+> J'ai cr?? un compte jelix, et import? nos trois branches
+>
+> http://bitbucket.org/jelix/jelix-trunk/
+> http://bitbucket.org/jelix/jelix-1.1.x/
+> http://bitbucket.org/jelix/jelix-1.0.x/
+>
+> Pour la proposition des patchs, on pourrait proposer un nouveau mode 
+> de fonctionnement. Le contributeur qui veut proposer un patch sera 
+> encourager ? faire comme ceci :
+>
+> - il ouvre un compte sur bitbucket
+> - il clone le depot qu'il veut
+> - il y commit ses modifs. les messages devront suivre un format pr?cis 
+> (? d?terminer), et il sera encourag? ? ne pas faire 50 commits pour 3 
+> lignes de code, histoire de garder un historique propre, de toujours 
+> faire un rebase etc.. r?gles ? pr?ciser.
+> - il fait une demande de pull dans bitbucket
+> - le reviewer check les commits et fait le pull dans le depot si c'est 
+> ok.
+>
+> je n'ai pas encore vu vraiment comment se passe un "pull request" sur 
+> bitbucket, donc on adaptera ce mode de fonctionnement en fonction de 
+> notre exp?rience.
+>
+> On laissera aussi, et bien s?r, la possibilit? de proposer des patchs 
+> via trac, pour ceux qui ne veulent pas s'inscrire sur bitbucket, qui 
+> ne connaissent pas mercurial etc.
+>
+> ? noter que dor?navant, je ferais comme tout le monde : je clonerai le 
+> trunk (d?j? fait en fait https://bitbucket.org/laurentj/jelix-trunk/) 
+> j'y ferai mes propres modifs, et ne pusherai dans le depot officiel 
+> que quand le d?veloppement d'une nouvelle feature est termin?.
+>
+>
+> Qu'en pensez-vous ? Des id?es ? Voyez vous d'autres modes de 
+> fonctionnement ?
+Tout cela me va, et comme toi j'ai "fork?" le trunk.
+
+Reste du d?tail :
+1) Jusqu'? maintenant quand un ticket ?tait "review+" (apres ta review 
+ou celle de loic) n'importe quel d?veloppeur (ayant les droits) pouvait 
+faire un *push *en ayant patch? le clone du trunk.
+A pr?sent tu sembles sugg?rer que le reviewer (donc loic ou toi) fera le 
+*pull *c'est ?a ?
+Ou bien comme "avant" vous mettez review+ et l'un de nous fera le *pull *?
+2) on (nous tous sauf toi) oublie le *push *pour ne plus faire que du 
+*pull *(via pull request)?
+3) comme Lipki, m?me question quant ? devenir writter ;-)
+
+Bonne soir?e.
+Olivier.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20100303/db3b030b/attachment.html>
+
+From olivier at foxmask.info  Fri Mar  5 09:47:32 2010
+From: olivier at foxmask.info (olivier at foxmask.info)
+Date: Fri, 05 Mar 2010 09:47:32 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+In-Reply-To: <4B8EC0F9.2080209@foxmask.info>
+References: <4B8DA21B.5020903@jelix.org> <4B8EC0F9.2080209@foxmask.info>
+Message-ID: <20100305094732.57015dd2vwsns64g@ssl0.ovh.net>
+
+bonjour,
+Je viens de m'apercevoir qu'on ne peut pas (encore ?) soumettre d'issue sur
+http://bitbucket.org/jelix/jelix-trunk/
+cdt.
+olivier <olivier at foxmask.info> a ?crit?:
+
+> Bonsoir,
+>
+> Le 03/03/2010 00:41, Laurent a ?crit :
+>> Bonjour,
+>>
+>> Le depot officiel du trunk est maintenant sur bitbucket :-)
+>>
+>> J'ai cr?? un compte jelix, et import? nos trois branches
+>>
+>> http://bitbucket.org/jelix/jelix-trunk/
+>> http://bitbucket.org/jelix/jelix-1.1.x/
+>> http://bitbucket.org/jelix/jelix-1.0.x/
+>>
+>> Pour la proposition des patchs, on pourrait proposer un nouveau  
+>> mode de fonctionnement. Le contributeur qui veut proposer un patch  
+>> sera encourager ? faire comme ceci :
+>>
+>> - il ouvre un compte sur bitbucket
+>> - il clone le depot qu'il veut
+>> - il y commit ses modifs. les messages devront suivre un format  
+>> pr?cis (? d?terminer), et il sera encourag? ? ne pas faire 50  
+>> commits pour 3 lignes de code, histoire de garder un historique  
+>> propre, de toujours faire un rebase etc.. r?gles ? pr?ciser.
+>> - il fait une demande de pull dans bitbucket
+>> - le reviewer check les commits et fait le pull dans le depot si c'est ok.
+>>
+>> je n'ai pas encore vu vraiment comment se passe un "pull request"  
+>> sur bitbucket, donc on adaptera ce mode de fonctionnement en  
+>> fonction de notre exp?rience.
+>>
+>> On laissera aussi, et bien s?r, la possibilit? de proposer des  
+>> patchs via trac, pour ceux qui ne veulent pas s'inscrire sur  
+>> bitbucket, qui ne connaissent pas mercurial etc.
+>>
+>> ? noter que dor?navant, je ferais comme tout le monde : je clonerai  
+>> le trunk (d?j? fait en fait  
+>> https://bitbucket.org/laurentj/jelix-trunk/) j'y ferai mes propres  
+>> modifs, et ne pusherai dans le depot officiel que quand le  
+>> d?veloppement d'une nouvelle feature est termin?.
+>>
+>>
+>> Qu'en pensez-vous ? Des id?es ? Voyez vous d'autres modes de  
+>> fonctionnement ?
+> Tout cela me va, et comme toi j'ai "fork?" le trunk.
+>
+> Reste du d?tail :
+> 1) Jusqu'? maintenant quand un ticket ?tait "review+" (apres ta  
+> review ou celle de loic) n'importe quel d?veloppeur (ayant les  
+> droits) pouvait faire un *push *en ayant patch? le clone du trunk.
+> A pr?sent tu sembles sugg?rer que le reviewer (donc loic ou toi)  
+> fera le *pull *c'est ?a ?
+> Ou bien comme "avant" vous mettez review+ et l'un de nous fera le *pull *?
+> 2) on (nous tous sauf toi) oublie le *push *pour ne plus faire que  
+> du *pull *(via pull request)?
+> 3) comme Lipki, m?me question quant ? devenir writter ;-)
+>
+> Bonne soir?e.
+> Olivier.
+>
+
+
+
+----------------------------------------------------------------
+This message was sent using IMP, the Internet Messaging Program.
+
+
+
+From laurent at xulfr.org  Fri Mar  5 18:13:17 2010
+From: laurent at xulfr.org (laurent)
+Date: Fri, 05 Mar 2010 18:13:17 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+In-Reply-To: <4B8EC0F9.2080209@foxmask.info>
+References: <4B8DA21B.5020903@jelix.org> <4B8EC0F9.2080209@foxmask.info>
+Message-ID: <4B913BAD.7090001@xulfr.org>
+
+Le 03/03/10 21:05, olivier a ?crit :
+> Reste du d?tail :
+> 1) Jusqu'? maintenant quand un ticket ?tait "review+" (apres ta review
+> ou celle de loic) n'importe quel d?veloppeur (ayant les droits) pouvait
+> faire un *push *en ayant patch? le clone du trunk.
+> A pr?sent tu sembles sugg?rer que le reviewer (donc loic ou toi) fera le
+> *pull *c'est ?a ?
+> Ou bien comme "avant" vous mettez review+ et l'un de nous fera le *pull *?
+> 2) on (nous tous sauf toi) oublie le *push *pour ne plus faire que du
+> *pull *(via pull request)?
+> 3) comme Lipki, m?me question quant ? devenir writter ;-)
+
+
+En effet, je ne sais pas si c'est utile de donner des acc?s ? tout le 
+monde sur le depot central, vu que tout le monde peut commiter dans son 
+propre clone. Et quand une fonctionnalit? est finie et revue, je pull. 
+Un peu le principe de fonctionnement du dev du noyau linux.
+
+Donner des acc?s en ?criture sur un d?p?t centralis? type svn, c'est 
+relativement n?cessaire pour mieux identifier les contributeurs. Mais 
+l?, vu qu'un commit est unique et identifie son auteur, on ne perd pas 
+cette information quand on pull.
+
+mais je vais peut ?tre donner des droits quand m?me, pour effectivement 
+d'autres que moi puisse puller en mon absence ou si je manque de temps.
+
+
+
+From laurent at xulfr.org  Fri Mar  5 18:04:29 2010
+From: laurent at xulfr.org (laurent)
+Date: Fri, 05 Mar 2010 18:04:29 +0100
+Subject: [Jelix-dev] Nouveau depot sur bitbucket
+In-Reply-To: <20100305094732.57015dd2vwsns64g@ssl0.ovh.net>
+References: <4B8DA21B.5020903@jelix.org> <4B8EC0F9.2080209@foxmask.info>
+	<20100305094732.57015dd2vwsns64g@ssl0.ovh.net>
+Message-ID: <4B91399D.5040703@xulfr.org>
+
+Le 05/03/10 09:47, olivier at foxmask.info a ?crit :
+> bonjour,
+> Je viens de m'apercevoir qu'on ne peut pas (encore ?) soumettre d'issue sur
+> http://bitbucket.org/jelix/jelix-trunk/
+> cdt.
+
+non j'ai d?sactiv? le truc, vu qu'on garde developer.jelix.org.
+
+
+From olivier at foxmask.info  Wed Mar 10 10:18:02 2010
+From: olivier at foxmask.info (olivier at foxmask.info)
+Date: Wed, 10 Mar 2010 10:18:02 +0100
+Subject: [Jelix-dev] LiveJelix.org
+Message-ID: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>
+
+bonjour,
+
+Me sont venues 2 id?es.
+
+- Premi?re id?e :
+
+Outre le site de "comm'", je me disais : ne serait-ce pas utile/sympa  
+de voir des appli jelix tourner et les tester.
+Par exemple pour rarangi, permettre de naviguer dedans pour se faire une id?e.
+Pour cela on lierai le site de "comm'" (la vitrine) avec un lien "try  
+it yourself" qui renverrai sur Livejelix.org, par exemple, qui  
+permettrait de tester les appli de la vitrine.
+Ce site pourrait aussi ?tre li? depuis booster.jelix.org avec le m?me  
+lien "try it yourself" depuis la page des modules mis en lumi?re.
+Evidement tout ne pourrait se retrouver sur livejelix.org, ca finirai  
+par faire trop de boulot  pour maintenir tout ca. Sauf quand on aura  
+grossi :)
+
+Cette id?e m'est venue quand j'ai pondu un billet sur Rarangi et  
+qu'aussit?t j'ai eu une demande pour savoir o? le trouver.
+J'ai donc mis le lien sur le billet puis fait un bac ? sable sur le  
+minicloud OVH que j'ai encore http://v11171.ovh.net/
+Mais comme ce site est du temporaire, je voyais bien un site d?di?  
+(livejelix.org)
+
+- Seconde id?e :
+dans une application jelix, afficher les noms des modules (et  
+plugins?) utilis?es par page,
+histoire d'illustrer le fait que jelix permet une iteroperabilit? des  
+modules entre eux.
+
+Exemple sur http://community.havefnubb.org il y a 3 modules :
+- havefnubb
+- jcommunity
+- jtags
+
+L'id?e serait d'afficher "g?ographiquement" sur la page o? sont ces modules.
+Je ne sais pas trop comment faire pour que le r?sultat pourrait ?tre  
+?l?gant et attrayant.
+
+Qu'en pensez vous ?
+
+bonne journ?e @tous.
+
+
+
+From laurent at xulfr.org  Wed Mar 10 11:14:49 2010
+From: laurent at xulfr.org (laurent)
+Date: Wed, 10 Mar 2010 11:14:49 +0100
+Subject: [Jelix-dev] LiveJelix.org
+In-Reply-To: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>
+References: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>
+Message-ID: <4B977119.9050605@xulfr.org>
+
+Le 10/03/10 10:18, olivier at foxmask.info a ?crit :
+> bonjour,
+>
+> Me sont venues 2 id?es.
+>
+> - Premi?re id?e :
+>
+> Outre le site de "comm'", je me disais : ne serait-ce pas utile/sympa de
+> voir des appli jelix tourner et les tester.
+> Par exemple pour rarangi, permettre de naviguer dedans pour se faire une
+> id?e.
+> Pour cela on lierai le site de "comm'" (la vitrine) avec un lien "try it
+> yourself" qui renverrai sur Livejelix.org, par exemple, qui permettrait
+> de tester les appli de la vitrine.
+> Ce site pourrait aussi ?tre li? depuis booster.jelix.org avec le m?me
+> lien "try it yourself" depuis la page des modules mis en lumi?re.
+> Evidement tout ne pourrait se retrouver sur livejelix.org, ca finirai
+> par faire trop de boulot pour maintenir tout ca. Sauf quand on aura
+> grossi :)
+>
+> Cette id?e m'est venue quand j'ai pondu un billet sur Rarangi et
+> qu'aussit?t j'ai eu une demande pour savoir o? le trouver.
+> J'ai donc mis le lien sur le billet puis fait un bac ? sable sur le
+> minicloud OVH que j'ai encore http://v11171.ovh.net/
+> Mais comme ce site est du temporaire, je voyais bien un site d?di?
+> (livejelix.org)
+
+Oui, ce n'est pas une mauvaise id?e. Mais  encore, vu nos dispo, ?a fait 
+une charge de travail suppl?mentaire. Ce serait mieux que chaque projet 
+installe lui m?me de son cot? si il le peux, son appli en d?mo. Et on 
+pourrait tout ? fait avoir une page sur jelix.org, qui liste ces d?mos, 
+page bien mise en avant sur la home.
+
+bref, le livejelix.org : quand on aura plein de contributeurs :-)
+
+>
+> - Seconde id?e :
+> dans une application jelix, afficher les noms des modules (et plugins?)
+> utilis?es par page,
+> histoire d'illustrer le fait que jelix permet une iteroperabilit? des
+> modules entre eux.
+>
+> Exemple sur http://community.havefnubb.org il y a 3 modules :
+> - havefnubb
+> - jcommunity
+> - jtags
+>
+> L'id?e serait d'afficher "g?ographiquement" sur la page o? sont ces
+> modules.
+> Je ne sais pas trop comment faire pour que le r?sultat pourrait ?tre
+> ?l?gant et attrayant.
+>
+> Qu'en pensez vous ?
+
+Je ne suis pas tr?s s?r d'avoir tr?s bien compris ce que tu expliques. 
+Ce ne serait pas une fonctionnalit? ? ajouter ? la barre de debug ?
+
+
+Au fait, je ne suis pas tr?s dispo ces jours-ci : ne m'attendez surtout 
+pas pour faire des choses ! surtout sur le site : homepage, design, 
+restructuration du contenu, etc. Go Go Go !
+
+(je vais essayer de m'occuper des reviews ce week-end)
+
+Laurent
+
+
+From olivier at foxmask.info  Wed Mar 10 11:36:13 2010
+From: olivier at foxmask.info (olivier at foxmask.info)
+Date: Wed, 10 Mar 2010 11:36:13 +0100
+Subject: [Jelix-dev] LiveJelix.org
+In-Reply-To: <4B977119.9050605@xulfr.org>
+References: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>
+	<4B977119.9050605@xulfr.org>
+Message-ID: <20100310113613.20872kahntdz02yo@ssl0.ovh.net>
+
+
+laurent <laurent at xulfr.org> a ?crit?:
+
+> Le 10/03/10 10:18, olivier at foxmask.info a ?crit :
+>> L'id?e serait d'afficher "g?ographiquement" sur la page o? sont ces
+>> modules.
+>> Je ne sais pas trop comment faire pour que le r?sultat pourrait ?tre
+>> ?l?gant et attrayant.
+/me relit ses phrases ecrites en chinois ...
+>>
+>> Qu'en pensez vous ?
+>
+> Je ne suis pas tr?s s?r d'avoir tr?s bien compris ce que tu  
+> expliques. Ce ne serait pas une fonctionnalit? ? ajouter ? la barre  
+> de debug ?
+je savais pas qu'elle existait (ou je l'ai oubli?e:)
+
++
+
+
+
+From laurent at xulfr.org  Wed Mar 10 12:05:36 2010
+From: laurent at xulfr.org (laurent)
+Date: Wed, 10 Mar 2010 12:05:36 +0100
+Subject: [Jelix-dev] LiveJelix.org
+In-Reply-To: <20100310113613.20872kahntdz02yo@ssl0.ovh.net>
+References: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>	<4B977119.9050605@xulfr.org>
+	<20100310113613.20872kahntdz02yo@ssl0.ovh.net>
+Message-ID: <4B977D00.3070306@xulfr.org>
+
+Le 10/03/10 11:36, olivier at foxmask.info a ?crit :
+>
+> laurent <laurent at xulfr.org> a ?crit :
+>
+>> Le 10/03/10 10:18, olivier at foxmask.info a ?crit :
+>>> L'id?e serait d'afficher "g?ographiquement" sur la page o? sont ces
+>>> modules.
+>>> Je ne sais pas trop comment faire pour que le r?sultat pourrait ?tre
+>>> ?l?gant et attrayant.
+> /me relit ses phrases ecrites en chinois ...
+>>>
+>>> Qu'en pensez vous ?
+>>
+>> Je ne suis pas tr?s s?r d'avoir tr?s bien compris ce que tu expliques.
+>> Ce ne serait pas une fonctionnalit? ? ajouter ? la barre de debug ?
+> je savais pas qu'elle existait (ou je l'ai oubli?e:)
+
+bah, la barre de debug, actuellement, se contente d'afficher les erreurs 
+(tu l'as surement d?j? vu, le truc en rouge immonde :-)). Mais on 
+pourrait y afficher plein d'autres trucs
+
+Des paaaaatches ! je veux des paaaaatches !
+
+:-)
+
+
+From dominique.papin at ruedesecoles.com  Wed Mar 10 12:07:10 2010
+From: dominique.papin at ruedesecoles.com (dominique papin)
+Date: Wed, 10 Mar 2010 12:07:10 +0100
+Subject: [Jelix-dev] LiveJelix.org
+In-Reply-To: <4B977D00.3070306@xulfr.org>
+References: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>	<4B977119.9050605@xulfr.org>	<20100310113613.20872kahntdz02yo@ssl0.ovh.net>
+	<4B977D00.3070306@xulfr.org>
+Message-ID: <4B977D5E.9030608@ruedesecoles.com>
+
+Ca vient :-)
+>
+> Des paaaaatches ! je veux des paaaaatches !
+>
+> :-)
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+
+From loic at mathaud.net  Wed Mar 10 12:30:00 2010
+From: loic at mathaud.net (Loic Mathaud)
+Date: Wed, 10 Mar 2010 12:30:00 +0100
+Subject: [Jelix-dev] LiveJelix.org
+In-Reply-To: <4B977D00.3070306@xulfr.org>
+References: <20100310101802.78671lao8h10n6bk@ssl0.ovh.net>	<4B977119.9050605@xulfr.org>	<20100310113613.20872kahntdz02yo@ssl0.ovh.net>
+	<4B977D00.3070306@xulfr.org>
+Message-ID: <4B9782B8.7050109@mathaud.net>
+
+
+
+laurent a ?crit :
+> 
+> bah, la barre de debug, actuellement, se contente d'afficher les erreurs
+> (tu l'as surement d?j? vu, le truc en rouge immonde :-)). Mais on
+> pourrait y afficher plein d'autres trucs
+> 
+> Des paaaaatches ! je veux des paaaaatches !
+> 
+> :-)
+
+J'ai un d?bug de debugbar que je dois avancer. J'ai besoin d'un petit
+peu de temps pour vous montrer ?a. ?a va arriver en tout cas :)
+
+

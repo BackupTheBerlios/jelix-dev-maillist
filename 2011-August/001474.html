@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] Jelix moved to Github
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2011-August/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20Jelix%20moved%20to%20Github&In-Reply-To=%3C4E57FAA7.7040605%40foxmask.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001473.html">
+   <LINK REL="Next"  HREF="001475.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] Jelix moved to Github</H1>
+    <B>olivier</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20Jelix%20moved%20to%20Github&In-Reply-To=%3C4E57FAA7.7040605%40foxmask.info%3E"
+       TITLE="[Jelix-dev] Jelix moved to Github">olivier at foxmask.info
+       </A><BR>
+    <I>Fri Aug 26 21:57:27 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001473.html">[Jelix-dev] Jelix moved to Github
+</A></li>
+        <LI>Next message: <A HREF="001475.html">[Jelix-dev] Jelix moved to Github
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1474">[ date ]</a>
+              <a href="thread.html#1474">[ thread ]</a>
+              <a href="subject.html#1474">[ subject ]</a>
+              <a href="author.html#1474">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Le 24/08/2011 14:15, Laurent a &#233;crit :
+&gt;<i> Dear contributors,
+</I>Hello  :)
+&gt;<i> If you want to propose several different changes, create a branch for
+</I>&gt;<i> each changes, so we could integrate changes individually, depending of
+</I>&gt;<i> their &quot;review status&quot;. With Git, when your changes will be integrated,
+</I>&gt;<i> you could &quot;delete&quot; the corresponding branch in your fork.
+</I>
+As I'm reading this nice post 
+<A HREF="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</A> I have a notice 
+to do.
+
+about &quot;create a branch for each changes&quot;
+that mean we have to do first of all :
+1) git clone <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">git at github</A>:myaccount/jelix
+
+then create a branch for our feature/fix, on the _target_ branch from 
+which we want to submit a patch
+2) git checkout -b ticket_1234_subject_foobar jelix-1.2.x
+where jelix-1.2.x is the _target_ branch
+
+3) when the patch will be reviewed we could delete the branch by :
+3.1) point on the right _target_ branch
+git checkout jelix-1.2.x
+3.2) merge the feature
+git merge --no-ff ticket_1234_subject_foobar
+3.3) delete the &quot;branch&quot; of the feature/fix
+git branch -d ticket_1234_subject_foobar
+3.4) push
+git push origin jelix-1.2.x
+
+
+Is all of that correct ?
+
+Olivier.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: olivier.vcf
+Type: text/x-vcard
+Size: 260 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/jelix-dev/attachments/20110826/1c3ed942/attachment.vcf">https://lists.berlios.de/pipermail/jelix-dev/attachments/20110826/1c3ed942/attachment.vcf</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001473.html">[Jelix-dev] Jelix moved to Github
+</A></li>
+	<LI>Next message: <A HREF="001475.html">[Jelix-dev] Jelix moved to Github
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1474">[ date ]</a>
+              <a href="thread.html#1474">[ thread ]</a>
+              <a href="subject.html#1474">[ subject ]</a>
+              <a href="author.html#1474">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

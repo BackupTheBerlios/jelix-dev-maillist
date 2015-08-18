@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] commit SVN-1317 (doubleface)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-February/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1317%20%28doubleface%29&In-Reply-To=%3C20090225210443.859D335402B%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000599.html">
+   <LINK REL="Next"  HREF="000601.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] commit SVN-1317 (doubleface)</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1317%20%28doubleface%29&In-Reply-To=%3C20090225210443.859D335402B%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] commit SVN-1317 (doubleface)">dev at jelix.org
+       </A><BR>
+    <I>Wed Feb 25 22:04:43 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000599.html">[Jelix-dev] [cron] Manual building
+</A></li>
+        <LI>Next message: <A HREF="000601.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#600">[ date ]</a>
+              <a href="thread.html#600">[ thread ]</a>
+              <a href="subject.html#600">[ subject ]</a>
+              <a href="author.html#600">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>doubleface
+2009-02-25 22:04:43 +0100 (Wed, 25 Feb 2009)
+26
+[phpunit] merged jelix 1.1
+
+U   branches/phpunit/Makefile
+U   branches/phpunit/TODO_RELEASE
+U   branches/phpunit/build/manifests/jelix-admin-modules.mn
+U   branches/phpunit/build/manifests/jelix-dev.mn
+U   branches/phpunit/build/manifests/jelix-lib.mn
+U   branches/phpunit/build/manifests/jelix-modules.mn
+U   branches/phpunit/build/manifests/jelix-www.mn
+U   branches/phpunit/build/manifests/testapp.mn
+U   branches/phpunit/lib/jelix/CREDITS
+U   branches/phpunit/lib/jelix/acl/jAcl.class.php
+U   branches/phpunit/lib/jelix/acl/jAcl2.class.php
+U   branches/phpunit/lib/jelix/auth/jAuth.class.php
+A   branches/phpunit/lib/jelix/auth/jAuthUserLDAP.class.php
+U   branches/phpunit/lib/jelix/core/defaultconfig.ini.php
+U   branches/phpunit/lib/jelix/core/jConfigCompiler.class.php
+U   branches/phpunit/lib/jelix/core/jCoordinator.class.php
+U   branches/phpunit/lib/jelix/core/jSession.class.php
+U   branches/phpunit/lib/jelix/core/response/jResponseHtmlFragment.class.php
+U   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jacl.schema.mysql.sql
+U   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jacl2.data.mysql.sql
+U   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jacl2.data.pgsql.sql
+U   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jacl2.schema.mysql.sql
+A   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jauth.data.mysql.sql
+A   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jauth.data.pgsql.sql
+A   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jauth.schema.mysql.sql
+A   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jauth.schema.pgsql.sql
+U   branches/phpunit/lib/jelix/core-modules/jelix/install/sql/install_jsession.schema.mysql.sql
+U   branches/phpunit/lib/jelix/core-modules/jelix/locales/en_EN/auth.UTF-8.properties
+U   branches/phpunit/lib/jelix/core-modules/jelix/locales/en_US/auth.UTF-8.properties
+U   branches/phpunit/lib/jelix/core-modules/jelix/locales/fr_FR/auth.UTF-8.properties
+U   branches/phpunit/lib/jelix/core-modules/jelix/module.xml
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/403.html.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/404.html.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/404.xul.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/crud_list.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/crud_view.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/cruddfk_list.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/cruddfk_view.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/en_EN/check_install.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/en_US/check_install.tpl
+U   branches/phpunit/lib/jelix/core-modules/jelix/templates/fr_FR/check_install.tpl
+U   branches/phpunit/lib/jelix/dao/jDaoGenerator.class.php
+U   branches/phpunit/lib/jelix/db/jDbTools.class.php
+U   branches/phpunit/lib/jelix/docs/ns/item_infos.rng
+U   branches/phpunit/lib/jelix/events/jEvent.class.php
+U   branches/phpunit/lib/jelix/forms/jFormsBase.class.php
+U   branches/phpunit/lib/jelix/forms/jFormsCompiler_jf_1_1.class.php
+U   branches/phpunit/lib/jelix/init.php
+U   branches/phpunit/lib/jelix/plugins/auth/class/class.auth.php
+U   branches/phpunit/lib/jelix/plugins/auth/db/db.auth.php
+A   branches/phpunit/lib/jelix/plugins/auth/ldap/
+A   branches/phpunit/lib/jelix/plugins/auth/ldap/ldap.auth.php
+U   branches/phpunit/lib/jelix/plugins/auth/lds/lds.auth.php
+U   branches/phpunit/lib/jelix/plugins/coord/auth/auth.coord.ini.php.dist
+U   branches/phpunit/lib/jelix/plugins/coord/auth/auth.coord.php
+U   branches/phpunit/lib/jelix/plugins/coord/history/history.coord.php
+U   branches/phpunit/lib/jelix/plugins/coord/history/plugin.xml
+U   branches/phpunit/lib/jelix/plugins/db/mysql/mysql.dbtools.php
+U   branches/phpunit/lib/jelix/plugins/db/oci/oci.daobuilder.php
+U   branches/phpunit/lib/jelix/plugins/db/sqlite/sqlite.daobuilder.php
+U   branches/phpunit/lib/jelix/plugins/jforms/html/html.jformsbuilder.php
+U   branches/phpunit/lib/jelix/plugins/jforms/htmllight/htmllight.jformsbuilder.php
+U   branches/phpunit/lib/jelix/plugins/tpl/html/block.swf.php
+U   branches/phpunit/lib/jelix/plugins/tpl/html/block.swfjs.php
+U   branches/phpunit/lib/jelix/plugins/tpl/html/cfunction.swfbiscuit.php
+U   branches/phpunit/lib/jelix/plugins/tpl/html/function.link_to_remote.php
+U   branches/phpunit/lib/jelix/plugins/tpl/html/function.pagelinks.php
+U   branches/phpunit/lib/jelix/utils/jIniFileModifier.class.php
+U   branches/phpunit/lib/jelix/utils/jMailer.class.php
+U   branches/phpunit/lib/jelix/utils/jTcpdf.class.php
+U   branches/phpunit/lib/jelix/utils/jWSDL.class.php
+A   branches/phpunit/lib/jelix-admin-modules/CREDITS
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/controllers/groups.classic.php
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/controllers/users.classic.php
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/install/urls_example.xml
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/locales/en_EN/acl2.UTF-8.properties
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/locales/fr_FR/acl2.UTF-8.properties
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/module.xml
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/templates/groups_right.tpl
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/templates/groups_right_view.tpl
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/templates/user_rights.tpl
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/templates/user_rights_view.tpl
+D   branches/phpunit/lib/jelix-admin-modules/jacl2_admin/templates/users_list.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/classes/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/classes/jacl2db_admin.listener.php
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/controllers/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/controllers/groups.classic.php
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/controllers/users.classic.php
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/events.xml
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/install/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/install/urls_example.xml
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/locales/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/locales/en_EN/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/locales/en_EN/acl2.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/locales/fr_FR/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/locales/fr_FR/acl2.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/module.xml
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/groups_edit.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/groups_right.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/groups_right_view.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/user_rights.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/user_rights_view.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jacl2db_admin/templates/users_list.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/classes/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/classes/jauthdb_admin.listener.php
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/controllers/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/controllers/default.classic.php
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/controllers/password.classic.php
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/controllers/user.classic.php
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/events.xml
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/forms/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/forms/jelixuser.form.xml
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/install/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/install/urls_example.xml
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/en_EN/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/en_EN/auth.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/en_EN/crud.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/en_EN/user.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/fr_FR/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/fr_FR/auth.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/fr_FR/crud.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/locales/fr_FR/user.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/module.xml
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/crud_delete.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/crud_edit.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/crud_list.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/crud_view.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/password_change.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/user_edit.tpl
+A   branches/phpunit/lib/jelix-admin-modules/jauthdb_admin/templates/user_view.tpl
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/classes/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/classes/masterAdminMenuItem.class.php
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/controllers/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/controllers/default.classic.php
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/locales/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/locales/en_EN/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/locales/en_EN/gui.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/locales/fr_FR/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/locales/fr_FR/gui.UTF-8.properties
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/module.xml
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/templates/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/templates/index_login.tpl
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/templates/main.tpl
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/templates/zone_admin_infobox.tpl
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/templates/zone_admin_menu.tpl
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/templates/zone_dashboard.tpl
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/zones/
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/zones/admin_infobox.zone.php
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/zones/admin_menu.zone.php
+A   branches/phpunit/lib/jelix-admin-modules/master_admin/zones/dashboard.zone.php
+U   branches/phpunit/lib/jelix-modules/jWSDL/module.xml
+U   branches/phpunit/lib/jelix-modules/jacl2db/classes/jacl2db.listener.php
+U   branches/phpunit/lib/jelix-modules/jacl2db/module.xml
+U   branches/phpunit/lib/jelix-modules/jacldb/classes/jacldb.listener.php
+U   branches/phpunit/lib/jelix-modules/jacldb/module.xml
+U   branches/phpunit/lib/jelix-modules/jauth/install/var/config/auth.coord.ini.php
+U   branches/phpunit/lib/jelix-modules/jauth/install/var/config/authsw.coord.ini.php
+U   branches/phpunit/lib/jelix-modules/jauth/module.xml
+U   branches/phpunit/lib/jelix-modules/junittests/module.xml
+U   branches/phpunit/lib/jelix-scripts/CREDITS
+U   branches/phpunit/lib/jelix-scripts/commands/acl2group.cmd.php
+U   branches/phpunit/lib/jelix-scripts/commands/acl2right.cmd.php
+U   branches/phpunit/lib/jelix-scripts/commands/cleartemp.cmd.php
+U   branches/phpunit/lib/jelix-scripts/commands/createapp.cmd.php
+U   branches/phpunit/lib/jelix-scripts/commands/createdaocrud.cmd.php
+U   branches/phpunit/lib/jelix-scripts/commands/createentrypoint.cmd.php
+U   branches/phpunit/lib/jelix-scripts/commands/createmodule.cmd.php
+A   branches/phpunit/lib/jelix-scripts/commands/initadmin.cmd.php
+A   branches/phpunit/lib/jelix-scripts/default.conf.php
+U   branches/phpunit/lib/jelix-scripts/includes/command.class.php
+U   branches/phpunit/lib/jelix-scripts/jelix.php
+D   branches/phpunit/lib/jelix-scripts/scripts.conf.php
+A   branches/phpunit/lib/jelix-scripts/scripts.conf.php.dist
+U   branches/phpunit/lib/jelix-scripts/templates/application.init.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/controller.cmdline.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/controller.daocrud.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/controller.newapp.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/controller.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/dao.xml.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/dao_empty.xml.tpl
+A   branches/phpunit/lib/jelix-scripts/templates/jelix-scripts.init.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/module.xml.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/myHtmlResponse.class.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/project.xml.tpl
+A   branches/phpunit/lib/jelix-scripts/templates/responses/
+A   branches/phpunit/lib/jelix-scripts/templates/responses/adminHtmlResponse.class.php.tpl
+A   branches/phpunit/lib/jelix-scripts/templates/responses/adminLoginHtmlResponse.class.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/scripts/cmdline.php.tpl
+A   branches/phpunit/lib/jelix-scripts/templates/var/config/auth.coord.ini.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/var/config/dbprofils.ini.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/var/config/defaultconfig.ini.php.tpl
+A   branches/phpunit/lib/jelix-scripts/templates/var/config/jacl2.coord.ini.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/www/index.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/www/jsonrpc.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/www/rdf.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/www/soap.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/www/xmlrpc.php.tpl
+U   branches/phpunit/lib/jelix-scripts/templates/zone.tpl
+U   branches/phpunit/lib/jelix-www/design/jacl2.css
+A   branches/phpunit/lib/jelix-www/design/master_admin.css
+A   branches/phpunit/lib/jelix-www/design/records_list.css
+U   branches/phpunit/lib/jelix-www/js/jforms/datepickers/default/init.js
+U   branches/phpunit/lib/jelix-www/js/jforms_jquery.js
+U   branches/phpunit/lib/jelix-www/js/jforms_light.js
+U   branches/phpunit/lib/phpMailer/class.phpmailer.php
+U   branches/phpunit/lib/phpMailer/jelix.patch
+A   branches/phpunit/testapp/jelix-scripts.init.php
+A   branches/phpunit/testapp/modules/jelix_tests/controllers/jstests.classic.php
+A   branches/phpunit/testapp/modules/jelix_tests/templates/jstest_jforms.tpl
+A   branches/phpunit/testapp/modules/jelix_tests/tests/jauth.ldap_api.html.php
+A   branches/phpunit/testapp/modules/jelix_tests/tests/jdbtools.mysql.html_cli.php
+U   branches/phpunit/testapp/modules/jelix_tests/tests/jforms.html_cli.php
+A   branches/phpunit/testapp/modules/jelix_tests/tests/jforms.modifiedcontrols.html_cli.php
+U   branches/phpunit/testapp/modules/jelix_tests/tests/utils.jinifilemodifier.html_cli.php
+U   branches/phpunit/testapp/modules/testapp/controllers/main.classic.php
+U   branches/phpunit/testapp/modules/testapp/forms/sample.form.xml
+U   branches/phpunit/testapp/modules/testapp/templates/sommaire.tpl
+A   branches/phpunit/testapp/var/config/auth_ldap.coord.ini.php.dist
+U   branches/phpunit/testapp/var/config/defaultconfig.ini.php
+A   branches/phpunit/testapp/www/qunit/
+A   branches/phpunit/testapp/www/qunit/VERSION
+A   branches/phpunit/testapp/www/qunit/testrunner.js
+A   branches/phpunit/testapp/www/qunit/testsuite.css
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000599.html">[Jelix-dev] [cron] Manual building
+</A></li>
+	<LI>Next message: <A HREF="000601.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#600">[ date ]</a>
+              <a href="thread.html#600">[ thread ]</a>
+              <a href="subject.html#600">[ subject ]</a>
+              <a href="author.html#600">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

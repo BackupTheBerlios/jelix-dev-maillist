@@ -1,0 +1,52 @@
+From laurent at xulfr.org  Mon Apr 26 12:15:11 2010
+From: laurent at xulfr.org (laurent)
+Date: Mon, 26 Apr 2010 12:15:11 +0200
+Subject: [Jelix-dev] =?iso-8859-1?q?Bientot_1=2E2_beta=2C_Manuel_=E0_mettr?=
+ =?iso-8859-1?q?e_=E0_jour?=
+Message-ID: <4BD567AF.7000506@xulfr.org>
+
+Bonjour,
+
+La version 1.2beta est pr?te ? sortir. Il manque juste un truc bloquant 
+: la mise ? jour du manuel.
+
+Je viens de finir de relire et mettre ? jour le manuel de la version 
+1.1, et de cloner le manuel 1.1 pour en faire le manuel 1.2.
+
+http://jelix.org/articles/fr/manuel-1.2
+http://jelix.org/articles/en/manual-1.2
+
+Il faut maintenant ajouter dans ce manuel toutes les nouveaut?s de la 
+version 1.2.
+
+La liste des trucs ? documenter est ici :
+
+http://developer.jelix.org/report/15
+
+
+Je vais m'occuper ? documenter tout ce qui concerne le nouveau syst?me 
+d'installation et de mise ? jour.
+
+Mais j'aurais besoin d'aide pour le reste. Il y a pas mal de choses o? 
+c'est juste un ou deux paragraphes ? rajouter. Je suis s?r que vous 
+pourrez trouver une dizaine de minutes pour documenter un truc :-)
+
+La proc?dure :
+
+- choisir un ticket dans la liste http://developer.jelix.org/report/15
+- documenter sur la version fran?aise ET anglaise
+- mettre ? jour le ticket en mettant les urls des pages modifi?es, et en 
+d?cochant la case "documentation needed".
+- si vous n'avez pas le temps (ou autre raison) de faire les deux 
+manuels, indiquez au moins l'url des pages que vous avez touch?, mais ne 
+d?cochez pas la case "documentation needed" (? ne cocher donc que quand 
+les DEUX manuels sont ? jour).
+
+Dans les titres de chaque page, il y a ajout? "NOT UPDATED". Ne retirez 
+cette mention que quand vous ?tes s?r que la section ou chapitre en 
+question est vraiment ? jour (cela peut concerner plusieurs tickets).
+
+
+Laurent
+
+

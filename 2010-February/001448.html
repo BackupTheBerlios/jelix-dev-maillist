@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] Jelix-dev Digest, Vol 18, Issue 6
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2010-February/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20Jelix-dev%20Digest%2C%20Vol%2018%2C%20Issue%206&In-Reply-To=%3C4B8869E8.4050706%40foxmask.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001442.html">
+   <LINK REL="Next"  HREF="001449.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] Jelix-dev Digest, Vol 18, Issue 6</H1>
+    <B>olivier</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20Jelix-dev%20Digest%2C%20Vol%2018%2C%20Issue%206&In-Reply-To=%3C4B8869E8.4050706%40foxmask.info%3E"
+       TITLE="[Jelix-dev] Jelix-dev Digest, Vol 18, Issue 6">olivier at foxmask.info
+       </A><BR>
+    <I>Sat Feb 27 01:40:08 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001442.html">[Jelix-dev] Discussions sur le futur de Jelix
+</A></li>
+        <LI>Next message: <A HREF="001449.html">[Jelix-dev] [booster] un point sous peu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1448">[ date ]</a>
+              <a href="thread.html#1448">[ thread ]</a>
+              <a href="subject.html#1448">[ subject ]</a>
+              <a href="author.html#1448">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Bonsoir,
+
+100% pour shooter le d&#233;p&#244;t mercurial de jelix et passer sur bb ;
+comme je l'avais expliqu&#233; je trouvais que c'&#233;tait lors de hg clone du 
+d&#233;pot que le serveur partait en vrille.
+donc &#224; fond pour cette solution.
+
+Pour Booster.Jelix.org :
+J'ai regard&#233; et ya tellement de code &#224; virer (notamment la  gestion de 
+donn&#233;es ajout&#233;es &#224; trac )
+qu'on ferait mieux de le reprendre from scratch ce &quot;projet&quot;
+
+100% ok pour le temps des releases.
+
+Pour les tickets &#224; migrer (&#224; la main :/ ) :
+1) on migre en premier les BUGs pour la 1.2 et les tickets dont on 
+s'occupe d&#233;j&#224; ;
+2) on prend le temps de migrer le reste au fur et &#224; mesure de notre temps
+
+Derniere chose :
+on conserve un d&#233;pot HG pour les sources du site sur le serveur non (je 
+serai pour tout tout mettre sur bitbucket) ?
+ou on fait un depot &quot;priv&#233;&quot; sur BB pour cela (mais je ne sais pas si 
+&quot;priv&#233;&quot; = invisible &#224; tout &#224; chacun sauf &#224; ceux dont on donne &quot;l'adresse&quot; )?
+
+bonne nuit.
+
+Le 26/02/2010 22:15, <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev-request at lists.berlios.de</A> a &#233;crit :
+&gt;<i> Send Jelix-dev mailing list submissions to
+</I>&gt;<i> 	<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>
+</I>&gt;<i>
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i> 	<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">https://lists.berlios.de/mailman/listinfo/jelix-dev</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i> 	<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev-request at lists.berlios.de</A>
+</I>&gt;<i>
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i> 	<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev-owner at lists.berlios.de</A>
+</I>&gt;<i>
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> than &quot;Re: Contents of Jelix-dev digest...&quot;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i>
+</I>&gt;<i>     1. [release] Num?rotation des versions (Loic Mathaud)
+</I>&gt;<i>     2. [release] Cycle des releases (Loic Mathaud)
+</I>&gt;<i>     3. Discussions sur le futur de Jelix (Loic Mathaud)
+</I>&gt;<i>     4. Re: [release] Num?rotation des versions (laurent)
+</I>&gt;<i>     5. Re: [release] Cycle des releases (laurent)
+</I>&gt;<i>     6. Discussions sur le futur de Jelix (Loic Mathaud)
+</I>&gt;<i>     7. Re: [release] Cycle des releases (Loic Mathaud)
+</I>&gt;<i>     8. Re: [release] Cycle des releases (Christophe Thiriot)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 1
+</I>&gt;<i> Date: Fri, 26 Feb 2010 17:45:34 +0100
+</I>&gt;<i> From: Loic Mathaud&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">loic at mathaud.net</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: [Jelix-dev] [release] Num?rotation des versions
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B87FAAE.50602 at mathaud.net</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1
+</I>&gt;<i>
+</I>&gt;<i> Hello,
+</I>&gt;<i>
+</I>&gt;<i> Actuellement la num?rotation de Jelix est assez classique : x.y.z
+</I>&gt;<i>
+</I>&gt;<i> Avec le nouveau cycle de releases qui va ?tre mis en place, nous devons
+</I>&gt;<i> nous poser la question de la num?rotation : est-ce qu'on garde ce
+</I>&gt;<i> principe ou est-ce qu'on en change pour quelque chose se rapprochant de
+</I>&gt;<i> ce que fait ubuntu ?
+</I>&gt;<i>
+</I>&gt;<i> Pour ne pas perturber nos utilisateurs je pense qu'il serait bien de
+</I>&gt;<i> conserver notre num?rotation (m?me si j'aime bien la num?rotation ubuntu).
+</I>&gt;<i>
+</I>&gt;<i> On va donc sortir bient?t une 1.2 (id?alement en avril)
+</I>&gt;<i> On incr?menterait alors le 2?me chiffre ? chaque release : 1.3, 1.4,
+</I>&gt;<i> ..., 1.10, 1.11, ...
+</I>&gt;<i>
+</I>&gt;<i> La version 2 arriverait certainement lors de la refonte plus compl?te et
+</I>&gt;<i> du passage ? php5.3. On continuerait alors sur le  m?me principe : 2.1,
+</I>&gt;<i> 2.2, ...
+</I>&gt;<i>
+</I>&gt;<i> On reste donc sur ce principe ou vous voulez autre chose ?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> @+
+</I>&gt;<i> Loic
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 2
+</I>&gt;<i> Date: Fri, 26 Feb 2010 17:48:10 +0100
+</I>&gt;<i> From: Loic Mathaud&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">loic at mathaud.net</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: [Jelix-dev] [release] Cycle des releases
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B87FB4A.9080409 at mathaud.net</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1
+</I>&gt;<i>
+</I>&gt;<i> Hello,
+</I>&gt;<i>
+</I>&gt;<i> Concernant le cycle des releases de Jelix, je serais partant pour 3
+</I>&gt;<i> releases par an, 1 tous les 4 mois.
+</I>&gt;<i>
+</I>&gt;<i> Cela me parait un bon compromis pour avoir ? la fois le temps de
+</I>&gt;<i> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+</I>&gt;<i> de sortir 3 releases chaque ann?e.
+</I>&gt;<i>
+</I>&gt;<i> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+</I>&gt;<i> rythme de 3 mois soit un peu plus difficile ? tenir.
+</I>&gt;<i>
+</I>&gt;<i> Vous en pensez quoi ?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> @+
+</I>&gt;<i> Loic
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 3
+</I>&gt;<i> Date: Fri, 26 Feb 2010 17:51:56 +0100
+</I>&gt;<i> From: Loic Mathaud&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">loic at mathaud.net</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: [Jelix-dev] Discussions sur le futur de Jelix
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B87FC2C.2010409 at mathaud.net</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1
+</I>&gt;<i>
+</I>&gt;<i> Hello ? tous,
+</I>&gt;<i>
+</I>&gt;<i> Comme annonc? par Laurent, il va y avoir du changement. Mais maintenant
+</I>&gt;<i> que le cap est donn? il va falloir l'orienter plus pr?cis?ment et
+</I>&gt;<i> discuter des d?tails.
+</I>&gt;<i>
+</I>&gt;<i> Je vais reprendre ici les points principaux avec ce que nous devons donc
+</I>&gt;<i> discuter :
+</I>&gt;<i>
+</I>&gt;<i> - Fermer la forge : en fait pas grand chose ? dire, c'est en cours et
+</I>&gt;<i> les projets r?cup?rent leurs sources et migrent ailleurs
+</I>&gt;<i>
+</I>&gt;<i> - Lancer booster.jelix.org : c'est notre addons.mozilla.org-like. Le
+</I>&gt;<i> lancement se fera sur une version assez simple mais sera am?lior?e au
+</I>&gt;<i> fil du temps (notation, commentaires, ...)
+</I>&gt;<i>
+</I>&gt;<i> - La roadmap/les releases :
+</I>&gt;<i>      - d?finir le cycle exact
+</I>&gt;<i>      - quelle num?rotation ?
+</I>&gt;<i>      - organisation de planification des roadmap pour R et R+1
+</I>&gt;<i>      - gestion de la dur?e de support des versions. LTS ?
+</I>&gt;<i>      - arr?t de 1.0.x
+</I>&gt;<i>
+</I>&gt;<i> - Les responsabilit?s :
+</I>&gt;<i>      - un release manager :
+</I>&gt;<i>          - gestion de la bonne marche de la milestone en cours
+</I>&gt;<i>          - gestion de la release
+</I>&gt;<i>      - un documentation manager :
+</I>&gt;<i>          - gestion de la mise ? jour de la documentation, sa bonne tenue
+</I>&gt;<i>          - gestion de la synchro FR // EN
+</I>&gt;<i>          - r?daction de tutoriaux, bonnes pratiques
+</I>&gt;<i>      - un community manager :
+</I>&gt;<i>          - gestion du site jelix.org
+</I>&gt;<i>          - gestion des actions marketing
+</I>&gt;<i>
+</I>&gt;<i> Je pense ? court terme cr?er des pages sur djo pour noter ce qui sera
+</I>&gt;<i> retenu des d?bats ayant lieu ici.
+</I>&gt;<i>
+</I>&gt;<i> Dans l'imm?diat, je vous propose d'organiser les threads ainsi
+</I>&gt;<i>
+</I>&gt;<i> - [booster] Sujet du mail : pour tout ce qui touche ? booster
+</I>&gt;<i> - [release] Sujet du mail : pour tout ce qui touche aux roadmaps/releases
+</I>&gt;<i> - [roles] Sujet du mail : pour tout ce qui touche aux responsabilit?
+</I>&gt;<i>
+</I>&gt;<i> Il s'agit donc maintenant d'entrer dans le vif du sujet pour remettre
+</I>&gt;<i> Jelix en route et avancer doucement (quoi que) mais r?guli?rement.
+</I>&gt;<i>
+</I>&gt;<i> Loic
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 4
+</I>&gt;<i> Date: Fri, 26 Feb 2010 17:51:17 +0100
+</I>&gt;<i> From: laurent&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">laurent at xulfr.org</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: Re: [Jelix-dev] [release] Num?rotation des versions
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B87FC05.6010803 at xulfr.org</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+</I>&gt;<i>
+</I>&gt;<i> Le 26/02/10 17:45, Loic Mathaud a ?crit :
+</I>&gt;<i>    
+</I>&gt;&gt;<i> Hello,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Actuellement la num?rotation de Jelix est assez classique : x.y.z
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Avec le nouveau cycle de releases qui va ?tre mis en place, nous devons
+</I>&gt;&gt;<i> nous poser la question de la num?rotation : est-ce qu'on garde ce
+</I>&gt;&gt;<i> principe ou est-ce qu'on en change pour quelque chose se rapprochant de
+</I>&gt;&gt;<i> ce que fait ubuntu ?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Pour ne pas perturber nos utilisateurs je pense qu'il serait bien de
+</I>&gt;&gt;<i> conserver notre num?rotation (m?me si j'aime bien la num?rotation ubuntu).
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On va donc sortir bient?t une 1.2 (id?alement en avril)
+</I>&gt;&gt;<i> On incr?menterait alors le 2?me chiffre ? chaque release : 1.3, 1.4,
+</I>&gt;&gt;<i> ..., 1.10, 1.11, ...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> La version 2 arriverait certainement lors de la refonte plus compl?te et
+</I>&gt;&gt;<i> du passage ? php5.3. On continuerait alors sur le  m?me principe : 2.1,
+</I>&gt;&gt;<i> 2.2, ...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On reste donc sur ce principe ou vous voulez autre chose ?
+</I>&gt;&gt;<i>      
+</I>&gt;<i>
+</I>&gt;<i> Je suis d'avis de rester sur la m?me num?rotation.
+</I>&gt;<i>
+</I>&gt;<i> Laurent
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 5
+</I>&gt;<i> Date: Fri, 26 Feb 2010 18:06:09 +0100
+</I>&gt;<i> From: laurent&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">laurent at xulfr.org</A>&gt;
+</I>&gt;<i> To: <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>
+</I>&gt;<i> Subject: Re: [Jelix-dev] [release] Cycle des releases
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B87FF81.4060900 at xulfr.org</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+</I>&gt;<i>
+</I>&gt;<i> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+</I>&gt;<i>    
+</I>&gt;&gt;<i> Hello,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Concernant le cycle des releases de Jelix, je serais partant pour 3
+</I>&gt;&gt;<i> releases par an, 1 tous les 4 mois.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Cela me parait un bon compromis pour avoir ? la fois le temps de
+</I>&gt;&gt;<i> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+</I>&gt;&gt;<i> de sortir 3 releases chaque ann?e.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+</I>&gt;&gt;<i> rythme de 3 mois soit un peu plus difficile ? tenir.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Vous en pensez quoi ?
+</I>&gt;&gt;<i>      
+</I>&gt;<i>
+</I>&gt;<i> 4 mois oui, pourquoi pas.
+</I>&gt;<i>
+</I>&gt;<i> Et il y a aussi au niveau de la gestion des dep?ts qu'il faut
+</I>&gt;<i> s'organiser, et que je ne refasse pas la m?me erreur que pour la 1.2.
+</I>&gt;<i>
+</I>&gt;<i> En effet, j'ai eu le grand tord de d?velopper le syst?me d'installation
+</I>&gt;<i> directement sur le trunk. Resultat : trunk instable pendant plusieurs
+</I>&gt;<i> semaines, et ?a m'a pris plusieurs mois pour le finaliser. Cons?quence :
+</I>&gt;<i> release pas possible, m?me sans le syst?me d'installation.
+</I>&gt;<i>
+</I>&gt;<i> donc voil?, je vais dor?navant d?velopper les nouvelles features sur mon
+</I>&gt;<i> propre d?p?t. J'invite tout les contributeurs ? le faire d'ailleurs.
+</I>&gt;<i> Utilisons au maximum les possibilit?s que nous offre Mercurial. clone,
+</I>&gt;<i> rebase, merge, collapse etc...
+</I>&gt;<i>
+</I>&gt;<i> On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire
+</I>&gt;<i> une release ? tout moment.
+</I>&gt;<i>
+</I>&gt;<i> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+</I>&gt;<i> pourra ainsi cloner &quot;publiquement&quot; le trunk et faire ses modifs. Et moi
+</I>&gt;<i> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+</I>&gt;<i> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+</I>&gt;<i> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+</I>&gt;<i>
+</I>&gt;<i> Qu'en pensez-vous ?
+</I>&gt;<i>
+</I>&gt;<i> Laurent
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 6
+</I>&gt;<i> Date: Fri, 26 Feb 2010 17:32:58 +0100
+</I>&gt;<i> From: Loic Mathaud&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">loic at mathaud.net</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: [Jelix-dev] Discussions sur le futur de Jelix
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B87F7BA.70008 at mathaud.net</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1
+</I>&gt;<i>
+</I>&gt;<i> Hello ? tous,
+</I>&gt;<i>
+</I>&gt;<i> Comme annonc? par Laurent, il va y avoir du changement. Mais maintenant
+</I>&gt;<i> que le cap est donn? il va falloir l'orienter plus pr?cis?ment et
+</I>&gt;<i> discuter des d?tails.
+</I>&gt;<i>
+</I>&gt;<i> Je vais reprendre ici les points principaux avec ce que nous devons donc
+</I>&gt;<i> discuter :
+</I>&gt;<i>
+</I>&gt;<i> - Fermer la forge : en fait pas grand chose ? dire, c'est en cours et
+</I>&gt;<i> les projets r?cup?rent leurs sources et migrent ailleurs
+</I>&gt;<i>
+</I>&gt;<i> - Lancer booster.jelix.org : c'est notre addons.mozilla.org-like. Le
+</I>&gt;<i> lancement se fera sur une version assez simple mais sera am?lior?e au
+</I>&gt;<i> fil du temps (notation, commentaires, ...)
+</I>&gt;<i>
+</I>&gt;<i> - La roadmap/les releases :
+</I>&gt;<i>      - d?finir le cycle exact
+</I>&gt;<i>      - quelle num?rotation ?
+</I>&gt;<i>      - organisation de planification des roadmap pour R et R+1
+</I>&gt;<i>      - gestion de la dur?e de support des versions. LTS ?
+</I>&gt;<i>      - arr?t de 1.0.x
+</I>&gt;<i>
+</I>&gt;<i> - Les responsabilit?s :
+</I>&gt;<i>      - un release manager :
+</I>&gt;<i>          - gestion de la bonne marche de la milestone en cours
+</I>&gt;<i>          - gestion de la release
+</I>&gt;<i>      - un documentation manager :
+</I>&gt;<i>          - gestion de la mise ? jour de la documentation, sa bonne tenue
+</I>&gt;<i>          - gestion de la synchro FR // EN
+</I>&gt;<i>          - r?daction de tutoriaux, bonnes pratiques
+</I>&gt;<i>      - un community manager :
+</I>&gt;<i>          - gestion du site jelix.org
+</I>&gt;<i>          - gestion des actions marketing
+</I>&gt;<i>
+</I>&gt;<i> Je pense ? court terme cr?er des pages sur djo pour noter ce qui sera
+</I>&gt;<i> retenu des d?bats ayant lieu ici.
+</I>&gt;<i>
+</I>&gt;<i> Dans l'imm?diat, je vous propose d'organiser les threads ainsi
+</I>&gt;<i>
+</I>&gt;<i> - [booster] Sujet du mail : pour tout ce qui touche ? booster
+</I>&gt;<i> - [release] Sujet du mail : pour tout ce qui touche aux roadmaps/releases
+</I>&gt;<i> - [roles] Sujet du mail : pour tout ce qui touche aux responsabilit?
+</I>&gt;<i>
+</I>&gt;<i> Il s'agit donc maintenant d'entrer dans le vif du sujet pour remettre
+</I>&gt;<i> Jelix en route et avancer doucement (quoi que) mais r?guli?rement.
+</I>&gt;<i>
+</I>&gt;<i> Loic
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 7
+</I>&gt;<i> Date: Fri, 26 Feb 2010 18:14:40 +0100
+</I>&gt;<i> From: Loic Mathaud&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">loic at mathaud.net</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: Re: [Jelix-dev] [release] Cycle des releases
+</I>&gt;<i> Message-ID:&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">4B880180.6080309 at mathaud.net</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=ISO-8859-1
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> laurent a ?crit :
+</I>&gt;<i>    
+</I>&gt;&gt;<i> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+</I>&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i> Hello,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Concernant le cycle des releases de Jelix, je serais partant pour 3
+</I>&gt;&gt;&gt;<i> releases par an, 1 tous les 4 mois.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Cela me parait un bon compromis pour avoir ? la fois le temps de
+</I>&gt;&gt;&gt;<i> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+</I>&gt;&gt;&gt;<i> de sortir 3 releases chaque ann?e.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+</I>&gt;&gt;&gt;<i> rythme de 3 mois soit un peu plus difficile ? tenir.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Vous en pensez quoi ?
+</I>&gt;&gt;&gt;<i>        
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 4 mois oui, pourquoi pas.
+</I>&gt;&gt;<i>      
+</I>&gt;<i> +2 pour les 4 mois alors.
+</I>&gt;<i>
+</I>&gt;<i> Peu importe la p?riode qui sera retenue, ce qu'il faut avant tout ? mon
+</I>&gt;<i> avis c'est que cette p?riode soit fixe afin de nous imposer de la
+</I>&gt;<i> r?gularit?.
+</I>&gt;<i> Si un ticket n'est pas pr?t ? temps (cas qu'il faudrait garder
+</I>&gt;<i> exceptionnel), ce n'est pas grave, on release et on le reporte ? dans 4
+</I>&gt;<i> mois. Ce n'est pas m?chant.
+</I>&gt;<i>
+</I>&gt;<i>    
+</I>&gt;&gt;<i> Et il y a aussi au niveau de la gestion des dep?ts qu'il faut
+</I>&gt;&gt;<i> s'organiser, et que je ne refasse pas la m?me erreur que pour la 1.2.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> En effet, j'ai eu le grand tord de d?velopper le syst?me d'installation
+</I>&gt;&gt;<i> directement sur le trunk. Resultat : trunk instable pendant plusieurs
+</I>&gt;&gt;<i> semaines, et ?a m'a pris plusieurs mois pour le finaliser. Cons?quence :
+</I>&gt;&gt;<i> release pas possible, m?me sans le syst?me d'installation.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> donc voil?, je vais dor?navant d?velopper les nouvelles features sur mon
+</I>&gt;&gt;<i> propre d?p?t. J'invite tout les contributeurs ? le faire d'ailleurs.
+</I>&gt;&gt;<i> Utilisons au maximum les possibilit?s que nous offre Mercurial. clone,
+</I>&gt;&gt;<i> rebase, merge, collapse etc...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire
+</I>&gt;&gt;<i> une release ? tout moment.
+</I>&gt;&gt;<i>      
+</I>&gt;<i> Bonne id?e.
+</I>&gt;<i>
+</I>&gt;<i>    
+</I>&gt;&gt;<i> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+</I>&gt;&gt;<i> pourra ainsi cloner &quot;publiquement&quot; le trunk et faire ses modifs. Et moi
+</I>&gt;&gt;<i> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+</I>&gt;&gt;<i> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+</I>&gt;&gt;<i> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+</I>&gt;&gt;<i>      
+</I>&gt;<i> 100% pour bitbucket.
+</I>&gt;<i> Cela nous ?vitera de devoir g?rer les d?pots, c'est exactement dans
+</I>&gt;<i> l'optique simplification de la maintenance du serveur.
+</I>&gt;<i> En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+</I>&gt;<i> hg.jelix.org et propose plus de fonctionnalit?s : fork en cliquant,
+</I>&gt;<i> possibilit? ensuite de s'?changer facilement les patchs, un wiki +
+</I>&gt;<i> bugtracker pour chaque projet, ...
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> @+
+</I>&gt;<i> Loic
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 8
+</I>&gt;<i> Date: Fri, 26 Feb 2010 22:15:46 +0100
+</I>&gt;<i> From: Christophe Thiriot&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">mr.thiriot at gmail.com</A>&gt;
+</I>&gt;<i> To: Development progress on Jelix&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">jelix-dev at lists.berlios.de</A>&gt;
+</I>&gt;<i> Subject: Re: [Jelix-dev] [release] Cycle des releases
+</I>&gt;<i> Message-ID:
+</I>&gt;<i> 	&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">829794f91002261315y3adbaba3v1455fe95598fd8f7 at mail.gmail.com</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;iso-8859-1&quot;
+</I>&gt;<i>
+</I>&gt;<i> 2010/2/26 Loic Mathaud&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">loic at mathaud.net</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>    
+</I>&gt;&gt;<i> laurent a ?crit :
+</I>&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i> Le 26/02/10 17:48, Loic Mathaud a ?crit :
+</I>&gt;&gt;&gt;<i>        
+</I>&gt;&gt;&gt;&gt;<i> Hello,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Concernant le cycle des releases de Jelix, je serais partant pour 3
+</I>&gt;&gt;&gt;&gt;<i> releases par an, 1 tous les 4 mois.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Cela me parait un bon compromis pour avoir ? la fois le temps de
+</I>&gt;&gt;&gt;&gt;<i> d?velopper des choses int?ressantes pendant 4 mois, tout en permettant
+</I>&gt;&gt;&gt;&gt;<i> de sortir 3 releases chaque ann?e.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+</I>&gt;&gt;&gt;&gt;<i> rythme de 3 mois soit un peu plus difficile ? tenir.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Vous en pensez quoi ?
+</I>&gt;&gt;&gt;&gt;<i>          
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 4 mois oui, pourquoi pas.
+</I>&gt;&gt;&gt;<i>        
+</I>&gt;&gt;<i> +2 pour les 4 mois alors.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Peu importe la p?riode qui sera retenue, ce qu'il faut avant tout ? mon
+</I>&gt;&gt;<i> avis c'est que cette p?riode soit fixe afin de nous imposer de la
+</I>&gt;&gt;<i> r?gularit?.
+</I>&gt;&gt;<i> Si un ticket n'est pas pr?t ? temps (cas qu'il faudrait garder
+</I>&gt;&gt;<i> exceptionnel), ce n'est pas grave, on release et on le reporte ? dans 4
+</I>&gt;&gt;<i> mois. Ce n'est pas m?chant.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>      
+</I>&gt;<i> Tout ? fait d'accord
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>    
+</I>&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+</I>&gt;&gt;&gt;<i> pourra ainsi cloner &quot;publiquement&quot; le trunk et faire ses modifs. Et moi
+</I>&gt;&gt;&gt;<i> je merge apr?s review sur le trunk. Et ? la limite, ?a nous permettrait
+</I>&gt;&gt;&gt;<i> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+</I>&gt;&gt;&gt;<i> qui va avec, droits d'acc?s etc) ? maintenir sur le serveur.
+</I>&gt;&gt;&gt;<i>        
+</I>&gt;&gt;<i> 100% pour bitbucket.
+</I>&gt;&gt;<i> Cela nous ?vitera de devoir g?rer les d?pots, c'est exactement dans
+</I>&gt;&gt;<i> l'optique simplification de la maintenance du serveur.
+</I>&gt;&gt;<i> En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+</I>&gt;&gt;<i> hg.jelix.org et propose plus de fonctionnalit?s : fork en cliquant,
+</I>&gt;&gt;<i> possibilit? ensuite de s'?changer facilement les patchs, un wiki +
+</I>&gt;&gt;<i> bugtracker pour chaque projet, ...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>      
+</I>&gt;<i> Comme je l'ai d?j? dit, je suis ? fond pour cette solution, qui nous
+</I>&gt;<i> permettra
+</I>&gt;<i> de nous concentrer plus sur le code et pas l'administration. Par contre, je
+</I>&gt;<i> ne
+</I>&gt;<i> vois pas de moyen de transfert de nos tickets vers le syst?me de bitbucket.
+</I>&gt;<i> Pour le wiki de dev, c'est aussi un depot hg ?a devrait ?tre jouable.
+</I>&gt;<i>
+</I>&gt;<i> A+
+</I>&gt;<i>
+</I>&gt;<i> Christophe
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An HTML attachment was scrubbed...
+</I>&gt;<i> URL:&lt;<A HREF="https://lists.berlios.de/pipermail/jelix-dev/attachments/20100226/04379ead/attachment.html">https://lists.berlios.de/pipermail/jelix-dev/attachments/20100226/04379ead/attachment.html</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Jelix-dev mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">Jelix-dev at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/jelix-dev">https://lists.berlios.de/mailman/listinfo/jelix-dev</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> End of Jelix-dev Digest, Vol 18, Issue 6
+</I>&gt;<i> ****************************************
+</I>&gt;<i>    
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001442.html">[Jelix-dev] Discussions sur le futur de Jelix
+</A></li>
+	<LI>Next message: <A HREF="001449.html">[Jelix-dev] [booster] un point sous peu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1448">[ date ]</a>
+              <a href="thread.html#1448">[ thread ]</a>
+              <a href="subject.html#1448">[ subject ]</a>
+              <a href="author.html#1448">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

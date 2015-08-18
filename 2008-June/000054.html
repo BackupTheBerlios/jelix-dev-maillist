@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] checkin SVN-995 (laurentj)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20checkin%20SVN-995%20%28laurentj%29&In-Reply-To=%3C48583CA5.mailB4K11WV9B%40jelix.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000053.html">
+   <LINK REL="Next"  HREF="000055.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] checkin SVN-995 (laurentj)</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20checkin%20SVN-995%20%28laurentj%29&In-Reply-To=%3C48583CA5.mailB4K11WV9B%40jelix.org%3E"
+       TITLE="[Jelix-dev] checkin SVN-995 (laurentj)">dev at jelix.org
+       </A><BR>
+    <I>Wed Jun 18 00:37:25 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000053.html">[Jelix-dev] checkin SVN-994 (laurentj)
+</A></li>
+        <LI>Next message: <A HREF="000055.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>laurentj
+2008-06-18 00:37:23 +0200 (Wed, 18 Jun 2008)
+83
+ticket #503: simplification of the build of locale files in other charset than utf8
+
+U   trunk/build/CREDITS
+U   trunk/build/buildjelix.php
+U   trunk/build/lib/jManifest.class.php
+U   trunk/build/manifests/jelix-lib.mn
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/acl2db.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/acl2db.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/acldb.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/acldb.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/auth.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/auth.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/captcha.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/captcha.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/common.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/common.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/crud.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/crud.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/dao.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/dao.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/daoxml.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/daoxml.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/db.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/db.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/errors.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/errors.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/format.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/format.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/formserr.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/formserr.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/jelix.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/jelix.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/ui.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_EN/ui.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/acl2db.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/acl2db.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/acldb.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/acldb.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/auth.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/auth.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/captcha.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/captcha.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/common.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/common.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/crud.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/crud.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/dao.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/dao.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/daoxml.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/daoxml.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/db.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/db.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/errors.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/errors.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/format.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/format.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/formserr.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/formserr.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/jelix.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/jelix.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/ui.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/en_US/ui.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/acl2db.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/acl2db.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/acldb.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/acldb.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/auth.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/auth.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/captcha.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/captcha.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/common.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/common.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/crud.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/crud.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/dao.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/dao.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/daoxml.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/daoxml.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/db.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/db.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/errors.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/errors.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/format.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/format.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/formserr.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/formserr.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/jelix.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/jelix.ISO-8859-15.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/ui.ISO-8859-1.properties
+D   trunk/lib/jelix/core-modules/jelix/locales/fr_FR/ui.ISO-8859-15.properties
+D   trunk/lib/jelix-modules/jWSDL/locales/en_EN/errors.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jWSDL/locales/en_US/errors.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jWSDL/locales/fr_FR/errors.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_EN/auth.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_EN/auth.ISO-8859-15.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_EN/autherror.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_EN/autherror.ISO-8859-15.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_US/auth.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_US/auth.ISO-8859-15.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_US/autherror.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/en_US/autherror.ISO-8859-15.properties
+D   trunk/lib/jelix-modules/jauth/locales/fr_FR/auth.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/fr_FR/auth.ISO-8859-15.properties
+D   trunk/lib/jelix-modules/jauth/locales/fr_FR/autherror.ISO-8859-1.properties
+D   trunk/lib/jelix-modules/jauth/locales/fr_FR/autherror.ISO-8859-15.properties
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000053.html">[Jelix-dev] checkin SVN-994 (laurentj)
+</A></li>
+	<LI>Next message: <A HREF="000055.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,141 @@
+From loic at mathaud.net  Mon Nov 17 09:56:49 2008
+From: loic at mathaud.net (Loic Mathaud)
+Date: Mon, 17 Nov 2008 09:56:49 +0100
+Subject: [Jelix-dev] Summary Jelix Summit at Paris Web 2008
+Message-ID: <492131D1.6090800@mathaud.net>
+
+Hi,
+
+Here is a summary of the unofficial Jelix Summit at Paris Web 2008.
+
+When : 2008-11-13
+Where : Quick Restaurant ;)
+Who : bastnic, laurentj, loic_m
+
+
+
+* Jelix 1.1 :
+
+  - we want to release 1.1 as sooner as possible
+
+
+* Jelix > 1.1 :
+
+We need to provide a real "dev edition", this means :
+
+  - adding logs (coordinator, selector calls, jDb, ...) to help debug.
+See ticket #175
+  - adding a dev toolbar to see those logs. This bar could be hidden but
+not deactivable in the conf. So as the dev edition won't be use in
+production anymore.
+  - by default dev edition should display the backtrace for errors, and
+if possible with a nice display (in the toolbar ?)
+  - compilation must be set to force = on (performance doesn't matter
+une developpment)
+
+Others :
+
+  - work on install/deinstall/update components (plugins, modules, ...)
+  - work on the doc : french + english. We should release the first
+official edition of the Jelix book in pdf
+  - as explained by the Y! Exceptionnal Performances Team, we could
+provide an enhancement with jResponseHtml in order to put the JS links
+at the bottom of the page (significant gain in the perception of speed
+while loading pages)
+  - jResponseHtml too: we could provide a way to minify and merge JS
+files and CSS files in order to decrease the number of HTTP requests and
+the total size of the files. Resulting optimized files would be cached.
+
+
+* Around Jelix :
+
+  - work on sharecode
+  - work on jbugtracker and use it for Jelix
+  - migrating to mercurial ?
+  - having a new really nice design for Jelix sites
+
+
+It was nice meeting you guys !
+
+
+@+
+Loic
+
+
+From dominique.papin at ruedesecoles.com  Mon Nov 17 12:15:24 2008
+From: dominique.papin at ruedesecoles.com (dominique.papin)
+Date: Mon, 17 Nov 2008 12:15:24 +0100
+Subject: [Jelix-dev] Summary Jelix Summit at Paris Web 2008
+In-Reply-To: <492131D1.6090800@mathaud.net>
+References: <492131D1.6090800@mathaud.net>
+Message-ID: <4921524C.1020607@ruedesecoles.com>
+
+Thanks for the report and great to hear from you...
+
+Just adding my thougths on the roadmap :
+As for 1.1 planning, here is a wishlist of what I'll try to work on and 
+hope to get  in. As jelix 1.1 was really about jForms :
+- jqueryfying jforms_jquery.js
+- implementing CSRF security (#478)
+
+As for post1.1 planning and the focus on performance, I would add work 
+on a cache management system. I have gathered some thoughts and usefuls 
+links. I'll try to start a draft on the wiki sooner than later, also 
+summering/gathering efforts already done (cache coord plugin proposed by 
+hadrien[OB],  jCache by sylvain261)
+
+A+ bobi
+
+
+
+From laurent at jelix.org  Wed Nov 26 10:36:39 2008
+From: laurent at jelix.org (laurent)
+Date: Wed, 26 Nov 2008 10:36:39 +0100
+Subject: [Jelix-dev] RC1 soon and features freeze
+Message-ID: <492D18A7.5070007@jelix.org>
+
+Hello,
+
+I would like to release Jelix 1.1RC1 next week ! Yessss !
+
+So, only bugs fix are allowed in the trunk until next week. Patch for 
+new features  will be include only for Jelix 1.2. (except ticket #196; 
+Julien, I'm waiting after a new version of your patch :-))
+
+After the release of Jelix 1.1 RC1, I will create the 1.1.x branch, so 
+we could then land patch for 1.2 in the trunk.
+
+Help needed on the french documentation. See 
+http://developer.jelix.org/report/15
+
+help needed also to update the english manual 
+http://jelix.org/articles/en/manual-1.1
+
+Go Go Go ! :-D
+
+Laurent
+
+
+From julien at issler.net  Wed Nov 26 12:34:44 2008
+From: julien at issler.net (Julien Issler)
+Date: Wed, 26 Nov 2008 12:34:44 +0100
+Subject: [Jelix-dev] RC1 soon and features freeze
+In-Reply-To: <492D18A7.5070007@jelix.org>
+References: <492D18A7.5070007@jelix.org>
+Message-ID: <492D3454.7050004@issler.net>
+
+Hello,
+
+ticket #196: will be fixed tomorrow (maybe tonight ?), having a lot of 
+work theses last days.
+
+Will also take a look at #749, as jLocale loves bugging me ;)
+
+So let's go for RC1 !
+
+Julien
+
+laurent a ?crit :
+> ticket #196; Julien, I'm waiting after a new version of your patch :-))
+
+

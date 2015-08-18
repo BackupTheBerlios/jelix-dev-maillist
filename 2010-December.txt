@@ -1,0 +1,110 @@
+From laurent at jelix.org  Wed Dec 22 15:18:04 2010
+From: laurent at jelix.org (Laurent)
+Date: Wed, 22 Dec 2010 15:18:04 +0100
+Subject: [Jelix-dev] Jelix 1.2 is released !
+Message-ID: <4D12089C.4010705@jelix.org>
+
+Hi,
+
+a new major version of Jelix is available on jelix.org.
+
+Enjoy!
+
+http://jelix.org/articles/en/download/stable/1.2
+http://jelix.org/articles/en/changelog/1.2
+http://jelix.org/articles/en/manual-1.2
+
+
+Laurent
+
+
+From ehesry at yahoo.com  Thu Dec 23 12:20:40 2010
+From: ehesry at yahoo.com (Emmanuel HESRY)
+Date: Thu, 23 Dec 2010 03:20:40 -0800 (PST)
+Subject: [Jelix-dev] Re : Jelix-dev Digest, Vol 21, Issue 1
+In-Reply-To: <mailman.62.1293102008.10549.jelix-dev@lists.berlios.de>
+References: <mailman.62.1293102008.10549.jelix-dev@lists.berlios.de>
+Message-ID: <429058.9148.qm@web30305.mail.mud.yahoo.com>
+
+Yeah ! good job.
+
+bravo ? tous ceux qui ont contribu?s activement.
+
+ 
+Il va falloir que je m'attarde sur la migration.
+
+Bonnes f?tes ? tous
+Manu
+
+
+
+
+________________________________
+De : "jelix-dev-request at lists.berlios.de" <jelix-dev-request at lists.berlios.de>
+? : jelix-dev at lists.berlios.de
+Envoy? le : Jeu 23 d?cembre 2010, 12h 00min 08s
+Objet : Jelix-dev Digest, Vol 21, Issue 1
+
+Send Jelix-dev mailing list submissions to
+    jelix-dev at lists.berlios.de
+
+To subscribe or unsubscribe via the World Wide Web, visit
+    https://lists.berlios.de/mailman/listinfo/jelix-dev
+or, via email, send a message with subject or body 'help' to
+    jelix-dev-request at lists.berlios.de
+
+You can reach the person managing the list at
+    jelix-dev-owner at lists.berlios.de
+
+When replying, please edit your Subject line so it is more specific
+than "Re: Contents of Jelix-dev digest..."
+
+
+Today's Topics:
+
+   1. Jelix 1.2 is released ! (Laurent)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Wed, 22 Dec 2010 15:18:04 +0100
+From: Laurent <laurent at jelix.org>
+To: "jelix-public at lists.berlios.de" <jelix-public at lists.berlios.de>,
+    Development progress on Jelix <jelix-dev at lists.berlios.de>
+Subject: [Jelix-dev] Jelix 1.2 is released !
+Message-ID: <4D12089C.4010705 at jelix.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+
+Hi,
+
+a new major version of Jelix is available on jelix.org.
+
+Enjoy!
+
+http://jelix.org/articles/en/download/stable/1.2
+http://jelix.org/articles/en/changelog/1.2
+http://jelix.org/articles/en/manual-1.2
+
+
+Laurent
+
+
+------------------------------
+
+_______________________________________________
+Jelix-dev mailing list
+Jelix-dev at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+End of Jelix-dev Digest, Vol 21, Issue 1
+****************************************
+
+
+
+      
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20101223/572b8725/attachment.html>
+

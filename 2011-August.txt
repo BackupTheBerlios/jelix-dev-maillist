@@ -1,0 +1,216 @@
+From laurent at jelix.org  Wed Aug 24 14:15:13 2011
+From: laurent at jelix.org (Laurent)
+Date: Wed, 24 Aug 2011 14:15:13 +0200
+Subject: [Jelix-dev] Jelix moved to Github
+Message-ID: <4E54EB51.3010304@jelix.org>
+
+Dear contributors,
+
+As you may know, the project has been moved to github 
+https://github.com/jelix/jelix/
+
+You can read why here: 
+http://jelix.org/en/news/post/let-s-move-to-git-and-github
+
+Rules to commit have changed a bit.
+
+Except to fix some syntax issues, misspelling or tiny changes, don't 
+commit directly on this repository (for those who have write access). 
+You are strongly encouraged to fork the repository in your github 
+account, and commit your changes into this fork.
+
+Then you will have to do a "pull request". It allows us to review your 
+changes in github, and when all is ok, to integrate your changes easily 
+into the official repository.
+
+If you want to propose several different changes, create a branch for 
+each changes, so we could integrate changes individually, depending of 
+their "review status". With Git, when your changes will be integrated, 
+you could "delete" the corresponding branch in your fork.
+
+As usual, let's discuss on the forum or on the mailing-list of your 
+proposition of improvement/bug fix before you code it, especially if 
+this is a critical change, an API change or a big/complex change. You 
+will have more chance  to see them imported in the official repository :-)
+
+For the code review, I think that everyone (who have a github account) 
+could comment and review pull requests. So don't hesitate to review 
+changes! I don't want to be anymore the single reviewer :-)
+
+The submission of patch into tickets on developer.jelix.org is now a 
+"deprecated" way to contribute; I prefer to work now with Github.
+
+However for the moment, use developer.jelix.org to indicate 
+bugs/improvements, although you can use the github issues manager of the 
+project. The use of the github issues manager is still under study (what 
+about of its feature, how to migrate tickets etc...). We probably 
+migrate to it but no decision has been made for now.
+
+If you have suggestion, don't hesitate to let me know.
+
+I want a project management more flexible.
+
+Fork it, fork it, fork it!
+
+Laurent
+
+
+
+
+From olivier at foxmask.info  Fri Aug 26 21:57:27 2011
+From: olivier at foxmask.info (olivier)
+Date: Fri, 26 Aug 2011 21:57:27 +0200
+Subject: [Jelix-dev] Jelix moved to Github
+In-Reply-To: <4E54EB51.3010304@jelix.org>
+References: <4E54EB51.3010304@jelix.org>
+Message-ID: <4E57FAA7.7040605@foxmask.info>
+
+Hi,
+
+Le 24/08/2011 14:15, Laurent a ?crit :
+> Dear contributors,
+Hello  :)
+> If you want to propose several different changes, create a branch for
+> each changes, so we could integrate changes individually, depending of
+> their "review status". With Git, when your changes will be integrated,
+> you could "delete" the corresponding branch in your fork.
+
+As I'm reading this nice post 
+http://nvie.com/posts/a-successful-git-branching-model/ I have a notice 
+to do.
+
+about "create a branch for each changes"
+that mean we have to do first of all :
+1) git clone git at github:myaccount/jelix
+
+then create a branch for our feature/fix, on the _target_ branch from 
+which we want to submit a patch
+2) git checkout -b ticket_1234_subject_foobar jelix-1.2.x
+where jelix-1.2.x is the _target_ branch
+
+3) when the patch will be reviewed we could delete the branch by :
+3.1) point on the right _target_ branch
+git checkout jelix-1.2.x
+3.2) merge the feature
+git merge --no-ff ticket_1234_subject_foobar
+3.3) delete the "branch" of the feature/fix
+git branch -d ticket_1234_subject_foobar
+3.4) push
+git push origin jelix-1.2.x
+
+
+Is all of that correct ?
+
+Olivier.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: olivier.vcf
+Type: text/x-vcard
+Size: 260 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20110826/1c3ed942/attachment.vcf>
+
+From vincent.viaud at externe.bnpparibas.com  Mon Aug 29 10:06:10 2011
+From: vincent.viaud at externe.bnpparibas.com (vincent.viaud at externe.bnpparibas.com)
+Date: Mon, 29 Aug 2011 10:06:10 +0200
+Subject: [Jelix-dev] Jelix moved to Github
+In-Reply-To: <4E57FAA7.7040605@foxmask.info>
+References: <4E54EB51.3010304@jelix.org> <4E57FAA7.7040605@foxmask.info>
+Message-ID: <OF7F1048F3.638043B1-ONC12578FB.002C6E54-C12578FB.002C82A5@bnpparibas.com>
+
+Pour te simplifier la tache tu as cette extension git : 
+https://github.com/nvie/gitflow ;)
+
+Cordialement,
+
+Vincent VIAUD
+
+
+
+De :    olivier at foxmask.info
+A :     jelix-dev at lists.berlios.de
+Date :  27/08/2011 02:42
+Objet : Re: [Jelix-dev] Jelix moved to Github
+Envoy? par :    jelix-dev-bounces at lists.berlios.de
+
+
+
+Hi,
+
+Le 24/08/2011 14:15, Laurent a ?crit :
+> Dear contributors,
+Hello  :)
+> If you want to propose several different changes, create a branch for
+> each changes, so we could integrate changes individually, depending of
+> their "review status". With Git, when your changes will be integrated,
+> you could "delete" the corresponding branch in your fork.
+
+As I'm reading this nice post 
+http://nvie.com/posts/a-successful-git-branching-model/ I have a notice 
+to do.
+
+about "create a branch for each changes"
+that mean we have to do first of all :
+1) git clone git at github:myaccount/jelix
+
+then create a branch for our feature/fix, on the _target_ branch from 
+which we want to submit a patch
+2) git checkout -b ticket_1234_subject_foobar jelix-1.2.x
+where jelix-1.2.x is the _target_ branch
+
+3) when the patch will be reviewed we could delete the branch by :
+3.1) point on the right _target_ branch
+git checkout jelix-1.2.x
+3.2) merge the feature
+git merge --no-ff ticket_1234_subject_foobar
+3.3) delete the "branch" of the feature/fix
+git branch -d ticket_1234_subject_foobar
+3.4) push
+git push origin jelix-1.2.x
+
+
+Is all of that correct ?
+
+Olivier.
+[pi?ce jointe "olivier.vcf" supprim?e par Vincent 
+VIAUD/PARTNERS/FR/EUROPE/GROUP] 
+_______________________________________________
+Jelix-dev mailing list
+Jelix-dev at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+
+
+
+This message and any attachments (the "message") is
+intended solely for the addressees and is confidential. 
+If you receive this message in error, please delete it and 
+immediately notify the sender. Any use not in accord with 
+its purpose, any dissemination or disclosure, either whole 
+or partial, is prohibited except formal approval. The internet
+can not guarantee the integrity of this message. 
+BNP PARIBAS (and its subsidiaries) shall (will) not 
+therefore be liable for the message if modified. 
+Do not print this message unless it is necessary,
+consider the environment.
+
+                ---------------------------------------------
+
+Ce message et toutes les pieces jointes (ci-apres le 
+"message") sont etablis a l'intention exclusive de ses 
+destinataires et sont confidentiels. Si vous recevez ce 
+message par erreur, merci de le detruire et d'en avertir 
+immediatement l'expediteur. Toute utilisation de ce 
+message non conforme a sa destination, toute diffusion 
+ou toute publication, totale ou partielle, est interdite, sauf 
+autorisation expresse. L'internet ne permettant pas 
+d'assurer l'integrite de ce message, BNP PARIBAS (et ses
+filiales) decline(nt) toute responsabilite au titre de ce 
+message, dans l'hypothese ou il aurait ete modifie.
+N'imprimez ce message que si necessaire,
+pensez a l'environnement.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20110829/060229e6/attachment.html>
+

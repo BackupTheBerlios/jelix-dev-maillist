@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] commit SVN-1458 (laurentj)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-July/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1458%20%28laurentj%29&In-Reply-To=%3C20090715085803.651C43CC001%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001178.html">
+   <LINK REL="Next"  HREF="001180.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] commit SVN-1458 (laurentj)</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1458%20%28laurentj%29&In-Reply-To=%3C20090715085803.651C43CC001%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] commit SVN-1458 (laurentj)">dev at jelix.org
+       </A><BR>
+    <I>Wed Jul 15 10:58:03 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001178.html">[Jelix-dev] [cron] Manual building
+</A></li>
+        <LI>Next message: <A HREF="001180.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1179">[ date ]</a>
+              <a href="thread.html#1179">[ thread ]</a>
+              <a href="subject.html#1179">[ subject ]</a>
+              <a href="author.html#1179">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>laurentj
+2009-07-15 10:58:02 +0200 (Wed, 15 Jul 2009)
+146
+Moved some install files of jacl, jacl2 and jauthdb in their own modules. Moved also jelixuser.dao.xml from jauth module to the new jauthdb module
+
+U   trunk/build/config/jelix-dist-dev.ini
+U   trunk/build/config/jelix-dist-gold.ini
+U   trunk/build/config/jelix-dist-opt.ini
+U   trunk/build/config/jelix-test.ini
+U   trunk/build/config/jelix-test2.ini
+U   trunk/build/manifests/jelix-deprecated.mn
+U   trunk/build/manifests/jelix-lib.mn
+U   trunk/build/manifests/jelix-modules.mn
+U   trunk/lib/jelix/acl/jAcl2Db.class.php
+U   trunk/lib/jelix/acl/jAcl2DbManager.class.php
+U   trunk/lib/jelix/acl/jAcl2DbUserGroup.class.php
+U   trunk/lib/jelix/acl/jAclDbManager.class.php
+U   trunk/lib/jelix/acl/jAclDbUserGroup.class.php
+D   trunk/lib/jelix/core-modules/jelix/daos/jacl2group.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jacl2groupsofuser.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jacl2rights.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jacl2subject.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jacl2usergroup.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclgroup.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclgroupsofuser.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclrights.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclrightvalues.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclrightvaluesandgroup.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclrightvaluesgroup.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclsubject.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/daos/jaclusergroup.dao.xml
+D   trunk/lib/jelix/core-modules/jelix/install/sql/delete.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/delete.pgsql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl.data.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl.data.pgsql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl.schema.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl.schema.pgsql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl2.data.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl2.data.pgsql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl2.schema.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jacl2.schema.pgsql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jauth.data.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jauth.data.pgsql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jauth.schema.mysql.sql
+D   trunk/lib/jelix/core-modules/jelix/install/sql/install_jauth.schema.pgsql.sql
+U   trunk/lib/jelix/plugins/acl/db/db.acl.php
+U   trunk/lib/jelix/plugins/acl2/db/db.acl2.php
+U   trunk/lib/jelix-admin-modules/jacl2db_admin/controllers/groups.classic.php
+U   trunk/lib/jelix-admin-modules/jacl2db_admin/controllers/users.classic.php
+A   trunk/lib/jelix-modules/jacl2db/daos/
+A   trunk/lib/jelix-modules/jacl2db/daos/jacl2group.dao.xml
+A   trunk/lib/jelix-modules/jacl2db/daos/jacl2groupsofuser.dao.xml
+A   trunk/lib/jelix-modules/jacl2db/daos/jacl2rights.dao.xml
+A   trunk/lib/jelix-modules/jacl2db/daos/jacl2subject.dao.xml
+A   trunk/lib/jelix-modules/jacl2db/daos/jacl2usergroup.dao.xml
+A   trunk/lib/jelix-modules/jacl2db/install/
+A   trunk/lib/jelix-modules/jacl2db/install/install_jacl2.data.mysql.sql
+A   trunk/lib/jelix-modules/jacl2db/install/install_jacl2.data.pgsql.sql
+A   trunk/lib/jelix-modules/jacl2db/install/install_jacl2.schema.mysql.sql
+A   trunk/lib/jelix-modules/jacl2db/install/install_jacl2.schema.pgsql.sql
+A   trunk/lib/jelix-modules/jacldb/daos/
+A   trunk/lib/jelix-modules/jacldb/daos/jaclgroup.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclgroupsofuser.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclrights.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclrightvalues.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclrightvaluesandgroup.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclrightvaluesgroup.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclsubject.dao.xml
+A   trunk/lib/jelix-modules/jacldb/daos/jaclusergroup.dao.xml
+A   trunk/lib/jelix-modules/jacldb/install/
+A   trunk/lib/jelix-modules/jacldb/install/delete.mysql.sql
+A   trunk/lib/jelix-modules/jacldb/install/delete.pgsql.sql
+A   trunk/lib/jelix-modules/jacldb/install/install_jacl.data.mysql.sql
+A   trunk/lib/jelix-modules/jacldb/install/install_jacl.data.pgsql.sql
+A   trunk/lib/jelix-modules/jacldb/install/install_jacl.schema.mysql.sql
+A   trunk/lib/jelix-modules/jacldb/install/install_jacl.schema.pgsql.sql
+D   trunk/lib/jelix-modules/jauth/daos/jelixuser.dao.xml
+A   trunk/lib/jelix-modules/jauthdb/
+A   trunk/lib/jelix-modules/jauthdb/daos/
+A   trunk/lib/jelix-modules/jauthdb/daos/jelixuser.dao.xml
+A   trunk/lib/jelix-modules/jauthdb/install/
+A   trunk/lib/jelix-modules/jauthdb/install/install_jauth.data.mysql.sql
+A   trunk/lib/jelix-modules/jauthdb/install/install_jauth.data.pgsql.sql
+A   trunk/lib/jelix-modules/jauthdb/install/install_jauth.schema.mysql.sql
+A   trunk/lib/jelix-modules/jauthdb/install/install_jauth.schema.pgsql.sql
+A   trunk/lib/jelix-modules/jauthdb/module.xml
+U   trunk/lib/jelix-scripts/commands/initadmin.cmd.php
+U   trunk/testapp/var/config/auth_ldap.coord.ini.php.dist
+U   trunk/testapp/var/config/defaultconfig.ini.php
+U   trunk/testapp/var/config/installer.ini.php
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001178.html">[Jelix-dev] [cron] Manual building
+</A></li>
+	<LI>Next message: <A HREF="001180.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1179">[ date ]</a>
+              <a href="thread.html#1179">[ thread ]</a>
+              <a href="subject.html#1179">[ subject ]</a>
+              <a href="author.html#1179">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

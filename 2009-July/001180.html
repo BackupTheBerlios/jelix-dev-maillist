@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [cron] nightly builds and unit tests
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-July/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20090716020228.489D13CC001%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001179.html">
+   <LINK REL="Next"  HREF="001181.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [cron] nightly builds and unit tests</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20nightly%20builds%20and%20unit%20tests&In-Reply-To=%3C20090716020228.489D13CC001%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] [cron] nightly builds and unit tests">dev at jelix.org
+       </A><BR>
+    <I>Thu Jul 16 04:02:28 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001179.html">[Jelix-dev] commit SVN-1458 (laurentj)
+</A></li>
+        <LI>Next message: <A HREF="001181.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1180">[ date ]</a>
+              <a href="thread.html#1180">[ thread ]</a>
+              <a href="subject.html#1180">[ subject ]</a>
+              <a href="author.html#1180">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>building trunk...
+===========================================
+U    build/manifests/jelix-deprecated.mn
+U    build/manifests/jelix-lib.mn
+U    build/manifests/jelix-modules.mn
+U    build/config/jelix-test2.ini
+U    build/config/jelix-dist-opt.ini
+U    build/config/jelix-test.ini
+U    build/config/jelix-dist-dev.ini
+U    build/config/jelix-dist-gold.ini
+U    testapp/var/config/installer.ini.php
+U    testapp/var/config/auth_ldap.coord.ini.php.dist
+U    testapp/var/config/defaultconfig.ini.php
+A    lib/jelix-modules/jacldb/daos
+A    lib/jelix-modules/jacldb/daos/jaclrightvaluesgroup.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclusergroup.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclgroup.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclrightvalues.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclrightvaluesandgroup.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclsubject.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclrights.dao.xml
+A    lib/jelix-modules/jacldb/daos/jaclgroupsofuser.dao.xml
+A    lib/jelix-modules/jacldb/install
+A    lib/jelix-modules/jacldb/install/install_jacl.schema.mysql.sql
+A    lib/jelix-modules/jacldb/install/install_jacl.schema.pgsql.sql
+A    lib/jelix-modules/jacldb/install/delete.mysql.sql
+A    lib/jelix-modules/jacldb/install/delete.pgsql.sql
+A    lib/jelix-modules/jacldb/install/install_jacl.data.mysql.sql
+A    lib/jelix-modules/jacldb/install/install_jacl.data.pgsql.sql
+A    lib/jelix-modules/jacl2db/daos
+A    lib/jelix-modules/jacl2db/daos/jacl2groupsofuser.dao.xml
+A    lib/jelix-modules/jacl2db/daos/jacl2usergroup.dao.xml
+A    lib/jelix-modules/jacl2db/daos/jacl2group.dao.xml
+A    lib/jelix-modules/jacl2db/daos/jacl2subject.dao.xml
+A    lib/jelix-modules/jacl2db/daos/jacl2rights.dao.xml
+A    lib/jelix-modules/jacl2db/install
+A    lib/jelix-modules/jacl2db/install/install_jacl2.schema.mysql.sql
+A    lib/jelix-modules/jacl2db/install/install_jacl2.schema.pgsql.sql
+A    lib/jelix-modules/jacl2db/install/install_jacl2.data.mysql.sql
+A    lib/jelix-modules/jacl2db/install/install_jacl2.data.pgsql.sql
+A    lib/jelix-modules/jauthdb
+A    lib/jelix-modules/jauthdb/module.xml
+A    lib/jelix-modules/jauthdb/daos
+A    lib/jelix-modules/jauthdb/daos/jelixuser.dao.xml
+A    lib/jelix-modules/jauthdb/install
+A    lib/jelix-modules/jauthdb/install/install_jauth.schema.mysql.sql
+A    lib/jelix-modules/jauthdb/install/install_jauth.schema.pgsql.sql
+A    lib/jelix-modules/jauthdb/install/install_jauth.data.mysql.sql
+A    lib/jelix-modules/jauthdb/install/install_jauth.data.pgsql.sql
+D    lib/jelix-modules/jauth/daos/jelixuser.dao.xml
+U    lib/jelix-scripts/commands/initadmin.cmd.php
+U    lib/jelix-admin-modules/jacl2db_admin/controllers/groups.classic.php
+U    lib/jelix-admin-modules/jacl2db_admin/controllers/users.classic.php
+U    lib/jelix/plugins/acl/db/db.acl.php
+U    lib/jelix/plugins/acl2/db/db.acl2.php
+D    lib/jelix/core-modules/jelix/daos/jacl2groupsofuser.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclrightvaluesgroup.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclusergroup.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclgroup.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jacl2usergroup.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclrightvalues.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclrightvaluesandgroup.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jacl2group.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclsubject.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclrights.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jacl2subject.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jacl2rights.dao.xml
+D    lib/jelix/core-modules/jelix/daos/jaclgroupsofuser.dao.xml
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl.schema.pgsql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl2.schema.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jauth.schema.pgsql.sql
+D    lib/jelix/core-modules/jelix/install/sql/delete.pgsql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl.data.pgsql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl2.data.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jauth.data.pgsql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl.schema.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jauth.schema.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl2.schema.pgsql.sql
+D    lib/jelix/core-modules/jelix/install/sql/delete.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl.data.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jauth.data.mysql.sql
+D    lib/jelix/core-modules/jelix/install/sql/install_jacl2.data.pgsql.sql
+U    lib/jelix/acl/jAclDbManager.class.php
+U    lib/jelix/acl/jAclDbUserGroup.class.php
+U    lib/jelix/acl/jAcl2DbManager.class.php
+U    lib/jelix/acl/jAcl2DbUserGroup.class.php
+U    lib/jelix/acl/jAcl2Db.class.php
+Updated to revision 1458.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_DEV
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_OPT
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_GOLD
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/var/www/jelix.org/temp/build_dir/svnanon/trunk
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/trunk/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/trunk/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/trunk/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/trunk//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+installer.ini.php doesn't exist! You should install your application..
+
+
+building 1.0.x branch...
+===========================================
+At revision 1458.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_DEV
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_OPT
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_GOLD
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/var/www/jelix.org/temp/build_dir/svnanon/branches/1.0.x
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.0.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.0.x/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/1.0.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.10x.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/1.0.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.0.11pre.1458
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+Error !!
+	in testStart
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [Erreur dans la requ&#195;&#170;te (ERREUR:  droit refus&#195;&#169; pour la relation product_test(DELETE FROM product_test))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [132]
+Error !!
+	in testInsert
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)Erreur dans la requ&#195;&#170;te (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(INSERT INTO &quot;product_test&quot; (
+&quot;name&quot;,&quot;price&quot;,&quot;create_date&quot;,&quot;promo&quot;
+) VALUES (
+'assiette', 3.87, NOW(), FALSE
+)))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [132]
+Error !!
+	in testGet
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [Erreur dans la requ&#195;&#170;te (ERREUR:  La colonne p.promo n'existe pas(SELECT &quot;p&quot;.&quot;id&quot;, &quot;p&quot;.&quot;name&quot;, &quot;p&quot;.&quot;price&quot;, &quot;p&quot;.&quot;create_date&quot;, &quot;p&quot;.&quot;promo&quot; FROM &quot;product_test&quot; AS &quot;p&quot; WHERE  &quot;p&quot;.&quot;id&quot;=0))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [132]
+Error !!
+	in testUpdate
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.0.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)Erreur dans la requ&#195;&#170;te (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(UPDATE &quot;product_test&quot; SET 
+ &quot;name&quot;= 'assiette nouvelle', &quot;price&quot;= 5.9, &quot;create_date&quot;= NULL, &quot;promo&quot;= TRUE
+ where  &quot;id&quot;=0
+))] in [/var/www/jelix.org/temp/build_dir/tests/1.0.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [132]
+jfilter tests: use of jelix filter
+FAILURES!!!
+Test cases run: 33/33, Passes: 3571, Failures: 0, Exceptions: 4
+
+building 1.1.x branch...
+===========================================
+At revision 1458.
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-dev.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_DEV
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-opt.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_OPT
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-dist-gold.ini
+mv /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME  /var/www/jelix.org/temp/build_dir/dist//PACKAGE_NAME_GOLD
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/testapp-dist.ini
+/usr/bin/php build/buildjbt.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jbt-dist.ini
+/usr/bin/php build/buildjtpl.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jtpl-dist.ini
+/usr/bin/php build/buildfonts.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/dist/&quot; build/config/jelix-fonts-dist.ini
+/var/www/jelix.org/temp/build_dir/svnanon/branches/1.1.x
+/usr/bin/php build/buildjelix.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.1.x/&quot; build/config/jelix-test2.ini
+/usr/bin/php build/buildapp.php -D &quot;MAIN_TARGET_PATH=/var/www/jelix.org/temp/build_dir/tests/1.1.x/&quot; build/config/testapp-test.ini
+cd /var/www/jelix.org/temp/build_dir/tests/1.1.x/ &amp;&amp; cp /var/www/jelix.org/demos/testapp/var/config/dbprofils.11x.ini.php testapp/var/config/dbprofils.ini.php
+cd /var/www/jelix.org/temp/build_dir/tests/1.1.x//testapp/scripts/ &amp;&amp; /usr/bin/php tests.php default:index
+
+Unit Tests        php version: 5.1.2   Jelix version: 1.1.4pre.1458
+===========================================================================
+
+Tests on module jelix_tests
+--------------------------------
+Error !!
+	in testStart
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [invalid query (ERREUR:  droit refus&#195;&#169; pour la relation product_test(DELETE FROM product_test))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [144]
+Error !!
+	in testInsert
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)invalid query (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(INSERT INTO &quot;product_test&quot; (
+&quot;name&quot;,&quot;price&quot;,&quot;create_date&quot;,&quot;promo&quot;
+) VALUES (
+'assiette', 3.87, NOW(), FALSE
+)))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [144]
+Error !!
+	in testGet
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [invalid query (ERREUR:  La colonne p.promo n'existe pas(SELECT &quot;p&quot;.&quot;id&quot;, &quot;p&quot;.&quot;name&quot;, &quot;p&quot;.&quot;price&quot;, &quot;p&quot;.&quot;create_date&quot;, &quot;p&quot;.&quot;promo&quot; FROM &quot;product_test&quot; AS &quot;p&quot; WHERE  &quot;p&quot;.&quot;id&quot;=0))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [144]
+Error !!
+	in testUpdate
+	in UTjDbPgsql
+	in /var/www/jelix.org/temp/build_dir/tests/1.1.x/testapp/modules/jelix_tests/tests/jdb.pgsql.html_cli.php
+	 Unexpected exception of type [jException] with message [(403)invalid query (ERREUR:  La colonne &#194;&#171;promo&#194;&#187; de la relation &#194;&#171;product_test&#194;&#187; n'existe pas(UPDATE &quot;product_test&quot; SET 
+ &quot;name&quot;= 'assiette nouvelle', &quot;price&quot;= 5.9, &quot;create_date&quot;= NULL, &quot;promo&quot;= TRUE
+ where  &quot;id&quot;=0
+))] in [/var/www/jelix.org/temp/build_dir/tests/1.1.x/lib/jelix/plugins/db/pgsql/pgsql.dbconnection.php] line [144]
+jfilter tests: use of jelix filter
+FAILURES!!!
+Test cases run: 46/46, Passes: 4435, Failures: 0, Exceptions: 4
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001179.html">[Jelix-dev] commit SVN-1458 (laurentj)
+</A></li>
+	<LI>Next message: <A HREF="001181.html">[Jelix-dev] [cron] API reference building
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1180">[ date ]</a>
+              <a href="thread.html#1180">[ thread ]</a>
+              <a href="subject.html#1180">[ subject ]</a>
+              <a href="author.html#1180">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

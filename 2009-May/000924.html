@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [cron] Manual building
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20Manual%20building&In-Reply-To=%3C20090507040958.D7F053CC001%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000923.html">
+   <LINK REL="Next"  HREF="000925.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [cron] Manual building</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Bcron%5D%20Manual%20building&In-Reply-To=%3C20090507040958.D7F053CC001%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] [cron] Manual building">dev at jelix.org
+       </A><BR>
+    <I>Thu May  7 06:09:58 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000923.html">[Jelix-dev] [cron] API reference building
+</A></li>
+        <LI>Next message: <A HREF="000925.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#924">[ date ]</a>
+              <a href="thread.html#924">[ thread ]</a>
+              <a href="subject.html#924">[ subject ]</a>
+              <a href="author.html#924">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+build french tutorial draft
+--------------------
+
+start docbook generation : fr:tutoriels:jelixnews
+docbook built.
+Build the listings...
+xsltproc --xinclude -o /tmp/tmpGFD_N1/listings.xml --param current.dir '/var/www/jelix.org/portail/var/books' /var/www/jelix.org/install/docbuilder/dblatex-0.2.8/share/dblatex/xsl/common/mklistings.xsl /var/www/jelix.org/portail/var/books/tutoriel-jelix-1.0.xml
+xsltproc --xinclude -o tutoriel-jelix-1.0.rtex --catalogs --param current.dir '/var/www/jelix.org/portail/var/books' --param listings.xml '/tmp/tmpGFD_N1/listings.xml' custom.xsl /var/www/jelix.org/portail/var/books/tutoriel-jelix-1.0.xml
+XSLT stylesheets DocBook -  LaTeX 2e (0.2.8)
+===================================================
+Build tutoriel-jelix-1.0.pdf
+no support found for fontenc
+no support found for inputenc
+no support found for fancybox
+built-in module makeidx registered
+no support found for jelixdoc_fr
+built-in module pdftex registered
+building additional files...
+checking if compiling is necessary...
+the output file doesn't exist
+pdflatex -interaction=batchmode tutoriel-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.idx is empty
+tutoriel-jelix-1.0_tmp.toc MD5 checksum changed
+tutoriel-jelix-1.0_tmp.aux MD5 checksum changed
+the /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.toc file has changed
+pdflatex -interaction=batchmode tutoriel-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.idx is empty
+no new compilation is needed
+removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.log
+removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.aux
+removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.toc
+removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.out
+removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.glo
+removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.cb
+cleaning additional files...
+[index] removing /tmp/tmpGFD_N1/tutoriel-jelix-1.0_tmp.idx
+'tutoriel-jelix-1.0.pdf' successfully built
+
+build french manual 1.0 draft
+-----------------------------
+
+start docbook generation : fr:manuel-1.0
+docbook built.
+Build the listings...
+xsltproc --xinclude -o /tmp/tmpRxIs1t/listings.xml --param current.dir '/var/www/jelix.org/portail/var/books' /var/www/jelix.org/install/docbuilder/dblatex-0.2.8/share/dblatex/xsl/common/mklistings.xsl /var/www/jelix.org/portail/var/books/manuel-jelix-1.0.xml
+xsltproc --xinclude -o manuel-jelix-1.0.rtex --catalogs --param current.dir '/var/www/jelix.org/portail/var/books' --param listings.xml '/tmp/tmpRxIs1t/listings.xml' custom.xsl /var/www/jelix.org/portail/var/books/manuel-jelix-1.0.xml
+XSLT stylesheets DocBook -  LaTeX 2e (0.2.8)
+===================================================
+Build manuel-jelix-1.0.pdf
+no support found for fontenc
+no support found for inputenc
+no support found for fancybox
+built-in module makeidx registered
+no support found for jelixdoc_fr
+built-in module pdftex registered
+building additional files...
+checking if compiling is necessary...
+the output file doesn't exist
+pdflatex -interaction=batchmode manuel-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.idx is empty
+manuel-jelix-1.0_tmp.toc MD5 checksum changed
+manuel-jelix-1.0_tmp.aux MD5 checksum changed
+the /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.toc file has changed
+pdflatex -interaction=batchmode manuel-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.idx is empty
+no new compilation is needed
+removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.log
+removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.aux
+removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.toc
+removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.out
+removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.glo
+removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.cb
+cleaning additional files...
+[index] removing /tmp/tmpRxIs1t/manuel-jelix-1.0_tmp.idx
+'manuel-jelix-1.0.pdf' successfully built
+
+build french manual 1.1 draft
+-----------------------------
+
+start docbook generation : fr:manuel-1.1
+docbook built.
+Build the listings...
+xsltproc --xinclude -o /tmp/tmpUFBiLi/listings.xml --param current.dir '/var/www/jelix.org/portail/var/books' /var/www/jelix.org/install/docbuilder/dblatex-0.2.8/share/dblatex/xsl/common/mklistings.xsl /var/www/jelix.org/portail/var/books/manuel-jelix-1.1.xml
+xsltproc --xinclude -o manuel-jelix-1.1.rtex --catalogs --param current.dir '/var/www/jelix.org/portail/var/books' --param listings.xml '/tmp/tmpUFBiLi/listings.xml' custom.xsl /var/www/jelix.org/portail/var/books/manuel-jelix-1.1.xml
+XSLT stylesheets DocBook -  LaTeX 2e (0.2.8)
+===================================================
+Build manuel-jelix-1.1.pdf
+no support found for fontenc
+no support found for inputenc
+no support found for fancybox
+built-in module makeidx registered
+no support found for jelixdoc_fr
+built-in module pdftex registered
+building additional files...
+checking if compiling is necessary...
+the output file doesn't exist
+pdflatex -interaction=batchmode manuel-jelix-1.1_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.idx is empty
+manuel-jelix-1.1_tmp.aux MD5 checksum changed
+manuel-jelix-1.1_tmp.toc MD5 checksum changed
+the /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.aux file has changed
+pdflatex -interaction=batchmode manuel-jelix-1.1_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.idx is empty
+no new compilation is needed
+removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.log
+removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.aux
+removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.toc
+removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.out
+removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.glo
+removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.cb
+cleaning additional files...
+[index] removing /tmp/tmpUFBiLi/manuel-jelix-1.1_tmp.idx
+'manuel-jelix-1.1.pdf' successfully built
+
+build english tutorial draft
+----------------------------
+
+start docbook generation : en:tutorials:main
+docbook built.
+Build the listings...
+xsltproc --xinclude -o /tmp/tmpYrCH99/listings.xml --param current.dir '/var/www/jelix.org/portail/var/books' /var/www/jelix.org/install/docbuilder/dblatex-0.2.8/share/dblatex/xsl/common/mklistings.xsl /var/www/jelix.org/portail/var/books/tutorial-jelix-1.0.xml
+xsltproc --xinclude -o tutorial-jelix-1.0.rtex --catalogs --param current.dir '/var/www/jelix.org/portail/var/books' --param listings.xml '/tmp/tmpYrCH99/listings.xml' custom.xsl /var/www/jelix.org/portail/var/books/tutorial-jelix-1.0.xml
+XSLT stylesheets DocBook -  LaTeX 2e (0.2.8)
+===================================================
+Build tutorial-jelix-1.0.pdf
+no support found for fontenc
+no support found for inputenc
+no support found for fancybox
+built-in module makeidx registered
+no support found for jelixdoc_en
+built-in module pdftex registered
+building additional files...
+checking if compiling is necessary...
+the output file doesn't exist
+pdflatex -interaction=batchmode tutorial-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.idx is empty
+tutorial-jelix-1.0_tmp.aux MD5 checksum changed
+tutorial-jelix-1.0_tmp.toc MD5 checksum changed
+the /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.aux file has changed
+pdflatex -interaction=batchmode tutorial-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.idx is empty
+no new compilation is needed
+removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.log
+removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.aux
+removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.toc
+removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.out
+removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.glo
+removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.cb
+cleaning additional files...
+[index] removing /tmp/tmpYrCH99/tutorial-jelix-1.0_tmp.idx
+'tutorial-jelix-1.0.pdf' successfully built
+
+build english manual 1.0 draft
+------------------------------
+
+start docbook generation : en:manual-1.0
+docbook built.
+Build the listings...
+xsltproc --xinclude -o /tmp/tmpPfk3jc/listings.xml --param current.dir '/var/www/jelix.org/portail/var/books' /var/www/jelix.org/install/docbuilder/dblatex-0.2.8/share/dblatex/xsl/common/mklistings.xsl /var/www/jelix.org/portail/var/books/manual-jelix-1.0.xml
+xsltproc --xinclude -o manual-jelix-1.0.rtex --catalogs --param current.dir '/var/www/jelix.org/portail/var/books' --param listings.xml '/tmp/tmpPfk3jc/listings.xml' custom.xsl /var/www/jelix.org/portail/var/books/manual-jelix-1.0.xml
+XSLT stylesheets DocBook -  LaTeX 2e (0.2.8)
+===================================================
+Build manual-jelix-1.0.pdf
+no support found for fontenc
+no support found for inputenc
+no support found for fancybox
+built-in module makeidx registered
+no support found for jelixdoc_en
+built-in module pdftex registered
+building additional files...
+checking if compiling is necessary...
+the output file doesn't exist
+pdflatex -interaction=batchmode manual-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.idx is empty
+manual-jelix-1.0_tmp.toc MD5 checksum changed
+manual-jelix-1.0_tmp.aux MD5 checksum changed
+the /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.toc file has changed
+pdflatex -interaction=batchmode manual-jelix-1.0_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.idx is empty
+no new compilation is needed
+removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.log
+removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.aux
+removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.toc
+removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.out
+removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.glo
+removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.cb
+cleaning additional files...
+[index] removing /tmp/tmpPfk3jc/manual-jelix-1.0_tmp.idx
+'manual-jelix-1.0.pdf' successfully built
+
+build english manual 1.1 draft
+------------------------------
+
+start docbook generation : en:manual-1.1
+docbook built.
+Build the listings...
+xsltproc --xinclude -o /tmp/tmpe8ZWgR/listings.xml --param current.dir '/var/www/jelix.org/portail/var/books' /var/www/jelix.org/install/docbuilder/dblatex-0.2.8/share/dblatex/xsl/common/mklistings.xsl /var/www/jelix.org/portail/var/books/manual-jelix-1.1.xml
+xsltproc --xinclude -o manual-jelix-1.1.rtex --catalogs --param current.dir '/var/www/jelix.org/portail/var/books' --param listings.xml '/tmp/tmpe8ZWgR/listings.xml' custom.xsl /var/www/jelix.org/portail/var/books/manual-jelix-1.1.xml
+XSLT stylesheets DocBook -  LaTeX 2e (0.2.8)
+===================================================
+Build manual-jelix-1.1.pdf
+no support found for fontenc
+no support found for inputenc
+no support found for fancybox
+built-in module makeidx registered
+no support found for jelixdoc_en
+built-in module pdftex registered
+building additional files...
+checking if compiling is necessary...
+the output file doesn't exist
+pdflatex -interaction=batchmode manual-jelix-1.1_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.idx is empty
+manual-jelix-1.1_tmp.toc MD5 checksum changed
+manual-jelix-1.1_tmp.aux MD5 checksum changed
+the /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.toc file has changed
+pdflatex -interaction=batchmode manual-jelix-1.1_tmp.tex
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+running post-compilation scripts...
+[index] the index file /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.idx is empty
+no new compilation is needed
+removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.log
+removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.aux
+removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.toc
+removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.out
+removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.glo
+removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.cb
+cleaning additional files...
+[index] removing /tmp/tmpe8ZWgR/manual-jelix-1.1_tmp.idx
+'manual-jelix-1.1.pdf' successfully built
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000923.html">[Jelix-dev] [cron] API reference building
+</A></li>
+	<LI>Next message: <A HREF="000925.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#924">[ date ]</a>
+              <a href="thread.html#924">[ thread ]</a>
+              <a href="subject.html#924">[ subject ]</a>
+              <a href="author.html#924">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] commit SVN-1316 (julieni)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2009-February/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1316%20%28julieni%29&In-Reply-To=%3C20090223173842.726EE35402B%40dns.tuxservices.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000590.html">
+   <LINK REL="Next"  HREF="000592.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] commit SVN-1316 (julieni)</H1>
+    <B>dev at jelix.org</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20commit%20SVN-1316%20%28julieni%29&In-Reply-To=%3C20090223173842.726EE35402B%40dns.tuxservices.org%3E"
+       TITLE="[Jelix-dev] commit SVN-1316 (julieni)">dev at jelix.org
+       </A><BR>
+    <I>Mon Feb 23 18:38:42 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000590.html">[Jelix-dev] commit SVN-1315 (julieni)
+</A></li>
+        <LI>Next message: <A HREF="000592.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#591">[ date ]</a>
+              <a href="thread.html#591">[ thread ]</a>
+              <a href="subject.html#591">[ subject ]</a>
+              <a href="author.html#591">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>julieni
+2009-02-23 18:38:42 +0100 (Mon, 23 Feb 2009)
+70
+periodic update of TcPDF and fonts, see included changelog for details
+
+U   trunk/lib/pdf-fonts/almohanad.php
+U   trunk/lib/pdf-fonts/arialunicid0.php
+U   trunk/lib/pdf-fonts/courier.php
+U   trunk/lib/pdf-fonts/dejavusans-extralight.ctg.z
+U   trunk/lib/pdf-fonts/dejavusans-extralight.php
+U   trunk/lib/pdf-fonts/dejavusans-extralight.z
+U   trunk/lib/pdf-fonts/dejavusans.ctg.z
+U   trunk/lib/pdf-fonts/dejavusans.php
+U   trunk/lib/pdf-fonts/dejavusans.z
+U   trunk/lib/pdf-fonts/dejavusansb.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansb.php
+U   trunk/lib/pdf-fonts/dejavusansb.z
+U   trunk/lib/pdf-fonts/dejavusansbi.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansbi.php
+U   trunk/lib/pdf-fonts/dejavusansbi.z
+U   trunk/lib/pdf-fonts/dejavusanscondensed.ctg.z
+U   trunk/lib/pdf-fonts/dejavusanscondensed.php
+U   trunk/lib/pdf-fonts/dejavusanscondensed.z
+U   trunk/lib/pdf-fonts/dejavusanscondensedb.ctg.z
+U   trunk/lib/pdf-fonts/dejavusanscondensedb.php
+U   trunk/lib/pdf-fonts/dejavusanscondensedb.z
+U   trunk/lib/pdf-fonts/dejavusanscondensedbi.ctg.z
+U   trunk/lib/pdf-fonts/dejavusanscondensedbi.php
+U   trunk/lib/pdf-fonts/dejavusanscondensedbi.z
+U   trunk/lib/pdf-fonts/dejavusanscondensedi.ctg.z
+U   trunk/lib/pdf-fonts/dejavusanscondensedi.php
+U   trunk/lib/pdf-fonts/dejavusanscondensedi.z
+U   trunk/lib/pdf-fonts/dejavusansi.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansi.php
+U   trunk/lib/pdf-fonts/dejavusansi.z
+U   trunk/lib/pdf-fonts/dejavusansmono.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansmono.php
+U   trunk/lib/pdf-fonts/dejavusansmono.z
+U   trunk/lib/pdf-fonts/dejavusansmonob.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansmonob.php
+U   trunk/lib/pdf-fonts/dejavusansmonob.z
+U   trunk/lib/pdf-fonts/dejavusansmonobi.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansmonobi.php
+U   trunk/lib/pdf-fonts/dejavusansmonobi.z
+U   trunk/lib/pdf-fonts/dejavusansmonoi.ctg.z
+U   trunk/lib/pdf-fonts/dejavusansmonoi.php
+U   trunk/lib/pdf-fonts/dejavusansmonoi.z
+U   trunk/lib/pdf-fonts/dejavuserif.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserif.php
+U   trunk/lib/pdf-fonts/dejavuserif.z
+U   trunk/lib/pdf-fonts/dejavuserifb.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifb.php
+U   trunk/lib/pdf-fonts/dejavuserifb.z
+U   trunk/lib/pdf-fonts/dejavuserifbi.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifbi.php
+U   trunk/lib/pdf-fonts/dejavuserifbi.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensed.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensed.php
+U   trunk/lib/pdf-fonts/dejavuserifcondensed.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensedb.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensedb.php
+U   trunk/lib/pdf-fonts/dejavuserifcondensedb.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensedbi.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensedbi.php
+U   trunk/lib/pdf-fonts/dejavuserifcondensedbi.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensedi.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifcondensedi.php
+U   trunk/lib/pdf-fonts/dejavuserifcondensedi.z
+U   trunk/lib/pdf-fonts/dejavuserifi.ctg.z
+U   trunk/lib/pdf-fonts/dejavuserifi.php
+U   trunk/lib/pdf-fonts/dejavuserifi.z
+U   trunk/lib/pdf-fonts/freemono.ctg.z
+U   trunk/lib/pdf-fonts/freemono.php
+U   trunk/lib/pdf-fonts/freemono.z
+U   trunk/lib/pdf-fonts/freemonob.ctg.z
+U   trunk/lib/pdf-fonts/freemonob.php
+U   trunk/lib/pdf-fonts/freemonob.z
+U   trunk/lib/pdf-fonts/freemonobi.ctg.z
+U   trunk/lib/pdf-fonts/freemonobi.php
+U   trunk/lib/pdf-fonts/freemonobi.z
+U   trunk/lib/pdf-fonts/freemonoi.ctg.z
+U   trunk/lib/pdf-fonts/freemonoi.php
+U   trunk/lib/pdf-fonts/freemonoi.z
+U   trunk/lib/pdf-fonts/freesans.ctg.z
+U   trunk/lib/pdf-fonts/freesans.php
+U   trunk/lib/pdf-fonts/freesans.z
+U   trunk/lib/pdf-fonts/freesansb.ctg.z
+U   trunk/lib/pdf-fonts/freesansb.php
+U   trunk/lib/pdf-fonts/freesansb.z
+U   trunk/lib/pdf-fonts/freesansbi.ctg.z
+U   trunk/lib/pdf-fonts/freesansbi.php
+U   trunk/lib/pdf-fonts/freesansbi.z
+U   trunk/lib/pdf-fonts/freesansi.ctg.z
+U   trunk/lib/pdf-fonts/freesansi.php
+U   trunk/lib/pdf-fonts/freesansi.z
+U   trunk/lib/pdf-fonts/freeserif.ctg.z
+U   trunk/lib/pdf-fonts/freeserif.php
+U   trunk/lib/pdf-fonts/freeserif.z
+U   trunk/lib/pdf-fonts/freeserifb.ctg.z
+U   trunk/lib/pdf-fonts/freeserifb.php
+U   trunk/lib/pdf-fonts/freeserifb.z
+U   trunk/lib/pdf-fonts/freeserifbi.ctg.z
+U   trunk/lib/pdf-fonts/freeserifbi.php
+U   trunk/lib/pdf-fonts/freeserifbi.z
+U   trunk/lib/pdf-fonts/freeserifi.ctg.z
+U   trunk/lib/pdf-fonts/freeserifi.php
+U   trunk/lib/pdf-fonts/freeserifi.z
+U   trunk/lib/pdf-fonts/helvetica.php
+U   trunk/lib/pdf-fonts/helveticab.php
+U   trunk/lib/pdf-fonts/helveticabi.php
+U   trunk/lib/pdf-fonts/helveticai.php
+U   trunk/lib/pdf-fonts/hysmyeongjostdmedium.php
+U   trunk/lib/pdf-fonts/kozgopromedium.php
+U   trunk/lib/pdf-fonts/kozminproregular.php
+U   trunk/lib/pdf-fonts/msungstdlight.php
+U   trunk/lib/pdf-fonts/stsongstdlight.php
+U   trunk/lib/pdf-fonts/symbol.php
+U   trunk/lib/pdf-fonts/times.php
+U   trunk/lib/pdf-fonts/timesb.php
+U   trunk/lib/pdf-fonts/timesbi.php
+U   trunk/lib/pdf-fonts/timesi.php
+U   trunk/lib/pdf-fonts/uni2cid_ac15.php
+U   trunk/lib/pdf-fonts/uni2cid_ag15.php
+U   trunk/lib/pdf-fonts/uni2cid_aj16.php
+U   trunk/lib/pdf-fonts/uni2cid_ak12.php
+U   trunk/lib/pdf-fonts/zapfdingbats.php
+U   trunk/lib/pdf-fonts/zarbold.php
+U   trunk/lib/tcpdf/CHANGELOG.TXT
+U   trunk/lib/tcpdf/README.TXT
+U   trunk/lib/tcpdf/barcodes.php
+U   trunk/lib/tcpdf/config/tcpdf_config.php
+U   trunk/lib/tcpdf/htmlcolors.php
+U   trunk/lib/tcpdf/tcpdf.php
+U   trunk/lib/tcpdf/unicode_data.php
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000590.html">[Jelix-dev] commit SVN-1315 (julieni)
+</A></li>
+	<LI>Next message: <A HREF="000592.html">[Jelix-dev] [cron] nightly builds and unit tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#591">[ date ]</a>
+              <a href="thread.html#591">[ thread ]</a>
+              <a href="subject.html#591">[ subject ]</a>
+              <a href="author.html#591">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

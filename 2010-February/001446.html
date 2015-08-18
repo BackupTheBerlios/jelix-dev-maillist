@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] [release] Cycle des releases
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2010-February/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Brelease%5D%20Cycle%20des%20releases&In-Reply-To=%3C4B880180.6080309%40mathaud.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="001444.html">
+   <LINK REL="Next"  HREF="001447.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] [release] Cycle des releases</H1>
+    <B>Loic Mathaud</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20%5Brelease%5D%20Cycle%20des%20releases&In-Reply-To=%3C4B880180.6080309%40mathaud.net%3E"
+       TITLE="[Jelix-dev] [release] Cycle des releases">loic at mathaud.net
+       </A><BR>
+    <I>Fri Feb 26 18:14:40 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001444.html">[Jelix-dev] [release] Cycle des releases
+</A></li>
+        <LI>Next message: <A HREF="001447.html">[Jelix-dev] [release] Cycle des releases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1446">[ date ]</a>
+              <a href="thread.html#1446">[ thread ]</a>
+              <a href="subject.html#1446">[ subject ]</a>
+              <a href="author.html#1446">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+laurent a &#233;crit :
+&gt;<i> Le 26/02/10 17:48, Loic Mathaud a &#233;crit :
+</I>&gt;&gt;<i> Hello,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Concernant le cycle des releases de Jelix, je serais partant pour 3
+</I>&gt;&gt;<i> releases par an, 1 tous les 4 mois.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Cela me parait un bon compromis pour avoir &#224; la fois le temps de
+</I>&gt;&gt;<i> d&#233;velopper des choses int&#233;ressantes pendant 4 mois, tout en permettant
+</I>&gt;&gt;<i> de sortir 3 releases chaque ann&#233;e.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Nous avons aussi l'option 4 releases/an, mais j'ai peur que tenir un
+</I>&gt;&gt;<i> rythme de 3 mois soit un peu plus difficile &#224; tenir.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Vous en pensez quoi ?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 4 mois oui, pourquoi pas.
+</I>
++2 pour les 4 mois alors.
+
+Peu importe la p&#233;riode qui sera retenue, ce qu'il faut avant tout &#224; mon
+avis c'est que cette p&#233;riode soit fixe afin de nous imposer de la
+r&#233;gularit&#233;.
+Si un ticket n'est pas pr&#234;t &#224; temps (cas qu'il faudrait garder
+exceptionnel), ce n'est pas grave, on release et on le reporte &#224; dans 4
+mois. Ce n'est pas m&#233;chant.
+
+&gt;<i> 
+</I>&gt;<i> Et il y a aussi au niveau de la gestion des dep&#244;ts qu'il faut
+</I>&gt;<i> s'organiser, et que je ne refasse pas la m&#234;me erreur que pour la 1.2.
+</I>&gt;<i> 
+</I>&gt;<i> En effet, j'ai eu le grand tord de d&#233;velopper le syst&#232;me d'installation
+</I>&gt;<i> directement sur le trunk. Resultat : trunk instable pendant plusieurs
+</I>&gt;<i> semaines, et &#231;a m'a pris plusieurs mois pour le finaliser. Cons&#233;quence :
+</I>&gt;<i> release pas possible, m&#234;me sans le syst&#232;me d'installation.
+</I>&gt;<i> 
+</I>&gt;<i> donc voil&#224;, je vais dor&#233;navant d&#233;velopper les nouvelles features sur mon
+</I>&gt;<i> propre d&#233;p&#244;t. J'invite tout les contributeurs &#224; le faire d'ailleurs.
+</I>&gt;<i> Utilisons au maximum les possibilit&#233;s que nous offre Mercurial. clone,
+</I>&gt;<i> rebase, merge, collapse etc...
+</I>&gt;<i> 
+</I>&gt;<i> On ne balance dans le trunk QUE les trucs stables. Ainsi on pourra faire
+</I>&gt;<i> une release &#224; tout moment.
+</I>
+Bonne id&#233;e.
+
+&gt;<i> 
+</I>&gt;<i> D'ailleurs, voir si on ne deplace pas les depots sur bitbucket. Chacun
+</I>&gt;<i> pourra ainsi cloner &quot;publiquement&quot; le trunk et faire ses modifs. Et moi
+</I>&gt;<i> je merge apr&#232;s review sur le trunk. Et &#224; la limite, &#231;a nous permettrait
+</I>&gt;<i> de virer hg.jelix.org, et donc d'avoir une appli en moins (et la conf
+</I>&gt;<i> qui va avec, droits d'acc&#232;s etc) &#224; maintenir sur le serveur.
+</I>
+100% pour bitbucket.
+Cela nous &#233;vitera de devoir g&#233;rer les d&#233;pots, c'est exactement dans
+l'optique simplification de la maintenance du serveur.
+En plus l'interface est plus sympa que ce qu'on propose actuellement sur
+hg.jelix.org et propose plus de fonctionnalit&#233;s : fork en cliquant,
+possibilit&#233; ensuite de s'&#233;changer facilement les patchs, un wiki +
+bugtracker pour chaque projet, ...
+
+
+@+
+Loic
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001444.html">[Jelix-dev] [release] Cycle des releases
+</A></li>
+	<LI>Next message: <A HREF="001447.html">[Jelix-dev] [release] Cycle des releases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1446">[ date ]</a>
+              <a href="thread.html#1446">[ thread ]</a>
+              <a href="subject.html#1446">[ subject ]</a>
+              <a href="author.html#1446">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

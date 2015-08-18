@@ -1,0 +1,936 @@
+From loic at mathaud.net  Thu Oct  1 16:33:17 2009
+From: loic at mathaud.net (Loic Mathaud)
+Date: Thu, 01 Oct 2009 16:33:17 +0200
+Subject: [Jelix-dev] =?iso-8859-1?q?D=E9tails_Jelix_Dev_Summit_2009?=
+Message-ID: <4AC4BDAD.20101@mathaud.net>
+
+Jelixians,
+
+R?sumer du d?roulement de ce premier Jelix Dev Summit :
+
+- Date : vendredi 9 octobre 2009 ? partir de 19h/19h30
+
+- Lieu : Bar/restaurant Zango du 1er arrondissement (http://www.zango.fr/)
+
+- Inscription : me contacter directement par mail ou sur la ML.
+La fin des inscriptions est fix?e au lundi 5 octobre au soir afin de
+pouvoir r?server. Le nombre de place est limit? et priorit? est donn?e
+aux contributeurs.
+
+- La page de la rencontre sur le wiki dev :
+http://developer.jelix.org/wiki/fr/summit/9-10
+
+Je rappel la liste des inscrits pour le moment :
+
+- S?bastien de Bollivier
+- Olivier Demah (FoxMaSk)
+- Bastien Jaillot (bastnic)
+- Laurent Jouanneau (laurentj)
+- K?vin Lepeltier (lipki)
+- Loic Mathaud (loic_m)
+- Christophe Thiriot (doubleface)
+- Guy-Philippe Uberos (gunt)
+
+
+
+
+
+From sebastien.debollivier at webarome.net  Fri Oct  2 10:04:28 2009
+From: sebastien.debollivier at webarome.net (=?ISO-8859-1?Q?S=E9bastien_De_Bollivier?=)
+Date: Fri, 2 Oct 2009 10:04:28 +0200
+Subject: [Jelix-dev] =?iso-8859-1?q?D=E9tails_Jelix_Dev_Summit_2009?=
+In-Reply-To: <4AC4BDAD.20101@mathaud.net>
+References: <4AC4BDAD.20101@mathaud.net>
+Message-ID: <38192f840910020104s6ffb9a15k9a3c8296216846e8@mail.gmail.com>
+
+Pour ma part, c'est avec regret que je vais devoir annuler ma pr?sence.
+D?sol?.
+
+2009/10/1 Loic Mathaud <loic at mathaud.net>
+
+> Jelixians,
+>
+> R?sumer du d?roulement de ce premier Jelix Dev Summit :
+>
+> - Date : vendredi 9 octobre 2009 ? partir de 19h/19h30
+>
+> - Lieu : Bar/restaurant Zango du 1er arrondissement (http://www.zango.fr/)
+>
+> - Inscription : me contacter directement par mail ou sur la ML.
+> La fin des inscriptions est fix?e au lundi 5 octobre au soir afin de
+> pouvoir r?server. Le nombre de place est limit? et priorit? est donn?e
+> aux contributeurs.
+>
+> - La page de la rencontre sur le wiki dev :
+> http://developer.jelix.org/wiki/fr/summit/9-10
+>
+> Je rappel la liste des inscrits pour le moment :
+>
+> - S?bastien de Bollivier
+> - Olivier Demah (FoxMaSk)
+> - Bastien Jaillot (bastnic)
+> - Laurent Jouanneau (laurentj)
+> - K?vin Lepeltier (lipki)
+> - Loic Mathaud (loic_m)
+> - Christophe Thiriot (doubleface)
+> - Guy-Philippe Uberos (gunt)
+>
+>
+>
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>
+
+
+
+-- 
+Cordialement,
+S?bastien De Bollivier
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/jelix-dev/attachments/20091002/88b77c9c/attachment.html>
+
+From loic at mathaud.net  Fri Oct  2 11:54:05 2009
+From: loic at mathaud.net (Loic Mathaud)
+Date: Fri, 02 Oct 2009 11:54:05 +0200
+Subject: [Jelix-dev] =?iso-8859-1?q?D=E9tails_Jelix_Dev_Summit_2009?=
+In-Reply-To: <38192f840910020104s6ffb9a15k9a3c8296216846e8@mail.gmail.com>
+References: <4AC4BDAD.20101@mathaud.net>
+	<38192f840910020104s6ffb9a15k9a3c8296216846e8@mail.gmail.com>
+Message-ID: <4AC5CDBD.7030200@mathaud.net>
+
+C'est not?, merci d'avoir pr?venu !
+
+Pour une prochaine fois sans doute.
+
+@+
+Loic
+
+S?bastien De Bollivier a ?crit :
+> Pour ma part, c'est avec regret que je vais devoir annuler ma pr?sence.
+> 
+> D?sol?.
+> 
+> 2009/10/1 Loic Mathaud <loic at mathaud.net <mailto:loic at mathaud.net>>
+> 
+>     Jelixians,
+> 
+>     R?sumer du d?roulement de ce premier Jelix Dev Summit :
+> 
+>     - Date : vendredi 9 octobre 2009 ? partir de 19h/19h30
+> 
+>     - Lieu : Bar/restaurant Zango du 1er arrondissement
+>     (http://www.zango.fr/)
+> 
+>     - Inscription : me contacter directement par mail ou sur la ML.
+>     La fin des inscriptions est fix?e au lundi 5 octobre au soir afin de
+>     pouvoir r?server. Le nombre de place est limit? et priorit? est donn?e
+>     aux contributeurs.
+> 
+>     - La page de la rencontre sur le wiki dev :
+>     http://developer.jelix.org/wiki/fr/summit/9-10
+> 
+>     Je rappel la liste des inscrits pour le moment :
+> 
+>     - S?bastien de Bollivier
+>     - Olivier Demah (FoxMaSk)
+>     - Bastien Jaillot (bastnic)
+>     - Laurent Jouanneau (laurentj)
+>     - K?vin Lepeltier (lipki)
+>     - Loic Mathaud (loic_m)
+>     - Christophe Thiriot (doubleface)
+>     - Guy-Philippe Uberos (gunt)
+> 
+> 
+> 
+>     _______________________________________________
+>     Jelix-dev mailing list
+>     Jelix-dev at lists.berlios.de <mailto:Jelix-dev at lists.berlios.de>
+>     https://lists.berlios.de/mailman/listinfo/jelix-dev
+> 
+> 
+> 
+> 
+> -- 
+> Cordialement,
+> S?bastien De Bollivier
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+
+
+
+From foxmask at foxmask.info  Mon Oct  5 19:42:25 2009
+From: foxmask at foxmask.info (Foxmask)
+Date: Mon, 5 Oct 2009 19:42:25 +0200
+Subject: [Jelix-dev] =?utf-8?q?Une_id=C3=A9e_folle_=28_de_plus_=29?=
+Message-ID: <4EF9CC08-8233-48E8-A759-FF88C18EFEF9@foxmask.info>
+
+Bonsoir,
+
+Le forumphp 2009 poindre et je me disait qu'avec ces multiples  
+?v?nement s que sont les summit aperophp et forum salon, que  
+l'occasion de produire un module jFest pour gerer ces "manifestations  
+" serait un moyen de plus de montrer ce que jelix a dans le ventre ;)
+Cela pourrait ?tre une appli de plus ? montrer ? ce m?me forumphp
+Et j'imaginais m?me , puisque l'?re du social network est de mise,  
+pourquoi de pas monter un site d?die o? n'importe qui pourrait mettre  
+sa manif , salon , r?union de geeks , concert et j'en passe et des  
+meilleures.
+Enfin vla l'id?e ;)
+Bonne soir?e
+
+---
+Blog "Le grin de Sable" - http://www.foxmask.info
+(d?)p?t de miel -http://projets.foxmask.info
+HaveFnuBB! le forum made in Jelix - http://www.havefnubb.org
+
+
+
+From laurent at jelix.org  Wed Oct  7 10:43:57 2009
+From: laurent at jelix.org (laurent)
+Date: Wed, 07 Oct 2009 10:43:57 +0200
+Subject: [Jelix-dev] =?utf-8?q?Une_id=C3=A9e_folle_=28_de_plus_=29?=
+In-Reply-To: <4EF9CC08-8233-48E8-A759-FF88C18EFEF9@foxmask.info>
+References: <4EF9CC08-8233-48E8-A759-FF88C18EFEF9@foxmask.info>
+Message-ID: <4ACC54CD.5080106@jelix.org>
+
+Fais donc, fais donc :)
+
+
+Foxmask a ?crit :
+> Bonsoir,
+> 
+> Le forumphp 2009 poindre et je me disait qu'avec ces multiples  
+> ?v?nement s que sont les summit aperophp et forum salon, que  
+> l'occasion de produire un module jFest pour gerer ces "manifestations  
+> " serait un moyen de plus de montrer ce que jelix a dans le ventre ;)
+> Cela pourrait ?tre une appli de plus ? montrer ? ce m?me forumphp
+> Et j'imaginais m?me , puisque l'?re du social network est de mise,  
+> pourquoi de pas monter un site d?die o? n'importe qui pourrait mettre  
+> sa manif , salon , r?union de geeks , concert et j'en passe et des  
+> meilleures.
+> Enfin vla l'id?e ;)
+> Bonne soir?e
+> 
+> ---
+> Blog "Le grin de Sable" - http://www.foxmask.info
+> (d?)p?t de miel -http://projets.foxmask.info
+> HaveFnuBB! le forum made in Jelix - http://www.havefnubb.org
+> 
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+
+
+From foxmask at foxmask.info  Wed Oct  7 11:32:58 2009
+From: foxmask at foxmask.info (FoxMaSk)
+Date: Wed, 07 Oct 2009 11:32:58 +0200
+Subject: [Jelix-dev] =?utf-8?q?Une_id=C3=A9e_folle_=28_de_plus_=29?=
+In-Reply-To: <4ACC54CD.5080106@jelix.org>
+References: <4EF9CC08-8233-48E8-A759-FF88C18EFEF9@foxmask.info>
+	<4ACC54CD.5080106@jelix.org>
+Message-ID: <737b374c0a746f07733a3b2c1732d343@localhost>
+
+On Wed, 07 Oct 2009 10:43:57 +0200, laurent <laurent at jelix.org> wrote:
+> Fais donc, fais donc :)
+
+Ok je vois que ?a n'inspire (pas assez ou) personne.
+On a tous trop de "trucs" en cours, logique.
+Je repasserai avec mes id?es fumeuses :D
+
+Bonne journ?e.
+
+> 
+> 
+> Foxmask a ?crit :
+>> Bonsoir,
+>> 
+>> Le forumphp 2009 poindre et je me disait qu'avec ces multiples  
+>> ?v?nement s que sont les summit aperophp et forum salon, que  
+>> l'occasion de produire un module jFest pour gerer ces "manifestations  
+>> " serait un moyen de plus de montrer ce que jelix a dans le ventre ;)
+>> Cela pourrait ?tre une appli de plus ? montrer ? ce m?me forumphp
+>> Et j'imaginais m?me , puisque l'?re du social network est de mise,  
+>> pourquoi de pas monter un site d?die o? n'importe qui pourrait mettre 
+
+>> sa manif , salon , r?union de geeks , concert et j'en passe et des  
+>> meilleures.
+>> Enfin vla l'id?e ;)
+>> Bonne soir?e
+>> 
+>> ---
+>> Blog "Le grin de Sable" - http://www.foxmask.info
+>> (d?)p?t de miel -http://projets.foxmask.info
+>> HaveFnuBB! le forum made in Jelix - http://www.havefnubb.org
+>> 
+>> _______________________________________________
+>> Jelix-dev mailing list
+>> Jelix-dev at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> 
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+-- 
+Blog "Le grin de Sable" - http://www.foxmask.info
+(d?)p?t de miel - http://projets.foxmask.info
+HaveFnuBB! le forum made in jelix - http://www.havefnubb.org
+
+
+From foxmask at foxmask.info  Mon Oct 12 10:05:14 2009
+From: foxmask at foxmask.info (foxmask at foxmask.info)
+Date: Mon, 12 Oct 2009 10:05:14 +0200
+Subject: [Jelix-dev] =?iso-8859-1?q?expos=E9_du_=22actAs=22_par_Bastnic_?=
+	=?iso-8859-1?q?=3B=29?=
+Message-ID: <1255334714.4ad2e33a7c7b0@ssl0.ovh.net>
+
+Bonjour,
+
+Ce weekend j'ai un peu cherch? le actAs comme je l'avais croise sur CakePHP pour
+comprendre comme c'?tait g?r?.
+
+Chez Cake, le actAs influe sur le mod?le uniquement.
+Ainsi, gerer comme dans jTags (par exemple), avec CakePHP cela revient ? d?finir
+un comportement et via des callbacks, g?rer les donn?es dans al base.
+
+Par contre cot? vue, et contr?leur, il faut le faire ? la main.
+
+En gros donc, m?me si on n'a pas actAs, on en revient ? la meme chose,
+
+Ajouter la colonne dans sa dao puis forms puis une zone pour gerer tout ?a.
+
+Bastnic : concr?tement si t'as 2min je veux bien que tu me dises comment SF g?re
+cela exactement (? part Doctrine qui gere sa sauce quoi d'autre doit etre fait
+par le developpeur  ?) ;-)
+
+Je veux bien qu'il y ait de la magie "la dedans" mais on pourrait aussi bien
+d?finir nous aussi un Behavior-like qui g?re tous ces aspects (dao/form/tpl)
+via des jEvent() non ?
+
+cdt ;)
+
+
+
+From laurent at jelix.org  Mon Oct 12 10:48:55 2009
+From: laurent at jelix.org (laurent)
+Date: Mon, 12 Oct 2009 10:48:55 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+Message-ID: <4AD2ED77.3060607@jelix.org>
+
+Bonjour,
+
+On ?tait donc sept autour d'une table avec des menus plut?t originaux. 
+Et nous avons discut? un peu de ce qu'on allait faire
+
+
+1) Bastnic est charg? de nous mont? un serveur, dans une machine virtuel 
+sur une de ses machines. On aura donc le contr?le total du serveur, et 
+on va pouvoir donc aller plus vite, car je donnerais des acc?s (ce que 
+je ne peux pas trop faire actuellement, ?tant donn? que ce n'est pas ma 
+machine, que c'est du ldap, et puis tout est cass?..). Ainsi donc :
+  - je donnerais des acc?s root pour g?rer les probl?mes sur la machine, 
+et ?viter des jours de blackout total quand ?a merde et que je suis en 
+vacances
+  - il sera aussi possible de corriger les probl?mes de build 
+automatiques plus rapidement (par ex, il y en a actuellement et je n'ai 
+pas le temps de m'en occuper)
+  - Je donnerais acc?s aux sources du site, ? qui voudra, afin de 
+d?l?guer les am?liorations sur le site.
+  - avantage de la wmware : on pourra r?cup?rer l'image, et d?menager 
+tr?s facilement si besoin
+
+2) Foxmask a avanc? sur la forge, lipki va voir aussi ce qu'il peut 
+faire pour aider. Je vais jetter un coup d'oeil ? ce qui a ?t? fait et 
+ensuite on mettra en ligne.
+
+3) Gunt et BBallizlife sont en train de repenser la page d'accueil et le 
+design g?n?ral
+
+4) Doubleface continue de bosser sur l'int?gration de PHPUnit. ? terme, 
+il s'agit de remplacer simpletest, car ce dernier n'est pas trop 
+maintenu, et fourni moins de fonctionnalit? (ex: couverture de test 
+manquante)
+
+5) je vais aussi d?l?guer pour faire les releases (ceux qui auront un 
+acc?s shell sur le serveur pourront faire ce qu'il faut). Une 
+documentation sur le processus de release sera faite (il en existe une 
+minimal dans le fichier TODO_RELEASE dans les sources)
+
+6) Une fois le serveur d?m?nag?, on va pouvoir aussi mettre ? jour trac 
+et les tracs de la forge. Un souci cependant, le langage de templates de 
+trac a chang? avec la derni?re version, et il me faudra donc un 
+volontaire pour les adapter ? la charte graphique jelix :-)
+
+7) Bastnic, qui fait du Symfony dans le cadre de son boulot, nous a 
+expliqu? quelques avantages de ce framework par rapport ? jelix, 
+notamment au niveau de l'ORM Doctrine, avec les actAs et cie (la 
+possibilit? de d?clarer dynamiquement des nouveaux champs sans avoir ? 
+modifier les fichiers des mod?les).
+
+8) noter que mes disponiblit?s vont ?tre tr?s limit?s ces deux 
+prochaines semaines, mais je pourrais ensuite ? nouveau avancer sur le 
+projet.
+
+
+Pour les participants, d'autres choses ? rajouter ? :-)
+
+
+Laurent
+
+
+
+
+From foxmask at foxmask.info  Mon Oct 12 11:12:06 2009
+From: foxmask at foxmask.info (foxmask at foxmask.info)
+Date: Mon, 12 Oct 2009 11:12:06 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+In-Reply-To: <4AD2ED77.3060607@jelix.org>
+References: <4AD2ED77.3060607@jelix.org>
+Message-ID: <1255338726.4ad2f2e603dd1@ssl0.ovh.net>
+
+Selon laurent <laurent at jelix.org>:
+
+> 2) Foxmask a avanc? sur la forge, lipki va voir aussi ce qu'il peut
+> faire pour aider. Je vais jetter un coup d'oeil ? ce qui a ?t? fait et
+> ensuite on mettra en ligne.
+
+si j'ai un truc ? commiter ; c'est tjs du svn le depot ?
+
+
+
+From loic at mathaud.net  Mon Oct 12 11:13:33 2009
+From: loic at mathaud.net (Loic Mathaud)
+Date: Mon, 12 Oct 2009 11:13:33 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+In-Reply-To: <4AD2ED77.3060607@jelix.org>
+References: <4AD2ED77.3060607@jelix.org>
+Message-ID: <4AD2F33D.6040009@mathaud.net>
+
+Hello,
+
+Je ne vois rien ? ajouter ? ton compte-rendu. Tu as bien synth?tis? ce
+qui s'est dit.
+
+J'ajouterais juste une seule chose ? la limite du off-topic : mais
+qu'est-ce qu'il parle bastnic ! ;)
+
+
+Loic
+
+laurent a ?crit :
+> Bonjour,
+> 
+> On ?tait donc sept autour d'une table avec des menus plut?t originaux. 
+> Et nous avons discut? un peu de ce qu'on allait faire
+> 
+> 
+> 1) Bastnic est charg? de nous mont? un serveur, dans une machine virtuel 
+> sur une de ses machines. On aura donc le contr?le total du serveur, et 
+> on va pouvoir donc aller plus vite, car je donnerais des acc?s (ce que 
+> je ne peux pas trop faire actuellement, ?tant donn? que ce n'est pas ma 
+> machine, que c'est du ldap, et puis tout est cass?..). Ainsi donc :
+>   - je donnerais des acc?s root pour g?rer les probl?mes sur la machine, 
+> et ?viter des jours de blackout total quand ?a merde et que je suis en 
+> vacances
+>   - il sera aussi possible de corriger les probl?mes de build 
+> automatiques plus rapidement (par ex, il y en a actuellement et je n'ai 
+> pas le temps de m'en occuper)
+>   - Je donnerais acc?s aux sources du site, ? qui voudra, afin de 
+> d?l?guer les am?liorations sur le site.
+>   - avantage de la wmware : on pourra r?cup?rer l'image, et d?menager 
+> tr?s facilement si besoin
+> 
+> 2) Foxmask a avanc? sur la forge, lipki va voir aussi ce qu'il peut 
+> faire pour aider. Je vais jetter un coup d'oeil ? ce qui a ?t? fait et 
+> ensuite on mettra en ligne.
+> 
+> 3) Gunt et BBallizlife sont en train de repenser la page d'accueil et le 
+> design g?n?ral
+> 
+> 4) Doubleface continue de bosser sur l'int?gration de PHPUnit. ? terme, 
+> il s'agit de remplacer simpletest, car ce dernier n'est pas trop 
+> maintenu, et fourni moins de fonctionnalit? (ex: couverture de test 
+> manquante)
+> 
+> 5) je vais aussi d?l?guer pour faire les releases (ceux qui auront un 
+> acc?s shell sur le serveur pourront faire ce qu'il faut). Une 
+> documentation sur le processus de release sera faite (il en existe une 
+> minimal dans le fichier TODO_RELEASE dans les sources)
+> 
+> 6) Une fois le serveur d?m?nag?, on va pouvoir aussi mettre ? jour trac 
+> et les tracs de la forge. Un souci cependant, le langage de templates de 
+> trac a chang? avec la derni?re version, et il me faudra donc un 
+> volontaire pour les adapter ? la charte graphique jelix :-)
+> 
+> 7) Bastnic, qui fait du Symfony dans le cadre de son boulot, nous a 
+> expliqu? quelques avantages de ce framework par rapport ? jelix, 
+> notamment au niveau de l'ORM Doctrine, avec les actAs et cie (la 
+> possibilit? de d?clarer dynamiquement des nouveaux champs sans avoir ? 
+> modifier les fichiers des mod?les).
+> 
+> 8) noter que mes disponiblit?s vont ?tre tr?s limit?s ces deux 
+> prochaines semaines, mais je pourrais ensuite ? nouveau avancer sur le 
+> projet.
+> 
+> 
+> Pour les participants, d'autres choses ? rajouter ? :-)
+> 
+> 
+> Laurent
+> 
+> 
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> 
+
+
+
+From laurent at jelix.org  Mon Oct 12 11:20:54 2009
+From: laurent at jelix.org (laurent)
+Date: Mon, 12 Oct 2009 11:20:54 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+In-Reply-To: <1255338726.4ad2f2e603dd1@ssl0.ovh.net>
+References: <4AD2ED77.3060607@jelix.org>
+	<1255338726.4ad2f2e603dd1@ssl0.ovh.net>
+Message-ID: <4AD2F4F6.6020202@jelix.org>
+
+foxmask at foxmask.info a ?crit :
+> Selon laurent <laurent at jelix.org>:
+> 
+>> 2) Foxmask a avanc? sur la forge, lipki va voir aussi ce qu'il peut
+>> faire pour aider. Je vais jetter un coup d'oeil ? ce qui a ?t? fait et
+>> ensuite on mettra en ligne.
+> 
+> si j'ai un truc ? commiter ; c'est tjs du svn le depot ?
+
+Oui.
+
+J'ai du coup oublier de dire :
+- il est prevu de migrer le depot svn du site vers mercurial :-)
+- apr?s la migration du serveur et du trac, on pourra installer le 
+plugin mercurial pour trac, et donc visualiser les sources mercurial 
+dans developer.jelix.org
+
+
+Laurent
+
+
+From bruno at atnos.com  Mon Oct 12 19:11:43 2009
+From: bruno at atnos.com (Bruno Perles)
+Date: Mon, 12 Oct 2009 19:11:43 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+In-Reply-To: <4AD2ED77.3060607@jelix.org>
+References: <4AD2ED77.3060607@jelix.org>
+Message-ID: <4AD3634F.8000006@atnos.com>
+
+Salut tout le monde,
+
+Je vois que cette r?union f?t productive.
+
+> 6) .....Un souci cependant, le langage de templates de 
+> trac a chang? avec la derni?re version, et il me faudra donc un 
+> volontaire pour les adapter ? la charte graphique jelix :-)
+
+N'?tant pas tr?s pr?sent sur IRC derni?rement (je donne des cours) je 
+veux bien m'occuper du point 6 avec grand plaisir.
+
+++
+Brunto
+
+
+From loic at mathaud.net  Mon Oct 12 19:19:15 2009
+From: loic at mathaud.net (Loic Mathaud)
+Date: Mon, 12 Oct 2009 19:19:15 +0200
+Subject: [Jelix-dev]
+ =?iso-8859-1?q?expos=E9_du_=22actAs=22_par_Bastnic_?=
+ =?iso-8859-1?q?=3B=29?=
+In-Reply-To: <1255334714.4ad2e33a7c7b0@ssl0.ovh.net>
+References: <1255334714.4ad2e33a7c7b0@ssl0.ovh.net>
+Message-ID: <4AD36513.7030002@mathaud.net>
+
+Effectivement il serait int?ressant d'avoir plus d'informations sur ce
+point qui a ?t? discut? l'autre soir.
+
+Bastien, nous attendons donc que tu puisse avoir un moment pour nous
+faire un retour sur ce point. Si tu le veux bien, bien entendu ;)
+
+
+Loic
+
+foxmask at foxmask.info a ?crit :
+> Bonjour,
+> 
+> Ce weekend j'ai un peu cherch? le actAs comme je l'avais croise sur CakePHP pour
+> comprendre comme c'?tait g?r?.
+> 
+> Chez Cake, le actAs influe sur le mod?le uniquement.
+> Ainsi, gerer comme dans jTags (par exemple), avec CakePHP cela revient ? d?finir
+> un comportement et via des callbacks, g?rer les donn?es dans al base.
+> 
+> Par contre cot? vue, et contr?leur, il faut le faire ? la main.
+> 
+> En gros donc, m?me si on n'a pas actAs, on en revient ? la meme chose,
+> 
+> Ajouter la colonne dans sa dao puis forms puis une zone pour gerer tout ?a.
+> 
+> Bastnic : concr?tement si t'as 2min je veux bien que tu me dises comment SF g?re
+> cela exactement (? part Doctrine qui gere sa sauce quoi d'autre doit etre fait
+> par le developpeur  ?) ;-)
+> 
+> Je veux bien qu'il y ait de la magie "la dedans" mais on pourrait aussi bien
+> d?finir nous aussi un Behavior-like qui g?re tous ces aspects (dao/form/tpl)
+> via des jEvent() non ?
+> 
+> cdt ;)
+> 
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> 
+
+
+
+From loic at mathaud.net  Mon Oct 12 19:23:46 2009
+From: loic at mathaud.net (Loic Mathaud)
+Date: Mon, 12 Oct 2009 19:23:46 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+In-Reply-To: <4AD3634F.8000006@atnos.com>
+References: <4AD2ED77.3060607@jelix.org> <4AD3634F.8000006@atnos.com>
+Message-ID: <4AD36622.8030104@mathaud.net>
+
+Bruno Perles a ?crit :
+> Salut tout le monde,
+> 
+> Je vois que cette r?union f?t productive.
+> 
+>> 6) .....Un souci cependant, le langage de templates de 
+>> trac a chang? avec la derni?re version, et il me faudra donc un 
+>> volontaire pour les adapter ? la charte graphique jelix :-)
+> 
+> N'?tant pas tr?s pr?sent sur IRC derni?rement (je donne des cours) je 
+> veux bien m'occuper du point 6 avec grand plaisir.
+
+Super ?a serait top, merci !
+
+Par contre, bien que tu sois occup? en ce moment, je t'invite tout de
+m?me ? attendre que la "nouvelle charte" soit mise en place avant de
+faire quoi que ce soit.
+
+Il serait dommage que tu passe du temps l? dessus pour devoir modifier
+ensuite.
+
+Bons cours sinon.
+
+@+
+Loic
+
+> 
+> ++
+> Brunto
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> 
+
+
+
+From bruno at atnos.com  Mon Oct 12 23:09:29 2009
+From: bruno at atnos.com (Bruno Perles)
+Date: Mon, 12 Oct 2009 23:09:29 +0200
+Subject: [Jelix-dev] Compte rendu du jelix summit
+In-Reply-To: <4AD36622.8030104@mathaud.net>
+References: <4AD2ED77.3060607@jelix.org> <4AD3634F.8000006@atnos.com>
+	<4AD36622.8030104@mathaud.net>
+Message-ID: <4AD39B09.4000205@atnos.com>
+
+Loic Mathaud a ?crit :
+> Bruno Perles a ?crit :
+>> Salut tout le monde,
+>>
+>> Je vois que cette r?union f?t productive.
+>>
+>>> 6) .....Un souci cependant, le langage de templates de 
+>>> trac a chang? avec la derni?re version, et il me faudra donc un 
+>>> volontaire pour les adapter ? la charte graphique jelix :-)
+>> N'?tant pas tr?s pr?sent sur IRC derni?rement (je donne des cours) je 
+>> veux bien m'occuper du point 6 avec grand plaisir.
+> 
+> Super ?a serait top, merci !
+> 
+> Par contre, bien que tu sois occup? en ce moment, je t'invite tout de
+> m?me ? attendre que la "nouvelle charte" soit mise en place avant de
+> faire quoi que ce soit.
+
+J'y comptais bien oui ;)
+
+> 
+> Il serait dommage que tu passe du temps l? dessus pour devoir modifier
+> ensuite.
+> 
+> Bons cours sinon.
+
+Merci
+
+++
+
+> @+
+> Loic
+> 
+>> ++
+>> Brunto
+>> _______________________________________________
+>> Jelix-dev mailing list
+>> Jelix-dev at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>>
+> 
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+> 
+
+-- 
+Cordialement,
+
+
+----------------------
+Bruno Perles
+email. bruno at atnos.com
+IM (JABBER ou au pire MSN). atnos.com at gmail.com
+web. http://atnos.com
+----------------------
+
+
+From bastnicj at gmail.com  Wed Oct 14 20:37:29 2009
+From: bastnicj at gmail.com (Bastien Jaillot)
+Date: Wed, 14 Oct 2009 20:37:29 +0200
+Subject: [Jelix-dev]
+	=?iso-8859-1?q?expos=E9_du_=22actAs=22_par_Bastnic_?=
+	=?iso-8859-1?q?=3B=29?=
+In-Reply-To: <1255334714.4ad2e33a7c7b0@ssl0.ovh.net>
+References: <1255334714.4ad2e33a7c7b0@ssl0.ovh.net>
+Message-ID: <16ce71b30910141137t19cc6b57oc5b67de17e794222@mail.gmail.com>
+
+Salut,
+
+Je passe en vitesse, prenons un exemple cette table :
+
+MaTable:
+  actAs:
+    I18n: { fields : [name] }
+    Timestampable: ~
+    Taggable: ~
+  column:
+    name: string(255)
+    madate: date
+    nbmachin : integer
+
+C'est un sch?ma doctrine bidon ?crit en yaml. Avec une commande en CLI
+je reg?nre la bd, les formulaires, les mod?les, les filtres (notions
+non abord?es ici).
+Il faut savoir qu'avec les ORM de sf (propel et doctrine donc), des
+classes BaseMaTableForm, BaseMaClass et BaseMaClassTable sont
+g?n?r?es. elles ne sont pas ? modifi?es par le dev, ce sont les
+repr?snetations du sch?ma yml. En principe on svn:ignore ces dossiers.
+Ailleurs, sont ?galement g?n?r?s les m?mes classes sans le "Base" qui
+h?ritent des Base*. Ainsi l'orm g?n?re tout qu'il faut dans son coin
+et propose des classes filles qui nous permettent de tout changer.
+
+Les ActAs interviennent ? la g?n?ration de ces classes Base* : il
+ajoute des champs au formulaire, ajoute les champs ? la bd, le
+comportement en modification de MaTable sont automatiquement g?r?s.
+
+
+on peut ainsi faire :
+$toto = new MaTable();
+$toto->setTags(array('titi', 'toto', 'coucou', 'miaou');
+$toto->Translations['fr']->setName('coucou');
+$toto->Translations['en']->setName('hello');
+
+Vous voulez savoir quoi d'autre ?
+
+
+2009/10/12  <foxmask at foxmask.info>:
+> Bonjour,
+>
+> Ce weekend j'ai un peu cherch? le actAs comme je l'avais croise sur CakePHP pour
+> comprendre comme c'?tait g?r?.
+>
+> Chez Cake, le actAs influe sur le mod?le uniquement.
+> Ainsi, gerer comme dans jTags (par exemple), avec CakePHP cela revient ? d?finir
+> un comportement et via des callbacks, g?rer les donn?es dans al base.
+>
+> Par contre cot? vue, et contr?leur, il faut le faire ? la main.
+>
+> En gros donc, m?me si on n'a pas actAs, on en revient ? la meme chose,
+>
+> Ajouter la colonne dans sa dao puis forms puis une zone pour gerer tout ?a.
+>
+> Bastnic : concr?tement si t'as 2min je veux bien que tu me dises comment SF g?re
+> cela exactement (? part Doctrine qui gere sa sauce quoi d'autre doit etre fait
+> par le developpeur ??) ;-)
+>
+> Je veux bien qu'il y ait de la magie "la dedans" mais on pourrait aussi bien
+> d?finir nous aussi un Behavior-like qui g?re tous ces aspects (dao/form/tpl)
+> via des jEvent() non ?
+>
+> cdt ;)
+>
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>
+
+
+
+-- 
+Bastien Jaillot
+
+
+From foxmask at foxmask.info  Wed Oct 14 20:58:33 2009
+From: foxmask at foxmask.info (Foxmask)
+Date: Wed, 14 Oct 2009 20:58:33 +0200
+Subject: [Jelix-dev]
+ =?utf-8?q?expos=C3=A9_du_=22actAs=22_par_Bastnic_=3B?=
+ =?utf-8?q?=29?=
+In-Reply-To: <16ce71b30910141137t19cc6b57oc5b67de17e794222@mail.gmail.com>
+References: <1255334714.4ad2e33a7c7b0@ssl0.ovh.net>
+	<16ce71b30910141137t19cc6b57oc5b67de17e794222@mail.gmail.com>
+Message-ID: <B76F0A76-AB35-44BC-B868-EE56651A1CCA@foxmask.info>
+
+Bonsoir et merci pour tes lumieres.
+
+J'ai compris :)
+Avec CakePhp on modifie un model sa table et on cr?e  un behavior  ;
+Avec Sf c'est un simple yalm qui via le CLI g?n?re tout via le  
+keywords actAs
+
+Reste donc ? trouver un moyen d'en faire autant le plus simplement  
+possible :)
+Peut ?tre en demarrant par un n?ud actAs dans un Dao qui permettrait  
+d'?tendre la fonctionnalit? / modifier le comportement de telle table  
+en "h?ritant" d'une autre.
+Qu'en dites vous ?
+---
+Blog "Le grin de Sable" - http://www.foxmask.info
+(d?)p?t de miel - http://projets.foxmask.info
+HaveFnuBB! le forum made in Jelix - http://www.havefnubb.org
+
+
+Le 14 oct. 2009 ? 20:37, Bastien Jaillot <bastnicj at gmail.com> a  
+?crit :
+
+> Salut,
+>
+> Je passe en vitesse, prenons un exemple cette table :
+>
+> MaTable:
+>  actAs:
+>    I18n: { fields : [name] }
+>    Timestampable: ~
+>    Taggable: ~
+>  column:
+>    name: string(255)
+>    madate: date
+>    nbmachin : integer
+>
+> C'est un sch?ma doctrine bidon ?crit en yaml. Avec une commande en C 
+> LI
+> je reg?nre la bd, les formulaires, les mod?les, les filtres (notions
+> non abord?es ici).
+> Il faut savoir qu'avec les ORM de sf (propel et doctrine donc), des
+> classes BaseMaTableForm, BaseMaClass et BaseMaClassTable sont
+> g?n?r?es. elles ne sont pas ? modifi?es par le dev, ce sont les
+> repr?snetations du sch?ma yml. En principe on svn:ignore ces dossier 
+> s.
+> Ailleurs, sont ?galement g?n?r?s les m?mes classes sans le  
+> "Base" qui
+> h?ritent des Base*. Ainsi l'orm g?n?re tout qu'il faut dans son co 
+> in
+> et propose des classes filles qui nous permettent de tout changer.
+>
+> Les ActAs interviennent ? la g?n?ration de ces classes Base* : il
+> ajoute des champs au formulaire, ajoute les champs ? la bd, le
+> comportement en modification de MaTable sont automatiquement g?r?s.
+>
+>
+> on peut ainsi faire :
+> $toto = new MaTable();
+> $toto->setTags(array('titi', 'toto', 'coucou', 'miaou');
+> $toto->Translations['fr']->setName('coucou');
+> $toto->Translations['en']->setName('hello');
+>
+> Vous voulez savoir quoi d'autre ?
+>
+>
+> 2009/10/12  <foxmask at foxmask.info>:
+>> Bonjour,
+>>
+>> Ce weekend j'ai un peu cherch? le actAs comme je l'avais croise su 
+>> r CakePHP pour
+>> comprendre comme c'?tait g?r?.
+>>
+>> Chez Cake, le actAs influe sur le mod?le uniquement.
+>> Ainsi, gerer comme dans jTags (par exemple), avec CakePHP cela  
+>> revient ? d?finir
+>> un comportement et via des callbacks, g?rer les donn?es dans al ba 
+>> se.
+>>
+>> Par contre cot? vue, et contr?leur, il faut le faire ? la main.
+>>
+>> En gros donc, m?me si on n'a pas actAs, on en revient ? la meme ch 
+>> ose,
+>>
+>> Ajouter la colonne dans sa dao puis forms puis une zone pour gerer  
+>> tout ?a.
+>>
+>> Bastnic : concr?tement si t'as 2min je veux bien que tu me dises c 
+>> omment SF g?re
+>> cela exactement (? part Doctrine qui gere sa sauce quoi d'autre do 
+>> it etre fait
+>> par le developpeur  ?) ;-)
+>>
+>> Je veux bien qu'il y ait de la magie "la dedans" mais on pourrait  
+>> aussi bien
+>> d?finir nous aussi un Behavior-like qui g?re tous ces aspects (dao 
+>> /form/tpl)
+>> via des jEvent() non ?
+>>
+>> cdt ;)
+>>
+>> _______________________________________________
+>> Jelix-dev mailing list
+>> Jelix-dev at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/jelix-dev
+>>
+>
+>
+>
+> -- 
+> Bastien Jaillot
+> _______________________________________________
+> Jelix-dev mailing list
+> Jelix-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/jelix-dev
+
+

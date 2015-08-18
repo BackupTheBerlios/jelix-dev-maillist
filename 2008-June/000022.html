@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jelix-dev] jComments
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jelix-dev/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20jComments&In-Reply-To=%3C484F7AA5.4000804%40mathaud.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000023.html">
+   <LINK REL="Next"  HREF="000027.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jelix-dev] jComments</H1>
+    <B>Loic Mathaud</B> 
+    <A HREF="mailto:jelix-dev%40lists.berlios.de?Subject=Re%3A%20%5BJelix-dev%5D%20jComments&In-Reply-To=%3C484F7AA5.4000804%40mathaud.net%3E"
+       TITLE="[Jelix-dev] jComments">loic at mathaud.net
+       </A><BR>
+    <I>Wed Jun 11 09:11:33 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000023.html">[Jelix-dev] jComments
+</A></li>
+        <LI>Next message: <A HREF="000027.html">[Jelix-dev] jComments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Bastien Jaillot a &#233;crit :
+&gt;<i> Les gens,
+</I>&gt;<i> 
+</I>&gt;<i> Dans le cadre de sharecode, j'ai cr&#233;&#233; un module jComments g&#233;n&#233;rique.
+</I>&gt;<i> Les sources : <A HREF="http://forge.jelix.org/projects/sharecode/browser/trunk/sharecode/modules/jcomments">http://forge.jelix.org/projects/sharecode/browser/trunk/sharecode/modules/jcomments</A>
+</I>&gt;<i> 
+</I>&gt;<i> Comment s'en servir :
+</I>&gt;<i> <A HREF="http://forge.jelix.org/projects/sharecode/browser/trunk/sharecode/modules/jcomments/README">http://forge.jelix.org/projects/sharecode/browser/trunk/sharecode/modules/jcomments/README</A>
+</I>
+Apr&#232;s lecture rapide des sources je vois que ce module d&#233;pend de ton
+controlercrudcomplet dans sharecode et qu'il d&#233;pend aussi de jAcl2.
+Soit il faut embarquer ton super controller dans le module, voir si il
+est acceptable dans jelix m&#234;me, mais dans tous les cas le module ne doit
+pas d&#233;pendre d'une application sp&#233;cifique ;) (Ceci dit je me doute que
+c'est pr&#233;vu et je commente du code que tu n'as pas encore termin&#233;)
+
+Pour jAcl2, pas encore bien regard&#233; ton code mais j'aurais &#233;t&#233; tent&#233; de
+faire autrement : lors des actions importantes, le module lance des
+&#233;v&#232;nements, genre saveComment, updateComment, ... et en fonction des
+r&#233;ponses des listeners de l'application dans laquelle le module est
+utilis&#233;, on g&#232;rerait les droits comme &#231;a. jAuth fait comme &#231;a il me
+semble d'ailleurs.
+
+&gt;<i> 
+</I>&gt;<i> Me manque encore
+</I>&gt;<i> * la gestion propre de l'url de retour apr&#232;s ajout d'un commentaire.
+</I>&gt;<i> Je vais surement pass&#233; cette adresse par param&#232;tre : &#224; voir.
+</I>
+J'ai qq chose pour &#231;a, tir&#233; d'un module simple de commentaires mais qui
+est &#233;quivalent &#224; celui-ci :
+J'ai une zone &quot;edit&quot; qui m'affiche uniquement le formulaire d'ajout de
+commentaire :
+{zone 'comments~edit',
+array('scope'=&gt;'foo','subject_id'=&gt;$objId,'return_url'=&gt;'module~ctrl:action','return_url_params'=&gt;htmlspecialchars(serialize(array('id'=&gt;$objId))))}
+
+
+Et dans cette zone j'ai donc le formulaire de saisi de commentaires avec
+ en champ cach&#233;s : le scope, le subject_id, return_url et return_url_params.
+
+Et dans l'action de mon controller qui enregistre le commentaire, je
+r&#233;cup&#232;re ces param&#232;tres et je m'en sers pour rediriger l&#224; je l'ai d&#233;cid&#233;.
+
+De la m&#234;me mani&#232;re j'ai une zone &quot;view&quot; qui m'affiche les commentaires
+pour le scope et le subject_id demand&#233;.
+
+&gt;<i> * la gestion g&#233;n&#233;rique d'un bloc &quot;les 10 derniers commentaires&quot; : il
+</I>&gt;<i> faut en g&#233;n&#233;ral le titre de l'objet en rapport. difficle je pense
+</I>
+Bien oblig&#233; de passer le scope &#224; chaque fois, le module ne peut pas
+deviner ce que tu veux afficher ;)
+
+&gt;<i> 
+</I>&gt;<i> Encore &#231;a me sera extr&#234;mement utile pour une de mes applis o&#249; l'on
+</I>&gt;<i> peut comment 4 types d'objets diff&#233;rends.
+</I>&gt;<i> 
+</I>&gt;<i> Vous en pensez quoi ?
+</I>
+Que tu fais enfin le module que je tra&#238;ne honteusement de faire depuis
+un bail, bravo ! :)
+
+Loic
+
+&gt;<i> 
+</I>&gt;<i> Demain je m'attaque au syst&#232;me de tags : avec le m&#234;me principe.
+</I>&gt;<i> 
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000023.html">[Jelix-dev] jComments
+</A></li>
+	<LI>Next message: <A HREF="000027.html">[Jelix-dev] jComments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jelix-dev">More information about the Jelix-dev
+mailing list</a><br>
+</body></html>

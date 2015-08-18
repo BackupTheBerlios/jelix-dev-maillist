@@ -1,0 +1,107 @@
+From laurent at jelix.org  Sun Nov 29 23:02:14 2009
+From: laurent at jelix.org (laurent)
+Date: Sun, 29 Nov 2009 23:02:14 +0100
+Subject: [Jelix-dev] New server
+Message-ID: <4B12EF66.1090909@jelix.org>
+
+Hello,
+
+We have now a new server, and the migration from the old server begin 
+this evening and will end perhaps next saturday.
+
+So this week, you may know difficulties to access to the web sites and 
+other services (hg, svn...).
+
+Sorry for the inconvenience.
+
+Laurent
+
+
+From laurent at jelix.org  Sun Nov 29 23:35:06 2009
+From: laurent at jelix.org (laurent)
+Date: Sun, 29 Nov 2009 23:35:06 +0100
+Subject: [Jelix-dev] access to hg repository are closed for committers
+Message-ID: <4B12F71A.9090104@jelix.org>
+
+Hi,
+
+first step for the migration: the mercurial repositories. So there are 
+closed for committers (impossible to commit). However you could still 
+clone them.
+
+Laurent
+
+
+
+From laurent at jelix.org  Mon Nov 30 01:57:27 2009
+From: laurent at jelix.org (laurent)
+Date: Mon, 30 Nov 2009 01:57:27 +0100
+Subject: [Jelix-dev] access to hg repository are closed for committers
+In-Reply-To: <4B12F71A.9090104@jelix.org>
+References: <4B12F71A.9090104@jelix.org>
+Message-ID: <4B131877.9050609@jelix.org>
+
+Le 29/11/09 23:35, laurent a ?crit :
+> Hi,
+>
+> first step for the migration: the mercurial repositories. So there are
+> closed for committers (impossible to commit). However you could still
+> clone them.
+>
+> Laurent
+>
+
+hg repositories have been migrated. the new http://hg.jelix.org is up. 
+Just wait for DNS propagation to access to the new home of repositories, 
+where you can push your commits.
+
+verify that in your .hg/hgrc file, in your all local repositories, for 
+the default path, you have the hg.jelix.org domain name, and not 
+jelix.org (jelix.org still points to the old server). for example, for a 
+clone of jelix-trunk, you should have
+
+[paths]
+default = http://hg.jelix.org/jelix/jelix-trunk
+
+or for commiters
+
+[paths]
+default = ssh://hg at hg.jelix.org/jelix/jelix-trunk
+
+If this is not the case, edit the hgrc file.
+
+
+All files for download.jelix.org have also been migrated, and the new 
+http://download.jelix.org is up.
+
+
+Laurent
+
+
+
+
+
+From laurent at xulfr.org  Sun Nov 22 15:51:17 2009
+From: laurent at xulfr.org (laurent)
+Date: Sun, 22 Nov 2009 14:51:17 -0000
+Subject: [Jelix-dev] Release of Jelix 1.1.5
+Message-ID: <4B094DC9.20907@xulfr.org>
+
+Hello,
+
+I just released jelix 1.1.5, because of an anoying warning which appears 
+when we use 1.1.4 with PHP 5.3.
+
+I fixed also other minor bugs. We have now only one known bug on stable 
+branches :-)
+
+http://jelix.org/articles/en/changelog/1.1.5
+http://jelix.org/articles/en/download/stable/1.1
+
+http://jelix.org/articles/fr/changelog/1.1.5
+http://jelix.org/articles/fr/telechargement/stable/1.1
+
+
+Laurent
+
+
